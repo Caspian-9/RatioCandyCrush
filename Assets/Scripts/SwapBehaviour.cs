@@ -3,6 +3,7 @@ using System.Collections;
 
 public class SwapBehaviour : MonoBehaviour
 {
+    private GridManager manager = null;
 
     private static SwapBehaviour selected;
     private SpriteRenderer Renderer;
@@ -10,6 +11,7 @@ public class SwapBehaviour : MonoBehaviour
     public Vector2Int Position;
 
     private bool isInGrid = false;
+
 
     // Use this for initialization
     void Start()
@@ -31,45 +33,39 @@ public class SwapBehaviour : MonoBehaviour
         GetComponent<SpriteRenderer>().color = color;
     }
 
+    public void setGridManager(GridManager m)
+    {
+        this.manager = m;
+    }
+
     public void Select()
     {
         color.a = 1f;
         GetComponent<SpriteRenderer>().color = color;
-
-        //Debug.Log("selected");
     }
 
     public void Unselect()
     {
         color.a = 0f;
         GetComponent<SpriteRenderer>().color = color;
-
-        //Debug.Log("unselected");
     }
 
 
     private void OnMouseDown()
     {
-        //Debug.Log("clicced");
-
         if (!isInGrid)
         {
-            //Debug.Log("not in grid");
             return;
         }
 
         if (selected != null)
         {
-            //Debug.Log("null");
-
             if (selected == this)
                 return;
             selected.Unselect();
             if (Vector2Int.Distance(selected.Position, Position) <= 1)
             {
-                GridManager.Instance.SwapBlocks(Position, selected.Position);
-                //// todo fix this so ugly
-                //GridManager.Instance.score += GridManager.Instance.CalculateScore(GridManager.Instance.CheckMatches());
+                manager.SwapBlocks(Position, selected.Position);
                 selected = null;
             }
             else
@@ -80,7 +76,6 @@ public class SwapBehaviour : MonoBehaviour
         }
         else
         {
-            //Debug.Log("bruh");
             selected = this;
             Select();
         }
