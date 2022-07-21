@@ -1,3 +1,3 @@
 # RatioCandyCrush
 
-note to self: figure out how to connect unity and/or visual studio to github
+https://caspian9.itch.io/ratio-dr-mario
