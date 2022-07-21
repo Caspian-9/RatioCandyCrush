@@ -5,17 +5,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Block : MonoBehaviour
+public class Block : MonoBehaviour, Tile
 {
-    
-    private static Block selected;
-    private SpriteRenderer Renderer;
-    private SwapBehaviour swapBehaviour;
 
-    private TextMeshProUGUI Text;
-    
+    //private static Block selected;
+    //private SpriteRenderer Renderer;
+    //private SwapBehaviour swapBehaviour;
     //public Vector2Int Position;
 
+    private TextMeshProUGUI Text;
     private int[] fraction;   // [0] is numerator, [1] is denominator
     private float internalValue;
 
@@ -30,11 +28,16 @@ public class Block : MonoBehaviour
 
     }
 
-    public void InitBlock()
+    public new TileTypes GetType()   // error if i dont use new
     {
-        Renderer = GetComponent<SpriteRenderer>();
+        return TileTypes.BLOCK;
+    }
+
+    public void InitTile()
+    {
+        //Renderer = GetComponent<SpriteRenderer>();
         Text = GetComponentInChildren<TextMeshProUGUI>();
-        swapBehaviour = GetComponent<SwapBehaviour>();
+        //swapBehaviour = GetComponent<SwapBehaviour>();
     }
 
 
@@ -67,45 +70,5 @@ public class Block : MonoBehaviour
     {
         internalValue = v;
     }
-
-
-
-    //public void Select()
-    //{
-    //    Renderer.color = Color.grey;
-    //}
-
-    //public void Unselect()
-    //{
-    //    Renderer.color = Color.white;
-    //}
-
-
-    //private void OnMouseDown()
-    //{
-
-    //    if (selected != null)
-    //    {
-    //        Debug.Log("clicced");
-    //        if (selected == this)
-    //            return;
-    //        selected.Unselect();
-    //        if (Vector2Int.Distance(selected.Position, Position) <= 2)
-    //        {
-    //            GridManager.Instance.SwapBlocks(Position, selected.Position);
-    //            selected = null;
-    //        }
-    //        else
-    //        {
-    //            selected = this;
-    //            Select();
-    //        }
-    //    }
-    //    else
-    //    {
-    //        selected = this;
-    //        Select();
-    //    }
-    //}
 
 }

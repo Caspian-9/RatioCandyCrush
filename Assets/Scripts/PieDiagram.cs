@@ -4,15 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PieDiagram : MonoBehaviour
+public class PieDiagram : MonoBehaviour, Tile
 {
-    private static PieDiagram selected;
-    private SpriteRenderer Renderer;
-    private SwapBehaviour swapBehaviour;
+    //private static PieDiagram selected;
+    //private SpriteRenderer Renderer;
+    //private SwapBehaviour swapBehaviour;
+    //public Vector2Int Position;
 
     public Image PieSector;
-    public float InternalValue;
-    //public Vector2Int Position;
+    private int[] fraction;   // [0] is numerator, [1] is denominator
+    private float internalValue;
 
     // Start is called before the first frame update
     void Start()
@@ -26,60 +27,45 @@ public class PieDiagram : MonoBehaviour
         
     }
 
-    public void InitPie()
+    public new TileTypes GetType() { 
+        return TileTypes.PIE;
+    }
+
+    public void InitTile()
     {
-        Renderer = GetComponent<SpriteRenderer>();
-        swapBehaviour = GetComponent<SwapBehaviour>();
+        //Renderer = GetComponent<SpriteRenderer>();
+        //swapBehaviour = GetComponent<SwapBehaviour>();
         //Debug.Log(swapBehaviour == null);
+    }
+
+    public void SetText()
+    {
+        // no text to set. don't do anything
+        return;
+    }
+
+    // getters
+    public int[] GetFraction()
+    {
+        return fraction;
     }
 
     public float GetValue()
     {
-        return InternalValue;
+        return internalValue;
     }
 
-    public void SetValue(float val)
+
+    // setters
+    public void SetFraction(int[] f)
     {
-        InternalValue = val;
-        PieSector.fillAmount = val;
+        fraction = f;
     }
 
-    //public void Select()
-    //{
-    //    Renderer.color = Color.grey;
-    //}
-
-    //public void Unselect()
-    //{
-    //    Renderer.color = Color.white;
-    //}
-
-
-    //private void OnMouseDown()
-    //{
-
-    //    if (selected != null)
-    //    {
-    //        Debug.Log("clicced");
-    //        if (selected == this)
-    //            return;
-    //        selected.Unselect();
-    //        if (Vector2Int.Distance(selected.Position, Position) <= 2)
-    //        {
-    //            GridManager.Instance.SwapBlocks(Position, selected.Position);
-    //            selected = null;
-    //        }
-    //        else
-    //        {
-    //            selected = this;
-    //            Select();
-    //        }
-    //    }
-    //    else
-    //    {
-    //        selected = this;
-    //        Select();
-    //    }
-    //}
+    public void SetValue(float v)
+    {
+        internalValue = v;
+        PieSector.fillAmount = v;
+    }
 
 }

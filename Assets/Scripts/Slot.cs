@@ -6,6 +6,12 @@ using UnityEngine.EventSystems;
 public class Slot : MonoBehaviour, IDropHandler
 {
     public Vector2Int Position;
+    private GridManager manager = null;
+
+    public void setGridManager(GridManager m)
+    {
+        this.manager = m;
+    }
 
     void IDropHandler.OnDrop(PointerEventData eventData)
     {
@@ -16,8 +22,8 @@ public class Slot : MonoBehaviour, IDropHandler
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = slotPosition;
             eventData.pointerDrag.GetComponent<DragDrop>().Lock();
 
-            GridManager.Instance.AddBlockToGrid(eventData.pointerDrag, this.Position);
-            GridManager.Instance.EndTurn();
+            manager.AddTileToGrid(eventData.pointerDrag, this.Position);
+            manager.EndTurn();
         }
     }
 }

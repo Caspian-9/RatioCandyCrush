@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Treasure : MonoBehaviour
+public class Treasure : MonoBehaviour, Tile
 {
     private int[] fraction;
     private float internalValue;
@@ -22,7 +22,12 @@ public class Treasure : MonoBehaviour
         
     }
 
-    public void InitTreasure()
+    public new TileTypes GetType()
+    {
+        return TileTypes.TREASURE;
+    }
+
+    public void InitTile()
     {
         Text = GetComponentInChildren<TextMeshProUGUI>();
     }
