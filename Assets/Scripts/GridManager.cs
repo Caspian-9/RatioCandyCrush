@@ -111,7 +111,7 @@ public class GridManager : MonoBehaviour
 
         InitValues();
         InitGrid();
-        NewTurn();
+        //NewTurn();
 
         stopwatch.StartStopwatch();
     }
@@ -267,19 +267,19 @@ public class GridManager : MonoBehaviour
 
     // TURNS (do not use)
 
-    void NewTurn()
-    {
-        List<int[]> keyList = new List<int[]>(Multiples.Keys.ToList());
-        int[] val = keyList[rand.Next(0, Multiples.Count)];
-        //GenerateDraggableBlock(TileTypes.BLOCK, val);
-    }
+    //void NewTurn()
+    //{
+    //    List<int[]> keyList = new List<int[]>(Multiples.Keys.ToList());
+    //    int[] val = keyList[rand.Next(0, Multiples.Count)];
+    //    //GenerateDraggableBlock(TileTypes.BLOCK, val);
+    //}
 
     public void EndTurn()
     {
         score += CalculateScore(CheckMatches());
         ScoreText.text = "Score: " + score.ToString();
 
-        if (CheckFullClear())
+        if (treasureCalculator.isAllCollected())    // end game
         {
             stopwatch.StopStopwatch();
             score += CalculateTimeBonus(stopwatch.getTime());
@@ -287,10 +287,10 @@ public class GridManager : MonoBehaviour
 
             Debug.Log("level cleared");
         }
-        else
-        {
-            NewTurn();
-        }
+        //else
+        //{
+        //    NewTurn();
+        //}
 
     }
 
@@ -322,28 +322,6 @@ public class GridManager : MonoBehaviour
     {
         return (int)(20 / Math.Sqrt(timeElapsed));
     }
-
-
-    private bool CheckFullClear()
-    {
-        for (int i = 0; i < GridDimension; i++)
-        {
-            for (int j = 0; j < GridDimension; j++)
-            {
-                if (TileGrid[i, j] == null)
-                {
-                    continue;
-                }
-                if (TileGrid[i, j].activeSelf)
-                {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
-
 
 
     public void SwapBlocks(Vector2Int tile1Inds, Vector2Int tile2Inds)
@@ -383,8 +361,11 @@ public class GridManager : MonoBehaviour
         //    temp.transform.position = new Vector3(block2Position.x * (int)Distance, block2Position.y * (int)Distance, 0) + positionOffset;
         //    temp.GetComponent<Block>().Position = block2Position;
         //}
-        score += CalculateScore(CheckMatches());
-        ScoreText.text = "Score: " + score.ToString();
+
+        //score += CalculateScore(CheckMatches());
+        //ScoreText.text = "Score: " + score.ToString();
+
+        EndTurn();
     }
 
     //private void SwapTreasureLocations(Vector2Int pos1, Vector2Int pos2)
@@ -593,6 +574,26 @@ public class GridManager : MonoBehaviour
 
 
     // slated for removal
+
+
+    //private bool CheckFullClear()
+    //{
+    //    for (int i = 0; i < GridDimension; i++)
+    //    {
+    //        for (int j = 0; j < GridDimension; j++)
+    //        {
+    //            if (TileGrid[i, j] == null)
+    //            {
+    //                continue;
+    //            }
+    //            if (TileGrid[i, j].activeSelf)
+    //            {
+    //                return false;
+    //            }
+    //        }
+    //    }
+    //    return true;
+    //}
 
 
     //private void InitBlockInGrid(int column, int row, Vector3 positionOffset, int[] fraction)
