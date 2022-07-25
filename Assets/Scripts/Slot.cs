@@ -5,7 +5,8 @@ using UnityEngine.EventSystems;
 
 public class Slot : MonoBehaviour, IDropHandler
 {
-    public Vector2Int Position;
+    public Vector2Int GridIndices;
+    public Vector2 sPosition;
     private GridManager manager = null;
 
     public void setGridManager(GridManager m)
@@ -22,7 +23,7 @@ public class Slot : MonoBehaviour, IDropHandler
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = slotPosition;
             eventData.pointerDrag.GetComponent<DragDrop>().Lock();
 
-            manager.AddTileToGrid(eventData.pointerDrag, this.Position);
+            manager.AddTileToGrid(eventData.pointerDrag, this.GridIndices);
             manager.EndTurn();
         }
     }

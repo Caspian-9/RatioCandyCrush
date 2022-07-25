@@ -14,13 +14,14 @@ public class GridManager : MonoBehaviour
 
     public TileFactory factory;
 
+    public GameObject GridContainer;
+
     public GameObject SlotPrefab;
 
     //public int GridDimension;
     //public float Distance;
     private int GridDimension = 4;
-    // todo: make distance, slotsize, and blocksize dependent on griddimension later
-    private float Distance = 2f;
+    private Vector2 positionOffset;
 
     public int[][] Values;
 
@@ -31,9 +32,7 @@ public class GridManager : MonoBehaviour
     public GameObject[,] TileGrid;
     //private int[] isBlockHere;
 
-    private int treasuresSoFar;
-    private int totalTreasures;
-    public List<Vector2Int> TreasureLocations;
+    private TreasureCalculator treasureCalculator;
 
     public int score = 0;
     public TextMeshProUGUI ScoreText;
@@ -59,6 +58,15 @@ public class GridManager : MonoBehaviour
 
         Values = new int[GridDimension * GridDimension][];
         canvas = GetComponentInChildren<Canvas>();
+        treasureCalculator = new TreasureCalculator(3);
+
+        RectTransform rt = GridContainer.transform.GetComponent<RectTransform>();
+        float edgelength = 0.8f * (2 * Camera.main.orthographicSize);
+        rt.sizeDelta = new Vector2(edgelength, edgelength);
+        rt.position = new Vector3(0, 0, 0);
+        // positionOffset = new Vector2( -(edgelength / 2), -(edgelength / 2)) * canvas.GetComponent<RectTransform>().localScale.x;
+        positionOffset = new Vector2(-(edgelength / 2), -(edgelength / 2));
+
         stopwatch = stopwatchText.GetComponent<Stopwatch>();
 
         NewGame();
@@ -85,7 +93,7 @@ public class GridManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // make grid and tile sizes always scale with screen size
     }
 
 
@@ -176,7 +184,7 @@ public class GridManager : MonoBehaviour
 
     void InitGrid()
     {
-        Vector3 positionOffset = transform.position - new Vector3(GridDimension * Distance / 2.5f, GridDimension * Distance / 2.5f, 0);
+        //Vector3 positionOffset = transform.position - new Vector3(GridDimension * Distance / 2.5f, GridDimension * Distance / 2.5f, 0);
 
         for (int row = 0; row < GridDimension; row++)
         {
@@ -184,17 +192,18 @@ public class GridManager : MonoBehaviour
             {
                 
                 GameObject newSlot = Instantiate(SlotPrefab);
-                newSlot.transform.SetParent(canvas.transform);
+                newSlot.transform.SetParent(GridContainer.transform);
 
                 Slot slot = newSlot.GetComponent<Slot>();
                 slot.setGridManager(this);
-                slot.Position = new Vector2Int(column, row);
+
+                slot.GridIndices = new Vector2Int(column, row);
 
 
-                InitTileInGrid(getRandomType(), column, row, positionOffset, Values[row * GridDimension + column]);
+                InitTileInGrid(getRandomType(), column, row, Values[row * GridDimension + column]);
 
                 // newSlot.transform.position = new Vector3(column * Distance, row * Distance, 0);
-                newSlot.transform.position = new Vector3(column * Distance, row * Distance, 0) + positionOffset;
+                newSlot.transform.position = GetXYfromColRow(column, row) + positionOffset;
 
                 SlotGrid[column, row] = newSlot;
             }
@@ -228,21 +237,21 @@ public class GridManager : MonoBehaviour
     //    return blockPositions;
     //}
 
-    private void InitTileInGrid(TileTypes type, int column, int row, Vector3 positionOffset, int[] fraction)
+    private void InitTileInGrid(TileTypes type, int column, int row, int[] fraction)
     {
         GameObject newTile = factory.InstantiateTile(type);
         Tile tile = newTile.GetComponent<Tile>();
         DragDrop dragDrop = newTile.GetComponent<DragDrop>();
         SwapBehaviour swapBehaviour = newTile.GetComponent<SwapBehaviour>();
 
-        newTile.transform.SetParent(canvas.transform);
-        newTile.transform.position = new Vector3(column * Distance, row * Distance, 0) + positionOffset;
+        newTile.transform.SetParent(GridContainer.transform);
+        newTile.transform.position = GetXYfromColRow(column, row) + positionOffset;
         TileGrid[column, row] = newTile;
 
         tile.InitTile();
         swapBehaviour.Init();
         swapBehaviour.setGridManager(this);
-        swapBehaviour.Position = new Vector2Int(column, row);
+        swapBehaviour.GridIndices = new Vector2Int(column, row);
         swapBehaviour.SetInGrid(true);
 
         float v = FractionToFloat(fraction, RoundDigits);
@@ -288,12 +297,12 @@ public class GridManager : MonoBehaviour
 
     // stuff to do at the end of a TURN
 
-    public void AddTileToGrid(GameObject obj, Vector2Int position)
+    public void AddTileToGrid(GameObject obj, Vector2Int indices)
     {
         SwapBehaviour swapBehaviour = obj.GetComponent<SwapBehaviour>();
         swapBehaviour.SetInGrid(true);
-        swapBehaviour.Position = position;
-        TileGrid[position[0], position[1]] = obj;
+        swapBehaviour.GridIndices = indices;
+        TileGrid[indices.x, indices.y] = obj;
 
     }
 
@@ -337,27 +346,30 @@ public class GridManager : MonoBehaviour
 
 
 
-    public void SwapBlocks(Vector2Int tile1Position, Vector2Int tile2Position)
+    public void SwapBlocks(Vector2Int tile1Inds, Vector2Int tile2Inds)
     {
-        Vector3 positionOffset = transform.position - new Vector3(GridDimension * Distance / 2.5f, GridDimension * Distance / 2.5f, 0);
+        //Vector3 positionOffset = transform.position - new Vector3(GridDimension * Distance / 2.5f, GridDimension * Distance / 2.5f, 0);
 
-        GameObject tile1 = TileGrid[tile1Position.x, tile1Position.y];
-        GameObject tile2 = TileGrid[tile2Position.x, tile2Position.y];
+        GameObject tile1 = TileGrid[tile1Inds.x, tile1Inds.y];
+        GameObject tile2 = TileGrid[tile2Inds.x, tile2Inds.y];
 
         //if (tile1.GetComponent<Treasure>() != null || tile2.GetComponent<Treasure>() != null)    // tile 1 is a treasure
         //{
         //    SwapTreasureLocations(tile1Position, tile2Position);
         //}
 
-        TileGrid[tile1Position.x, tile1Position.y] = tile2;
-        tile2.transform.position = new Vector3(tile1Position.x * (int)Distance, tile1Position.y * (int)Distance, 0) + positionOffset;
-        tile2.transform.SetAsLastSibling();
-        tile2.GetComponent<SwapBehaviour>().Position = tile1Position;
+        Vector2 pos1 = tile1.transform.position;
+        Vector2 pos2 = tile2.transform.position;
 
-        TileGrid[tile2Position.x, tile2Position.y] = tile1;
-        tile1.transform.position = new Vector3(tile2Position.x * (int)Distance, tile2Position.y * (int)Distance, 0) + positionOffset;
+        TileGrid[tile1Inds.x, tile1Inds.y] = tile2;
+        tile2.transform.position = pos1;
+        tile2.transform.SetAsLastSibling();
+        tile2.GetComponent<SwapBehaviour>().GridIndices = tile1Inds;
+
+        TileGrid[tile2Inds.x, tile2Inds.y] = tile1;
+        tile1.transform.position = pos2;
         tile1.transform.SetAsLastSibling();
-        tile1.GetComponent<SwapBehaviour>().Position = tile2Position;
+        tile1.GetComponent<SwapBehaviour>().GridIndices = tile2Inds;
 
         //bool changesOccurs = CheckMatches();
         //if (!changesOccurs)
@@ -429,7 +441,10 @@ public class GridManager : MonoBehaviour
                 int col = matchedCoordinates[i][0];
                 int row = matchedCoordinates[i][1];
 
-                TileGrid[col, row].GetComponent<SwapBehaviour>().Select();
+                if (TileGrid[col, row] != null)
+                {
+                    TileGrid[col, row].GetComponent<SwapBehaviour>().Select();
+                }
                 Destroy(TileGrid[col, row], 1f);
                 TileGrid[col, row] = null;
             }
@@ -493,8 +508,6 @@ public class GridManager : MonoBehaviour
 
     void FillHoles()
     {
-        Vector3 positionOffset = transform.position - new Vector3(GridDimension * Distance / 2.5f, GridDimension * Distance / 2.5f, 0);
-
         for (int column = 0; column < GridDimension; column++)
         {
             for (int row = 0; row < GridDimension; row++)
@@ -515,13 +528,11 @@ public class GridManager : MonoBehaviour
 
                         Debug.Log(column.ToString() + "," + filler.ToString() + ": " + next);
 
-                        next.transform.position = new Vector3(column * (int)Distance, filler * (int)Distance, 0) + positionOffset;
-                        next.GetComponent<SwapBehaviour>().Position = new Vector2Int(column, filler);
+                        next.transform.position = GetXYfromColRow(column, filler) + positionOffset;
+                        next.GetComponent<SwapBehaviour>().GridIndices = new Vector2Int(column, filler);
                         
                     }
-                    // todo: make a generate fraction method
-                    // FRACTION VALUE IS PLACEHOLDER TO MAKE SURE TILE DROP WORKS
-                    InitTileInGrid(TileTypes.BLOCK, column, GridDimension - 1, positionOffset, Values[rand.Next(0, Values.Length)]);
+                    InitTileInGrid(TileTypes.BLOCK, column, GridDimension - 1, Values[rand.Next(0, Values.Length)]);
                 }
             }
         }
@@ -554,6 +565,21 @@ public class GridManager : MonoBehaviour
         int enumCountNoTreasure = Enum.GetNames(typeof(TileTypes)).Length - 1;
         TileTypes type = (TileTypes)rand.Next(0, enumCountNoTreasure);
         return type;
+    }
+
+    private Vector2 GetXYfromColRow(int column, int row)
+    {
+        RectTransform rt = GridContainer.transform.GetComponent<RectTransform>();
+        //float gridsize = rt.sizeDelta.y * canvas.GetComponent<RectTransform>().localScale.x;
+        float gridsize = rt.sizeDelta.y;
+        float tilesize = gridsize / GridDimension;
+
+        //Debug.Log("gridsize: " + gridsize + "; tilesize: " + tilesize);
+
+        float x = column * tilesize + (tilesize / 2);
+        float y = row * tilesize + (tilesize / 2);
+
+        return new Vector2(x, y);
     }
 
 

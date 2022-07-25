@@ -8,7 +8,7 @@ public class SwapBehaviour : MonoBehaviour
     private static SwapBehaviour selected;
     private SpriteRenderer Renderer;
     private Color color;
-    public Vector2Int Position;
+    public Vector2Int GridIndices;
 
     private bool isInGrid = false;
 
@@ -63,9 +63,9 @@ public class SwapBehaviour : MonoBehaviour
             if (selected == this)
                 return;
             selected.Unselect();
-            if (Vector2Int.Distance(selected.Position, Position) <= 1)
+            if (Vector2.Distance(selected.GridIndices, GridIndices) <= 1)
             {
-                manager.SwapBlocks(Position, selected.Position);
+                manager.SwapBlocks(GridIndices, selected.GridIndices);
                 selected = null;
             }
             else
