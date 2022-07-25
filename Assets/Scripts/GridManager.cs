@@ -265,7 +265,7 @@ public class GridManager : MonoBehaviour
     }
 
 
-    // TURNS (do not use)
+    // TURNS
 
     //void NewTurn()
     //{
@@ -303,7 +303,6 @@ public class GridManager : MonoBehaviour
         swapBehaviour.SetInGrid(true);
         swapBehaviour.GridIndices = indices;
         TileGrid[indices.x, indices.y] = obj;
-
     }
 
 
@@ -318,70 +317,13 @@ public class GridManager : MonoBehaviour
         return (int) Math.Max(0.5f * Math.Pow(numOfBlocks * baseNum, 2), numOfBlocks * baseNum);
     }
 
+    
+    // todo: do i still need this?
     private int CalculateTimeBonus(float timeElapsed)
     {
         return (int)(20 / Math.Sqrt(timeElapsed));
     }
 
-
-    public void SwapBlocks(Vector2Int tile1Inds, Vector2Int tile2Inds)
-    {
-        //Vector3 positionOffset = transform.position - new Vector3(GridDimension * Distance / 2.5f, GridDimension * Distance / 2.5f, 0);
-
-        GameObject tile1 = TileGrid[tile1Inds.x, tile1Inds.y];
-        GameObject tile2 = TileGrid[tile2Inds.x, tile2Inds.y];
-
-        //if (tile1.GetComponent<Treasure>() != null || tile2.GetComponent<Treasure>() != null)    // tile 1 is a treasure
-        //{
-        //    SwapTreasureLocations(tile1Position, tile2Position);
-        //}
-
-        Vector2 pos1 = tile1.transform.position;
-        Vector2 pos2 = tile2.transform.position;
-
-        TileGrid[tile1Inds.x, tile1Inds.y] = tile2;
-        tile2.transform.position = pos1;
-        tile2.transform.SetAsLastSibling();
-        tile2.GetComponent<SwapBehaviour>().GridIndices = tile1Inds;
-
-        TileGrid[tile2Inds.x, tile2Inds.y] = tile1;
-        tile1.transform.position = pos2;
-        tile1.transform.SetAsLastSibling();
-        tile1.GetComponent<SwapBehaviour>().GridIndices = tile2Inds;
-
-        //bool changesOccurs = CheckMatches();
-        //if (!changesOccurs)
-        //{
-        //    temp = block2;
-        //    Grid[block1Position.x, block1Position.y] = block1;
-        //    block1.transform.position = new Vector3(block1Position.x * (int)Distance, block1Position.y * (int)Distance, 0) + positionOffset;
-        //    block1.GetComponent<Block>().Position = block1Position;
-
-        //    Grid[block2Position.x, block2Position.y] = temp;
-        //    temp.transform.position = new Vector3(block2Position.x * (int)Distance, block2Position.y * (int)Distance, 0) + positionOffset;
-        //    temp.GetComponent<Block>().Position = block2Position;
-        //}
-
-        //score += CalculateScore(CheckMatches());
-        //ScoreText.text = "Score: " + score.ToString();
-
-        EndTurn();
-    }
-
-    //private void SwapTreasureLocations(Vector2Int pos1, Vector2Int pos2)
-    //{
-    //    for (int i = 0; i < TreasureLocations.Count; i++)
-    //    {
-    //        if (TreasureLocations[i] == pos1)
-    //        {
-    //            TreasureLocations[i] = pos2;
-    //        }
-    //        else if (TreasureLocations[i] == pos2)
-    //        {
-    //            TreasureLocations[i] = pos1;
-    //        }
-    //    }
-    //}
 
     public int CheckMatches()
     {
@@ -513,7 +455,7 @@ public class GridManager : MonoBehaviour
                         next.GetComponent<SwapBehaviour>().GridIndices = new Vector2Int(column, filler);
                         
                     }
-                    InitTileInGrid(TileTypes.BLOCK, column, GridDimension - 1, Values[rand.Next(0, Values.Length)]);
+                    InitTileInGrid(getRandomType(), column, GridDimension - 1, Values[rand.Next(0, Values.Length)]);
                 }
             }
         }
@@ -542,7 +484,7 @@ public class GridManager : MonoBehaviour
 
     private TileTypes getRandomType()
     {
-        // todo: CURRENTLY HAS NO TREASURE GENERATION
+        // HAS NO TREASURE GENERATION BECAUSE TREASURE IS GENERATED A DIFFERENT WAY
         int enumCountNoTreasure = Enum.GetNames(typeof(TileTypes)).Length - 1;
         TileTypes type = (TileTypes)rand.Next(0, enumCountNoTreasure);
         return type;
@@ -574,6 +516,67 @@ public class GridManager : MonoBehaviour
 
 
     // slated for removal
+
+
+    //public void SwapBlocks(Vector2Int tile1Inds, Vector2Int tile2Inds)
+    //{
+    //    //Vector3 positionOffset = transform.position - new Vector3(GridDimension * Distance / 2.5f, GridDimension * Distance / 2.5f, 0);
+
+    //    GameObject tile1 = TileGrid[tile1Inds.x, tile1Inds.y];
+    //    GameObject tile2 = TileGrid[tile2Inds.x, tile2Inds.y];
+
+    //    //if (tile1.GetComponent<Treasure>() != null || tile2.GetComponent<Treasure>() != null)    // tile 1 is a treasure
+    //    //{
+    //    //    SwapTreasureLocations(tile1Position, tile2Position);
+    //    //}
+
+    //    Vector2 pos1 = tile1.transform.position;
+    //    Vector2 pos2 = tile2.transform.position;
+
+    //    TileGrid[tile1Inds.x, tile1Inds.y] = tile2;
+    //    tile2.transform.position = pos1;
+    //    tile2.transform.SetAsLastSibling();
+    //    tile2.GetComponent<SwapBehaviour>().GridIndices = tile1Inds;
+
+    //    TileGrid[tile2Inds.x, tile2Inds.y] = tile1;
+    //    tile1.transform.position = pos2;
+    //    tile1.transform.SetAsLastSibling();
+    //    tile1.GetComponent<SwapBehaviour>().GridIndices = tile2Inds;
+
+    //    //bool changesOccurs = CheckMatches();
+    //    //if (!changesOccurs)
+    //    //{
+    //    //    temp = block2;
+    //    //    Grid[block1Position.x, block1Position.y] = block1;
+    //    //    block1.transform.position = new Vector3(block1Position.x * (int)Distance, block1Position.y * (int)Distance, 0) + positionOffset;
+    //    //    block1.GetComponent<Block>().Position = block1Position;
+
+    //    //    Grid[block2Position.x, block2Position.y] = temp;
+    //    //    temp.transform.position = new Vector3(block2Position.x * (int)Distance, block2Position.y * (int)Distance, 0) + positionOffset;
+    //    //    temp.GetComponent<Block>().Position = block2Position;
+    //    //}
+
+    //    //score += CalculateScore(CheckMatches());
+    //    //ScoreText.text = "Score: " + score.ToString();
+
+    //    EndTurn();
+    //}
+
+    //private void SwapTreasureLocations(Vector2Int pos1, Vector2Int pos2)
+    //{
+    //    for (int i = 0; i < TreasureLocations.Count; i++)
+    //    {
+    //        if (TreasureLocations[i] == pos1)
+    //        {
+    //            TreasureLocations[i] = pos2;
+    //        }
+    //        else if (TreasureLocations[i] == pos2)
+    //        {
+    //            TreasureLocations[i] = pos1;
+    //        }
+    //    }
+    //}
+
 
 
     //private bool CheckFullClear()

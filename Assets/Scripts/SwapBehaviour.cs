@@ -65,7 +65,8 @@ public class SwapBehaviour : MonoBehaviour
             selected.Unselect();
             if (Vector2.Distance(selected.GridIndices, GridIndices) <= 1)
             {
-                manager.SwapBlocks(GridIndices, selected.GridIndices);
+                SwapBlocks(GridIndices, selected.GridIndices);
+                manager.EndTurn();
                 selected = null;
             }
             else
@@ -84,5 +85,52 @@ public class SwapBehaviour : MonoBehaviour
     public void SetInGrid(bool inGrid)
     {
         isInGrid = inGrid;
+    }
+
+
+    public void SwapBlocks(Vector2Int tile1Inds, Vector2Int tile2Inds)
+    {
+        //Vector3 positionOffset = transform.position - new Vector3(GridDimension * Distance / 2.5f, GridDimension * Distance / 2.5f, 0);
+        GameObject[,] grid = manager.TileGrid;
+
+
+        GameObject tile1 = grid[tile1Inds.x, tile1Inds.y];
+        GameObject tile2 = grid[tile2Inds.x, tile2Inds.y];
+
+        //if (tile1.GetComponent<Treasure>() != null || tile2.GetComponent<Treasure>() != null)    // tile 1 is a treasure
+        //{
+        //    SwapTreasureLocations(tile1Position, tile2Position);
+        //}
+
+        Vector2 pos1 = tile1.transform.position;
+        Vector2 pos2 = tile2.transform.position;
+
+        grid[tile1Inds.x, tile1Inds.y] = tile2;
+        tile2.transform.position = pos1;
+        tile2.transform.SetAsLastSibling();
+        tile2.GetComponent<SwapBehaviour>().GridIndices = tile1Inds;
+
+        grid[tile2Inds.x, tile2Inds.y] = tile1;
+        tile1.transform.position = pos2;
+        tile1.transform.SetAsLastSibling();
+        tile1.GetComponent<SwapBehaviour>().GridIndices = tile2Inds;
+
+        //bool changesOccurs = CheckMatches();
+        //if (!changesOccurs)
+        //{
+        //    temp = block2;
+        //    Grid[block1Position.x, block1Position.y] = block1;
+        //    block1.transform.position = new Vector3(block1Position.x * (int)Distance, block1Position.y * (int)Distance, 0) + positionOffset;
+        //    block1.GetComponent<Block>().Position = block1Position;
+
+        //    Grid[block2Position.x, block2Position.y] = temp;
+        //    temp.transform.position = new Vector3(block2Position.x * (int)Distance, block2Position.y * (int)Distance, 0) + positionOffset;
+        //    temp.GetComponent<Block>().Position = block2Position;
+        //}
+
+        //score += CalculateScore(CheckMatches());
+        //ScoreText.text = "Score: " + score.ToString();
+
+        //EndTurn();
     }
 }
