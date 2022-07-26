@@ -8,7 +8,8 @@ public class Treasure : MonoBehaviour, Tile
     private int[] fraction;
     private float internalValue;
 
-    private TextMeshProUGUI Text;
+    public TextMeshProUGUI TextTop;
+    public TextMeshProUGUI TextBottom;
 
     // Start is called before the first frame update
     void Start()
@@ -29,12 +30,14 @@ public class Treasure : MonoBehaviour, Tile
 
     public void InitTile()
     {
-        Text = GetComponentInChildren<TextMeshProUGUI>();
+        //Text = GetComponentInChildren<TextMeshProUGUI>();
     }
 
     public void SetText()
     {
-        Text.text = fraction[0].ToString() + "/" + fraction[1].ToString();
+        TextTop.text = fraction[0].ToString();
+        TextBottom.text = fraction[1].ToString();
+        //Text.text = fraction[0].ToString() + "/" + fraction[1].ToString();
     }
 
     public int[] GetFraction()

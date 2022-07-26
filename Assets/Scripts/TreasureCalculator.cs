@@ -4,16 +4,19 @@
 public class TreasureCalculator
 {
 
-    private float chance = 0f;
+    private float chance;
 
-    private int treasuresCollected = 0;
-    private int treasuresPlaced = 0;
-    private int totalTreasures = 0;
+    private int treasuresCollected;
+    private int treasuresPlaced;
+    private int totalTreasures;
 
     private Random random = new Random();
 
     public TreasureCalculator(int totalTreasures)
 	{
+        this.chance = 0f;
+        this.treasuresCollected = 0;
+        this.treasuresPlaced = 0;
         this.totalTreasures = totalTreasures;
 	}
 

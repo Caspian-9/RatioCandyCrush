@@ -13,7 +13,8 @@ public class Block : MonoBehaviour, Tile
     //private SwapBehaviour swapBehaviour;
     //public Vector2Int Position;
 
-    private TextMeshProUGUI Text;
+    public TextMeshProUGUI TextTop;
+    public TextMeshProUGUI TextBottom;
     private int[] fraction;   // [0] is numerator, [1] is denominator
     private float internalValue;
 
@@ -36,7 +37,7 @@ public class Block : MonoBehaviour, Tile
     public void InitTile()
     {
         //Renderer = GetComponent<SpriteRenderer>();
-        Text = GetComponentInChildren<TextMeshProUGUI>();
+        //Text = GetComponentInChildren<TextMeshProUGUI>();
         //swapBehaviour = GetComponent<SwapBehaviour>();
     }
 
@@ -44,7 +45,8 @@ public class Block : MonoBehaviour, Tile
 
     public void SetText()
     {
-        Text.text = fraction[0].ToString() + "/" + fraction[1].ToString();
+        TextTop.text = fraction[0].ToString();
+        TextBottom.text = fraction[1].ToString();
     }
 
 
