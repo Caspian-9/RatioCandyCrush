@@ -44,4 +44,10 @@ public class Stopwatch : MonoBehaviour
         return currentTime;
     }
 
+    public void setTime(float t)
+    {
+        currentTime = t;
+    }
+
+
 }

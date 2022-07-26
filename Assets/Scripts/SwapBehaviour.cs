@@ -10,7 +10,7 @@ public class SwapBehaviour : MonoBehaviour
     private Color color;
     public Vector2Int GridIndices;
 
-    private bool isInGrid = false;
+    private bool clickable = false;
 
     //private bool moving = false;
 
@@ -55,7 +55,7 @@ public class SwapBehaviour : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (!isInGrid)
+        if (!clickable)
         {
             return;
         }
@@ -84,9 +84,9 @@ public class SwapBehaviour : MonoBehaviour
         }
     }
 
-    public void SetInGrid(bool inGrid)
+    public void SetClickable(bool c)
     {
-        isInGrid = inGrid;
+        clickable = c;
     }
 
 

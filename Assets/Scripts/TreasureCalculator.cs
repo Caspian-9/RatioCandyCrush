@@ -6,9 +6,13 @@ public class TreasureCalculator
 
     private float chance;
 
-    private int treasuresCollected;
-    private int treasuresPlaced;
-    private int totalTreasures;
+    //private int treasuresCollected;
+    //private int treasuresPlaced;
+    //private int totalTreasures;
+
+    public int treasuresCollected;
+    public int treasuresPlaced;
+    public int totalTreasures;
 
     private Random random = new Random();
 

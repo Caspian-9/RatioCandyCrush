@@ -16,6 +16,8 @@ public class GridManager : MonoBehaviour
 
     public GameObject GridContainer;
 
+    public GameObject EndPrompt;
+
     public GameObject SlotPrefab;
 
     //public int GridDimension;
@@ -32,7 +34,9 @@ public class GridManager : MonoBehaviour
     public GameObject[,] TileGrid;
     private bool[] isBlockHere;
 
-    private TreasureCalculator tCalculator = new TreasureCalculator(3);
+    private TreasureCalculator tCalculator;
+    //public int treasuresCollected;
+    //public int totalTreasures;
 
     //public int score = 0;
     public TextMeshProUGUI GemText;
@@ -56,18 +60,7 @@ public class GridManager : MonoBehaviour
     {
         Instance = this;
 
-        Values = new int[GridDimension * GridDimension][];
-        canvas = GetComponentInChildren<Canvas>();
-        //tCalculator = new TreasureCalculator(3);
-
-        RectTransform rt = GridContainer.transform.GetComponent<RectTransform>();
-        float edgelength = 0.8f * (2 * Camera.main.orthographicSize);
-        rt.sizeDelta = new Vector2(edgelength, edgelength);
-        rt.position = new Vector3(0, 0, 0);
-        // positionOffset = new Vector2( -(edgelength / 2), -(edgelength / 2)) * canvas.GetComponent<RectTransform>().localScale.x;
-        positionOffset = new Vector2(-(edgelength / 2), -(edgelength / 2));
-
-        stopwatch = stopwatchText.GetComponent<Stopwatch>();
+        
 
         NewGame();
     }
@@ -101,19 +94,32 @@ public class GridManager : MonoBehaviour
 
     public void NewGame()
     {
+        Values = new int[GridDimension * GridDimension][];
         SlotGrid = new GameObject[GridDimension, GridDimension];
         TileGrid = new GameObject[GridDimension, GridDimension];
-        //TreasureLocations = new List<Vector2Int>();
+
+        canvas = GetComponentInChildren<Canvas>();
+        tCalculator = new TreasureCalculator(3);
+        stopwatch = stopwatchText.GetComponent<Stopwatch>();
+        EndPrompt.SetActive(false);
+
+
+        RectTransform rt = GridContainer.transform.GetComponent<RectTransform>();
+        float edgelength = 0.8f * (2 * Camera.main.orthographicSize);
+        rt.sizeDelta = new Vector2(edgelength, edgelength);
+        rt.position = new Vector3(0, 0, 0);
+        // positionOffset = new Vector2( -(edgelength / 2), -(edgelength / 2)) * canvas.GetComponent<RectTransform>().localScale.x;
+        positionOffset = new Vector2(-(edgelength / 2), -(edgelength / 2));
+        
 
         isBlockHere = PossibleBlockPositions(3);
 
-        //ScoreText.text = "Score: 0";
-        GemText.text = "Gems: 0/" + tCalculator.getTotal().ToString();
+        GemText.text = "Gems: 0/" + tCalculator.totalTreasures.ToString();
 
         InitValues();
         InitGrid();
-        //NewTurn();
 
+        stopwatch.setTime(0f);
         stopwatch.StartStopwatch();
     }
 
@@ -233,30 +239,6 @@ public class GridManager : MonoBehaviour
     }
 
 
-    //int[] PossibleBlockPositions(int NumOfBlocks, int NumOfPies, int NumOfTreasures)
-    //{
-    //    int[] blockPositions = new int[GridDimension * GridDimension];
-
-    //    // blocks
-    //    for (int i = 0; i < NumOfBlocks; i++)
-    //    {
-    //        blockPositions[i] = 1;
-    //    }
-    //    // pies
-    //    for (int i = 0; i < NumOfPies; i++)
-    //    {
-    //        blockPositions[i + NumOfBlocks] = 2;
-    //    }
-    //    //treasures
-    //    for (int i = 0; i < NumOfTreasures; i++)
-    //    {
-    //        blockPositions[i + NumOfBlocks * 2] = 3;
-    //    }
-
-    //    System.Random rand = new System.Random();
-    //    blockPositions = blockPositions.OrderBy(x => rand.Next()).ToArray();
-    //    return blockPositions;
-    //}
 
     private void InitTileInGrid(TileTypes type, int column, int row, int[] fraction)
     {
@@ -272,7 +254,7 @@ public class GridManager : MonoBehaviour
         swapBehaviour.Init();
         swapBehaviour.setGridManager(this);
         swapBehaviour.GridIndices = new Vector2Int(column, row);
-        swapBehaviour.SetInGrid(true);
+        swapBehaviour.SetClickable(true);
 
         float v = FractionToFloat(fraction, RoundDigits);
         tile.SetFraction(fraction);
@@ -285,15 +267,27 @@ public class GridManager : MonoBehaviour
     }
 
 
+    // stuff to do at the end of a GAME
 
     private void EndGame()
     {
         stopwatch.StopStopwatch();
+        DisableGrid();
+        EndPrompt.SetActive(true);
+
         //score += CalculateTimeBonus(stopwatch.getTime());
         //ScoreText.text = "Score: " + score.ToString();
-        GemText.text = "Gems: " + tCalculator.getCollected().ToString() + "/" + tCalculator.getTotal().ToString();
+        //GemText.text = "Gems: " + treasuresCollected.ToString() + "/" + totalTreasures.ToString();
 
-        Debug.Log("level cleared");
+        //Debug.Log("level cleared");
+    }
+
+    private void DisableGrid()
+    {
+        foreach (GameObject tile in TileGrid)
+        {
+            tile.GetComponent<SwapBehaviour>().SetClickable(false);
+        }
     }
 
 
@@ -317,7 +311,7 @@ public class GridManager : MonoBehaviour
     public void AddTileToGrid(GameObject obj, Vector2Int indices)
     {
         SwapBehaviour swapBehaviour = obj.GetComponent<SwapBehaviour>();
-        swapBehaviour.SetInGrid(true);
+        swapBehaviour.SetClickable(true);
         swapBehaviour.GridIndices = indices;
         TileGrid[indices.x, indices.y] = obj;
     }
@@ -387,16 +381,19 @@ public class GridManager : MonoBehaviour
                 {
                     tile.GetComponent<SwapBehaviour>().Select();
 
-                    if (tile.GetType().Equals(TileTypes.TREASURE))
+                    if (tile.GetComponent<Tile>().GetType() == TileTypes.TREASURE)
                     {
                         // tCalculator.setCollected(tCalculator.getCollected() + 1);    // increment treasures collected
-                        tCalculator.incrementCollected();
-                        GemText.text = "Gems: " + tCalculator.getCollected().ToString() + "/" + tCalculator.getTotal().ToString();
+                        tCalculator.treasuresCollected += 1;
+                        GemText.text = "Gems: " + tCalculator.treasuresCollected.ToString() + "/" + tCalculator.totalTreasures.ToString();
+                        if (tCalculator.isAllCollected())
+                        {
+                            EndGame();
+                        }
                     }
                 }
 
                 Destroy(tile, 1f);
-                //tile = null;
             }
 
             Invoke("FillHoles", 1f);
