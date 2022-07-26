@@ -6,14 +6,11 @@ using UnityEngine.UI;
 
 public class PieDiagram : MonoBehaviour, Tile
 {
-    //private static PieDiagram selected;
-    //private SpriteRenderer Renderer;
-    //private SwapBehaviour swapBehaviour;
-    //public Vector2Int Position;
 
     public Image PieSector;
     private int[] fraction;   // [0] is numerator, [1] is denominator
     private float internalValue;
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,18 +28,6 @@ public class PieDiagram : MonoBehaviour, Tile
         return TileTypes.PIE;
     }
 
-    public void InitTile()
-    {
-        //Renderer = GetComponent<SpriteRenderer>();
-        //swapBehaviour = GetComponent<SwapBehaviour>();
-        //Debug.Log(swapBehaviour == null);
-    }
-
-    public void SetText()
-    {
-        // no text to set. don't do anything
-        return;
-    }
 
     // getters
     public int[] GetFraction()
@@ -66,6 +51,12 @@ public class PieDiagram : MonoBehaviour, Tile
     {
         internalValue = v;
         PieSector.fillAmount = v;
+    }
+
+    public void SetText()
+    {
+        // no text to set. don't do anything
+        return;
     }
 
 }

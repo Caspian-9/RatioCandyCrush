@@ -93,7 +93,7 @@ public class GridManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // make grid and tile sizes always scale with screen size
+        
     }
 
 
@@ -125,12 +125,11 @@ public class GridManager : MonoBehaviour
 
         // generate base fractions
         do {
-            //int n = rand.Next(1, 5);
-            //int d = rand.Next(1, 11);
-            int n = 1;
+            int n = rand.Next(1, 3);
             int d = rand.Next(1, 7);
+
             int[] fraction = new int[2] { n, d };
-            if (!baseVals.Contains(fraction))
+            if (!baseVals.Contains(fraction) && (FractionToFloat(fraction, RoundDigits) < 1f))
             {
                 baseVals.Add(fraction);
                 Multiples[fraction] = new List<int[]>();
@@ -142,13 +141,6 @@ public class GridManager : MonoBehaviour
         // generate the grid
         for (int i = 0; i < (int)Math.Pow(GridDimension, 2); i++)
         {
-
-            // this only applies to dr mario style incomplete grid
-            //if (isBlockHere[i] == 0)
-            //{
-            //    continue;
-            //}
-            
 
             List<int[]> possibleVals = new List<int[]>(baseVals);
 
@@ -277,7 +269,6 @@ public class GridManager : MonoBehaviour
         newTile.transform.position = GetXYfromColRow(column, row) + positionOffset;
         TileGrid[column, row] = newTile;
 
-        tile.InitTile();
         swapBehaviour.Init();
         swapBehaviour.setGridManager(this);
         swapBehaviour.GridIndices = new Vector2Int(column, row);
@@ -294,32 +285,6 @@ public class GridManager : MonoBehaviour
     }
 
 
-    // TURNS
-
-    //void NewTurn()
-    //{
-    //    List<int[]> keyList = new List<int[]>(Multiples.Keys.ToList());
-    //    int[] val = keyList[rand.Next(0, Multiples.Count)];
-    //    //GenerateDraggableBlock(TileTypes.BLOCK, val);
-    //}
-
-    public void EndTurn()
-    {
-        //score += CalculateScore(CheckMatches());
-        CheckMatches();
-        //ScoreText.text = "Score: " + score.ToString();
-        //GemText.text = "Gems: " + tCalculator.getCollected().ToString() + "/" + tCalculator.getTotal().ToString();
-
-        if (tCalculator.isAllCollected())
-        {
-            EndGame();
-        }
-        //else
-        //{
-        //    NewTurn();
-        //}
-
-    }
 
     private void EndGame()
     {
@@ -332,7 +297,22 @@ public class GridManager : MonoBehaviour
     }
 
 
+
     // stuff to do at the end of a TURN
+
+    public void EndTurn()
+    {
+        //score += CalculateScore(CheckMatches());
+        CheckMatches();
+        //ScoreText.text = "Score: " + score.ToString();
+        //GemText.text = "Gems: " + tCalculator.getCollected().ToString() + "/" + tCalculator.getTotal().ToString();
+
+        if (tCalculator.isAllCollected())
+        {
+            EndGame();
+        }
+    }
+
 
     public void AddTileToGrid(GameObject obj, Vector2Int indices)
     {
@@ -551,254 +531,6 @@ public class GridManager : MonoBehaviour
 
         return new Vector2(x, y);
     }
-
-
-
-
-
-
-
-
-
-
-
-    // slated for removal
-
-
-    //public void SwapBlocks(Vector2Int tile1Inds, Vector2Int tile2Inds)
-    //{
-    //    //Vector3 positionOffset = transform.position - new Vector3(GridDimension * Distance / 2.5f, GridDimension * Distance / 2.5f, 0);
-
-    //    GameObject tile1 = TileGrid[tile1Inds.x, tile1Inds.y];
-    //    GameObject tile2 = TileGrid[tile2Inds.x, tile2Inds.y];
-
-    //    //if (tile1.GetComponent<Treasure>() != null || tile2.GetComponent<Treasure>() != null)    // tile 1 is a treasure
-    //    //{
-    //    //    SwapTreasureLocations(tile1Position, tile2Position);
-    //    //}
-
-    //    Vector2 pos1 = tile1.transform.position;
-    //    Vector2 pos2 = tile2.transform.position;
-
-    //    TileGrid[tile1Inds.x, tile1Inds.y] = tile2;
-    //    tile2.transform.position = pos1;
-    //    tile2.transform.SetAsLastSibling();
-    //    tile2.GetComponent<SwapBehaviour>().GridIndices = tile1Inds;
-
-    //    TileGrid[tile2Inds.x, tile2Inds.y] = tile1;
-    //    tile1.transform.position = pos2;
-    //    tile1.transform.SetAsLastSibling();
-    //    tile1.GetComponent<SwapBehaviour>().GridIndices = tile2Inds;
-
-    //    //bool changesOccurs = CheckMatches();
-    //    //if (!changesOccurs)
-    //    //{
-    //    //    temp = block2;
-    //    //    Grid[block1Position.x, block1Position.y] = block1;
-    //    //    block1.transform.position = new Vector3(block1Position.x * (int)Distance, block1Position.y * (int)Distance, 0) + positionOffset;
-    //    //    block1.GetComponent<Block>().Position = block1Position;
-
-    //    //    Grid[block2Position.x, block2Position.y] = temp;
-    //    //    temp.transform.position = new Vector3(block2Position.x * (int)Distance, block2Position.y * (int)Distance, 0) + positionOffset;
-    //    //    temp.GetComponent<Block>().Position = block2Position;
-    //    //}
-
-    //    //score += CalculateScore(CheckMatches());
-    //    //ScoreText.text = "Score: " + score.ToString();
-
-    //    EndTurn();
-    //}
-
-    //private void SwapTreasureLocations(Vector2Int pos1, Vector2Int pos2)
-    //{
-    //    for (int i = 0; i < TreasureLocations.Count; i++)
-    //    {
-    //        if (TreasureLocations[i] == pos1)
-    //        {
-    //            TreasureLocations[i] = pos2;
-    //        }
-    //        else if (TreasureLocations[i] == pos2)
-    //        {
-    //            TreasureLocations[i] = pos1;
-    //        }
-    //    }
-    //}
-
-
-
-    //private bool CheckFullClear()
-    //{
-    //    for (int i = 0; i < GridDimension; i++)
-    //    {
-    //        for (int j = 0; j < GridDimension; j++)
-    //        {
-    //            if (TileGrid[i, j] == null)
-    //            {
-    //                continue;
-    //            }
-    //            if (TileGrid[i, j].activeSelf)
-    //            {
-    //                return false;
-    //            }
-    //        }
-    //    }
-    //    return true;
-    //}
-
-
-    //private void InitBlockInGrid(int column, int row, Vector3 positionOffset, int[] fraction)
-    //{
-    //    GameObject newBlock = Instantiate(BlockPrefab);
-    //    newBlock.transform.SetParent(canvas.transform);
-    //    newBlock.transform.position = new Vector3(column * Distance, row * Distance, 0) + positionOffset;
-    //    TileGrid[column, row] = newBlock;
-
-    //    Block block = newBlock.GetComponent<Block>();
-    //    DragDrop dragDrop = newBlock.GetComponent<DragDrop>();
-    //    SwapBehaviour swapBehaviour = newBlock.GetComponent<SwapBehaviour>();
-
-    //    block.InitBlock();
-    //    swapBehaviour.Init();
-    //    swapBehaviour.Position = new Vector2Int(column, row);
-    //    swapBehaviour.SetInGrid(true);
-
-    //    float v = FractionToFloat(fraction, RoundDigits);
-    //    block.SetFraction(fraction);
-    //    block.SetValue(v);
-
-    //    block.SetText();
-
-    //    dragDrop.Lock();
-    //}
-
-    //private void InitPieInGrid(int column, int row, Vector3 positionOffset, int[] fraction)
-    //{
-    //    GameObject newPie = Instantiate(PiePrefab);
-    //    newPie.transform.SetParent(canvas.transform);
-    //    newPie.transform.position = new Vector3(column * Distance, row * Distance, 0) + positionOffset;
-    //    TileGrid[column, row] = newPie;
-
-    //    PieDiagram pie = newPie.GetComponent<PieDiagram>();
-    //    DragDrop dragDrop = newPie.GetComponent<DragDrop>();
-    //    SwapBehaviour swapBehaviour = newPie.GetComponent<SwapBehaviour>();
-
-    //    pie.InitPie();
-    //    swapBehaviour.Init();
-    //    swapBehaviour.Position = new Vector2Int(column, row);
-    //    swapBehaviour.SetInGrid(true);
-
-    //    float v = FractionToFloat(fraction, RoundDigits);
-    //    pie.SetValue(v);
-
-    //    dragDrop.Lock();
-    //}
-
-    //private void InitTreasureInGrid(int column, int row, Vector3 positionOffset, int[] fraction)
-    //{
-    //    GameObject newTreasure = Instantiate(TreasurePrefab);
-    //    newTreasure.transform.SetParent(canvas.transform);
-    //    newTreasure.transform.position = new Vector3(column * Distance, row * Distance, 0) + positionOffset;
-    //    TileGrid[column, row] = newTreasure;
-
-    //    Treasure treasure = newTreasure.GetComponent<Treasure>();
-    //    //DragDrop dragDrop = newTreasure.GetComponent<DragDrop>();
-    //    SwapBehaviour swapBehaviour = newTreasure.GetComponent<SwapBehaviour>();
-
-    //    treasure.InitTreasure();
-    //    swapBehaviour.Init();
-    //    swapBehaviour.Position = new Vector2Int(column, row);
-    //    swapBehaviour.SetInGrid(true);
-
-    //    float v = FractionToFloat(fraction, RoundDigits);
-    //    treasure.SetFraction(fraction);
-    //    treasure.SetValue(v);
-
-    //    treasure.SetText();
-
-    //    //dragDrop.Lock();
-    //}
-
-
-    //void GenerateDraggableBlock(TileTypes type, int[] fraction)
-    //{
-
-    //    // GameObject newBlock = Instantiate(BlockPrefab);
-    //    GameObject newBlock = factory.InstantiateTile(type);
-
-    //    Block block = newBlock.GetComponent<Block>();
-    //    DragDrop dragDrop = newBlock.GetComponent<DragDrop>();
-    //    SwapBehaviour swapBehaviour = newBlock.GetComponent<SwapBehaviour>();
-
-    //    block.InitTile();
-    //    swapBehaviour.Init();
-
-    //    newBlock.transform.SetParent(canvas.transform);
-    //    newBlock.transform.position = new Vector3(-7, -3, 0);
-    //    swapBehaviour.SetInGrid(false);
-
-    //    float v = FractionToFloat(fraction, RoundDigits);
-    //    block.SetFraction(fraction);
-    //    block.SetValue(v);
-
-    //    block.SetText();
-
-    //    dragDrop.Unlock();
-    //}
-
-
-
-
-
-
-
-
-
-
-    // old code from CandyCrushTM era do not use pl0x
-
-
-
-    //public bool CheckMatchesOld()
-    //{
-    //    HashSet<GameObject> matchedTiles = new HashSet<GameObject>();
-    //    for (int row = 0; row < GridDimension; row++)
-    //    {
-    //        for (int column = 0; column < GridDimension; column++)
-    //        {
-    //            GameObject current = Grid[column, row];
-
-    //            List<GameObject> horizontalMatches = FindColumnMatchForTile(column, row, current);
-    //            if (horizontalMatches.Count >= 1)
-    //            {
-    //                matchedTiles.UnionWith(horizontalMatches);
-    //                matchedTiles.Add(current);
-    //            }
-
-    //            List<GameObject> verticalMatches = FindRowMatchForTile(column, row, current);
-    //            if (verticalMatches.Count >= 1)
-    //            {
-    //                matchedTiles.UnionWith(verticalMatches);
-    //                matchedTiles.Add(current);
-    //            }
-    //        }
-    //    }
-
-    //    foreach (GameObject obj in matchedTiles)
-    //    {
-    //        obj.SetActive(false);
-    //    }
-    //    return matchedTiles.Count > 0;
-    //}
-
-    //double GetInternalValueAt(int column, int row)
-    //{
-    //    if (column < 0 || column >= GridDimension
-    //         || row < 0 || row >= GridDimension)
-    //        return 0;
-    //    GameObject tile = Grid[column, row];
-    //    double value = tile.GetComponent<Tile>().internalValue;
-    //    return value;
-    //}
 
 
 }
