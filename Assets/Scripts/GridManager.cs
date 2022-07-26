@@ -30,12 +30,12 @@ public class GridManager : MonoBehaviour
 
     private GameObject[,] SlotGrid;
     public GameObject[,] TileGrid;
-    //private int[] isBlockHere;
+    private bool[] isBlockHere;
 
-    private TreasureCalculator treasureCalculator;
+    private TreasureCalculator tCalculator = new TreasureCalculator(3);
 
-    public int score = 0;
-    public TextMeshProUGUI ScoreText;
+    //public int score = 0;
+    public TextMeshProUGUI GemText;
 
     private Stopwatch stopwatch;
     public TextMeshProUGUI stopwatchText;
@@ -58,7 +58,7 @@ public class GridManager : MonoBehaviour
 
         Values = new int[GridDimension * GridDimension][];
         canvas = GetComponentInChildren<Canvas>();
-        treasureCalculator = new TreasureCalculator(3);
+        //tCalculator = new TreasureCalculator(3);
 
         RectTransform rt = GridContainer.transform.GetComponent<RectTransform>();
         float edgelength = 0.8f * (2 * Camera.main.orthographicSize);
@@ -105,9 +105,10 @@ public class GridManager : MonoBehaviour
         TileGrid = new GameObject[GridDimension, GridDimension];
         //TreasureLocations = new List<Vector2Int>();
 
-        //isBlockHere = PossibleBlockPositions(4, 3, 3);
+        isBlockHere = PossibleBlockPositions(3);
 
-        ScoreText.text = "Score: 0";
+        //ScoreText.text = "Score: 0";
+        GemText.text = "Gems: 0/" + tCalculator.getTotal().ToString();
 
         InitValues();
         InitGrid();
@@ -200,7 +201,17 @@ public class GridManager : MonoBehaviour
                 slot.GridIndices = new Vector2Int(column, row);
 
 
-                InitTileInGrid(getRandomType(), column, row, Values[row * GridDimension + column]);
+                // placeholder to test treasure collection
+                if (isBlockHere[row * GridDimension + column])
+                {
+                    InitTileInGrid(TileTypes.TREASURE, column, row, Values[row * GridDimension + column]);
+                } else
+                {
+                    InitTileInGrid(getRandomType(), column, row, Values[row * GridDimension + column]);
+                }
+
+                // InitTileInGrid(getRandomType(), column, row, Values[row * GridDimension + column]);
+
 
                 // newSlot.transform.position = new Vector3(column * Distance, row * Distance, 0);
                 newSlot.transform.position = GetXYfromColRow(column, row) + positionOffset;
@@ -209,6 +220,24 @@ public class GridManager : MonoBehaviour
             }
         }
 
+    }
+
+    // placeholder to test treasure collection
+    bool[] PossibleBlockPositions(int NumOfTreasures)
+    {
+        //tCalculator.setTotal(NumOfTreasures);
+
+        bool[] blockPositions = new bool[GridDimension * GridDimension];
+
+        // treasures
+        for (int i = 0; i < NumOfTreasures; i++)
+        {
+            blockPositions[i] = true;
+        }
+
+        System.Random rand = new System.Random();
+        blockPositions = blockPositions.OrderBy(x => rand.Next()).ToArray();
+        return blockPositions;
     }
 
 
@@ -241,7 +270,7 @@ public class GridManager : MonoBehaviour
     {
         GameObject newTile = factory.InstantiateTile(type);
         Tile tile = newTile.GetComponent<Tile>();
-        DragDrop dragDrop = newTile.GetComponent<DragDrop>();
+        //DragDrop dragDrop = newTile.GetComponent<DragDrop>();
         SwapBehaviour swapBehaviour = newTile.GetComponent<SwapBehaviour>();
 
         newTile.transform.SetParent(GridContainer.transform);
@@ -260,7 +289,7 @@ public class GridManager : MonoBehaviour
 
         tile.SetText();
 
-        dragDrop.Lock();
+        //dragDrop.Lock();
 
     }
 
@@ -276,22 +305,30 @@ public class GridManager : MonoBehaviour
 
     public void EndTurn()
     {
-        score += CalculateScore(CheckMatches());
-        ScoreText.text = "Score: " + score.ToString();
+        //score += CalculateScore(CheckMatches());
+        CheckMatches();
+        //ScoreText.text = "Score: " + score.ToString();
+        //GemText.text = "Gems: " + tCalculator.getCollected().ToString() + "/" + tCalculator.getTotal().ToString();
 
-        if (treasureCalculator.isAllCollected())    // end game
+        if (tCalculator.isAllCollected())
         {
-            stopwatch.StopStopwatch();
-            score += CalculateTimeBonus(stopwatch.getTime());
-            ScoreText.text = "Score: " + score.ToString();
-
-            Debug.Log("level cleared");
+            EndGame();
         }
         //else
         //{
         //    NewTurn();
         //}
 
+    }
+
+    private void EndGame()
+    {
+        stopwatch.StopStopwatch();
+        //score += CalculateTimeBonus(stopwatch.getTime());
+        //ScoreText.text = "Score: " + score.ToString();
+        GemText.text = "Gems: " + tCalculator.getCollected().ToString() + "/" + tCalculator.getTotal().ToString();
+
+        Debug.Log("level cleared");
     }
 
 
@@ -364,12 +401,22 @@ public class GridManager : MonoBehaviour
                 int col = matchedCoordinates[i][0];
                 int row = matchedCoordinates[i][1];
 
-                if (TileGrid[col, row] != null)
+                GameObject tile = TileGrid[col, row];
+
+                if (tile != null)
                 {
-                    TileGrid[col, row].GetComponent<SwapBehaviour>().Select();
+                    tile.GetComponent<SwapBehaviour>().Select();
+
+                    if (tile.GetType().Equals(TileTypes.TREASURE))
+                    {
+                        // tCalculator.setCollected(tCalculator.getCollected() + 1);    // increment treasures collected
+                        tCalculator.incrementCollected();
+                        GemText.text = "Gems: " + tCalculator.getCollected().ToString() + "/" + tCalculator.getTotal().ToString();
+                    }
                 }
-                Destroy(TileGrid[col, row], 1f);
-                TileGrid[col, row] = null;
+
+                Destroy(tile, 1f);
+                //tile = null;
             }
 
             Invoke("FillHoles", 1f);
@@ -449,7 +496,7 @@ public class GridManager : MonoBehaviour
 
                         TileGrid[column, filler] = next;
 
-                        Debug.Log(column.ToString() + "," + filler.ToString() + ": " + next);
+                        //Debug.Log(column.ToString() + "," + filler.ToString() + ": " + next);
 
                         next.transform.position = GetXYfromColRow(column, filler) + positionOffset;
                         next.GetComponent<SwapBehaviour>().GridIndices = new Vector2Int(column, filler);

@@ -155,9 +155,7 @@ MonoBehaviour:
   factory: {fileID: 509996551}
   GridContainer: {fileID: 1542558149}
   SlotPrefab: {fileID: 1247011692992048893, guid: 14262e368eb304937bb5917ff8526a99, type: 3}
-  TreasureLocations: []
-  score: 0
-  ScoreText: {fileID: 846143981}
+  GemText: {fileID: 846143981}
   stopwatchText: {fileID: 84728030}
 --- !u!4 &36554473
 Transform:

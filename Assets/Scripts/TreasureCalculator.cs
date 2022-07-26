@@ -4,11 +4,11 @@
 public class TreasureCalculator
 {
 
-    private float chance;
+    private float chance = 0f;
 
-    private int treasuresCollected;
-    private int treasuresPlaced;
-    private int totalTreasures;
+    private int treasuresCollected = 0;
+    private int treasuresPlaced = 0;
+    private int totalTreasures = 0;
 
     private Random random = new Random();
 
@@ -18,36 +18,69 @@ public class TreasureCalculator
 	}
 
 
+    // getters
+
     public float getChance()
     {
-        return this.chance;
+        return chance;
     }
+
+    public int getCollected()
+    {
+        return treasuresCollected;
+    }
+
+    public int getPlaced()
+    {
+        return treasuresPlaced;
+    }
+
+    public int getTotal()
+    {
+        return totalTreasures;
+    }
+
+
+    // setters
 
     public void setChance(float chance)
     {
         this.chance = chance;
     }
 
-
-    public bool isAllCollected()
+    public void setCollected(int collected)
     {
-        //return treasuresCollected == totalTreasures;
+        this.treasuresCollected = collected;
+    }
 
-        // placeholder to test if end game works
-        return true;
+    public void setPlaced(int placed)
+    {
+        this.treasuresPlaced = placed;
+    }
+
+    public void setTotal(int total)
+    {
+        this.totalTreasures = total;
     }
 
 
-    // change these to setters if clearing multiple gems at a time starts causing problems
+
     public void incrementCollected()
     {
         treasuresCollected += 1;
-
     }
 
-    public void incrementPlaced()
+
+
+
+
+
+    public bool isAllCollected()
     {
-        treasuresPlaced += 1;
+        return treasuresCollected == totalTreasures;
+
+        // placeholder to test if end game works
+        //return true;
     }
 
 
