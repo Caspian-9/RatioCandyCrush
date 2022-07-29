@@ -5,6 +5,12 @@ using UnityEngine;
 public class LevelButton : MonoBehaviour
 {
 
+
+
+
+    // PROOOOOOBABLY DEPRECATED?
+
+
     public LevelManager lvManager;
     private int level = 0;
 
@@ -36,7 +42,7 @@ public class LevelButton : MonoBehaviour
 
         // placeholder, since there's only 1 level right now
         Debug.Log("clicked");
-        lvManager.NewLevel();
+        lvManager.LoadLevel();
         
     }
 }

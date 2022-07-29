@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
 
-    public GameObject LevelButton;
-    public Camera mainCamera;
+    public GameObject LevelCube;
+    //public Camera mainCamera;
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +21,11 @@ public class LevelManager : MonoBehaviour
         
     }
 
-    public void NewLevel()
+    public void LoadLevel()
     {
-        // GridManager gm = new GridManager(4, 2f, 3);
-        //mainCamera.transform.position = new Vector3(0, 0, -10);
-        //gm.NewGame();
+
+        // 0 = 3d platformer scene; 1 = level scene
+
+        SceneManager.LoadScene(1);
     }
 }
