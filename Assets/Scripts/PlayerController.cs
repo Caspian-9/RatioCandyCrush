@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController controller;
 
+    public LevelManager levelManager;
+
     public float moveSpeed;
     public float gravity = Physics.gravity.y;
 
@@ -30,6 +32,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Level") {
 
             Debug.Log("bonk");
+            levelManager.LoadLevel();
         }
     }
 }

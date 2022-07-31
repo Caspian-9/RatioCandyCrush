@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GridManager : MonoBehaviour
@@ -288,6 +288,11 @@ public class GridManager : MonoBehaviour
         {
             tile.GetComponent<SwapBehaviour>().SetClickable(false);
         }
+    }
+
+    public void ReturnToLobby() {
+        // 0 = 3d platformer scene; 1 = level scene
+        SceneManager.LoadScene(0);
     }
 
 
