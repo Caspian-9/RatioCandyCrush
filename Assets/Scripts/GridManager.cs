@@ -112,7 +112,7 @@ public class GridManager : MonoBehaviour
         positionOffset = new Vector2(-(edgelength / 2), -(edgelength / 2));
         
 
-        isBlockHere = PossibleBlockPositions(3);
+        //isBlockHere = PossibleBlockPositions(3);
 
         GemText.text = "Gems: 0/" + tCalculator.totalTreasures.ToString();
 
@@ -199,16 +199,17 @@ public class GridManager : MonoBehaviour
                 slot.GridIndices = new Vector2Int(column, row);
 
 
-                // placeholder to test treasure collection
-                if (isBlockHere[row * GridDimension + column])
-                {
+                if (tCalculator.isTreasureHere()) {
                     InitTileInGrid(TileTypes.TREASURE, column, row, Values[row * GridDimension + column]);
-                } else
-                {
+                    tCalculator.incrementPlaced();
+                    //Debug.Log("***************");
+                    //Debug.Log(tCalculator.getCollected());
+                    //Debug.Log(tCalculator.getPlaced());
+                    //Debug.Log(tCalculator.getTotal());
+                }
+                else {
                     InitTileInGrid(getRandomType(), column, row, Values[row * GridDimension + column]);
                 }
-
-                // InitTileInGrid(getRandomType(), column, row, Values[row * GridDimension + column]);
 
 
                 // newSlot.transform.position = new Vector3(column * Distance, row * Distance, 0);
@@ -220,23 +221,24 @@ public class GridManager : MonoBehaviour
 
     }
 
+    // todo: KILL
     // placeholder to test treasure collection
-    bool[] PossibleBlockPositions(int NumOfTreasures)
-    {
-        //tCalculator.setTotal(NumOfTreasures);
+    //bool[] PossibleBlockPositions(int NumOfTreasures)
+    //{
+    //    //tCalculator.setTotal(NumOfTreasures);
 
-        bool[] blockPositions = new bool[GridDimension * GridDimension];
+    //    bool[] blockPositions = new bool[GridDimension * GridDimension];
 
-        // treasures
-        for (int i = 0; i < NumOfTreasures; i++)
-        {
-            blockPositions[i] = true;
-        }
+    //    // treasures
+    //    for (int i = 0; i < NumOfTreasures; i++)
+    //    {
+    //        blockPositions[i] = true;
+    //    }
 
-        System.Random rand = new System.Random();
-        blockPositions = blockPositions.OrderBy(x => rand.Next()).ToArray();
-        return blockPositions;
-    }
+    //    System.Random rand = new System.Random();
+    //    blockPositions = blockPositions.OrderBy(x => rand.Next()).ToArray();
+    //    return blockPositions;
+    //}
 
 
 
@@ -302,7 +304,11 @@ public class GridManager : MonoBehaviour
     public void EndTurn()
     {
         //score += CalculateScore(CheckMatches());
-        CheckMatches();
+        int matches = CheckMatches();
+        if (matches >= 3) {
+            tCalculator.calculateChance(matches);
+            //Debug.Log(tCalculator.getChance());
+        }
         //ScoreText.text = "Score: " + score.ToString();
         //GemText.text = "Gems: " + tCalculator.getCollected().ToString() + "/" + tCalculator.getTotal().ToString();
 
@@ -313,13 +319,13 @@ public class GridManager : MonoBehaviour
     }
 
 
-    public void AddTileToGrid(GameObject obj, Vector2Int indices)
-    {
-        SwapBehaviour swapBehaviour = obj.GetComponent<SwapBehaviour>();
-        swapBehaviour.SetClickable(true);
-        swapBehaviour.GridIndices = indices;
-        TileGrid[indices.x, indices.y] = obj;
-    }
+    //public void AddTileToGrid(GameObject obj, Vector2Int indices)
+    //{
+    //    SwapBehaviour swapBehaviour = obj.GetComponent<SwapBehaviour>();
+    //    swapBehaviour.SetClickable(true);
+    //    swapBehaviour.GridIndices = indices;
+    //    TileGrid[indices.x, indices.y] = obj;
+    //}
 
 
     public int CalculateScore(int numOfBlocks)
@@ -389,7 +395,7 @@ public class GridManager : MonoBehaviour
                     if (tile.GetComponent<Tile>().GetType() == TileTypes.TREASURE)
                     {
                         // tCalculator.setCollected(tCalculator.getCollected() + 1);    // increment treasures collected
-                        tCalculator.treasuresCollected += 1;
+                        tCalculator.incrementCollected();
                         GemText.text = "Gems: " + tCalculator.treasuresCollected.ToString() + "/" + tCalculator.totalTreasures.ToString();
                         if (tCalculator.isAllCollected())
                         {
@@ -484,7 +490,14 @@ public class GridManager : MonoBehaviour
                         next.GetComponent<SwapBehaviour>().GridIndices = new Vector2Int(column, filler);
                         
                     }
-                    InitTileInGrid(getRandomType(), column, GridDimension - 1, Values[rand.Next(0, Values.Length)]);
+
+                    if (tCalculator.isTreasureHere()) {
+                        InitTileInGrid(TileTypes.TREASURE, column, GridDimension - 1, Values[rand.Next(0, Values.Length)]);
+                        tCalculator.incrementPlaced();
+                    }
+                    else {
+                        InitTileInGrid(getRandomType(), column, GridDimension - 1, Values[rand.Next(0, Values.Length)]);
+                    }
                 }
             }
         }

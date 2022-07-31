@@ -22,6 +22,8 @@ public class TreasureCalculator
         this.treasuresCollected = 0;
         this.treasuresPlaced = 0;
         this.totalTreasures = totalTreasures;
+
+        calculateChance();
 	}
 
 
@@ -72,9 +74,15 @@ public class TreasureCalculator
 
 
 
-    public void incrementCollected()
+    public void incrementPlaced()
     {
+        treasuresPlaced += 1;
+        calculateChance();
+    }
+
+    public void incrementCollected() {
         treasuresCollected += 1;
+        calculateChance();
     }
 
 
@@ -91,24 +99,29 @@ public class TreasureCalculator
     }
 
 
-    public bool isGemHere()
+    public bool isTreasureHere()
     {
         int index = random.Next(0, 100);
         return chanceToArray()[index];
     }
 
-    private void calculateGemChance()
-    {
-        // todo finish this lmao
-        if (treasuresPlaced == 0)
-        {
-            chance = 0.9f;
 
-        } else if (treasuresPlaced >= 1)
-        {
-            chance = 0.7f;
+    public void calculateChance(int numOfMatches = 0)
+    {
+        if (treasuresPlaced == 0) {    // nothing is placed yet
+            chance = 0.3f;
         }
+
+        else if (treasuresCollected < treasuresPlaced) {    // gems present on the grid aren't collected
+            chance = 0f;
+        }
+
+        else if (treasuresCollected == treasuresPlaced) {   // all current gems on grid collected
+            chance += 0.05f + (0.002f * numOfMatches);
+        }
+
     }
+
 
     private bool[] chanceToArray()
     {
