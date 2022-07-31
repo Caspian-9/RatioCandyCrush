@@ -22,7 +22,7 @@ public class GridManager : MonoBehaviour
 
     //public int GridDimension;
     //public float Distance;
-    private int GridDimension = 4;
+    private int GridDimension = 6;
     private Vector2 positionOffset;
 
     public int[][] Values;
@@ -192,6 +192,7 @@ public class GridManager : MonoBehaviour
                 
                 GameObject newSlot = Instantiate(SlotPrefab);
                 newSlot.transform.SetParent(GridContainer.transform);
+                newSlot.transform.localScale *= 4f / GridDimension;
 
                 Slot slot = newSlot.GetComponent<Slot>();
                 slot.setGridManager(this);
@@ -221,26 +222,6 @@ public class GridManager : MonoBehaviour
 
     }
 
-    // todo: KILL
-    // placeholder to test treasure collection
-    //bool[] PossibleBlockPositions(int NumOfTreasures)
-    //{
-    //    //tCalculator.setTotal(NumOfTreasures);
-
-    //    bool[] blockPositions = new bool[GridDimension * GridDimension];
-
-    //    // treasures
-    //    for (int i = 0; i < NumOfTreasures; i++)
-    //    {
-    //        blockPositions[i] = true;
-    //    }
-
-    //    System.Random rand = new System.Random();
-    //    blockPositions = blockPositions.OrderBy(x => rand.Next()).ToArray();
-    //    return blockPositions;
-    //}
-
-
 
     private void InitTileInGrid(TileTypes type, int column, int row, int[] fraction)
     {
@@ -251,6 +232,8 @@ public class GridManager : MonoBehaviour
 
         newTile.transform.SetParent(GridContainer.transform);
         newTile.transform.position = GetXYfromColRow(column, row) + positionOffset;
+        newTile.transform.localScale *= 4f / GridDimension;
+
         TileGrid[column, row] = newTile;
 
         swapBehaviour.Init();
@@ -317,15 +300,6 @@ public class GridManager : MonoBehaviour
             EndGame();
         }
     }
-
-
-    //public void AddTileToGrid(GameObject obj, Vector2Int indices)
-    //{
-    //    SwapBehaviour swapBehaviour = obj.GetComponent<SwapBehaviour>();
-    //    swapBehaviour.SetClickable(true);
-    //    swapBehaviour.GridIndices = indices;
-    //    TileGrid[indices.x, indices.y] = obj;
-    //}
 
 
     public int CalculateScore(int numOfBlocks)
@@ -439,6 +413,7 @@ public class GridManager : MonoBehaviour
         return result;
     }
 
+
     List<int[]> FindRowMatchForTile(int col, int row, GameObject obj)
     {
         //List<GameObject> result = new List<GameObject>();
@@ -507,15 +482,16 @@ public class GridManager : MonoBehaviour
 
 
 
-    // general helpers
+    // helpers
 
-    GameObject GetGameObjectAt(int column, int row)
+    private GameObject GetGameObjectAt(int column, int row)
     {
         if (column < 0 || column >= GridDimension
              || row < 0 || row >= GridDimension)
             return null;
         return TileGrid[column, row];
     }
+
 
     public float FractionToFloat(int[] fraction, int roundDigits)
     {
@@ -524,13 +500,15 @@ public class GridManager : MonoBehaviour
         return (float)Math.Round((double)n / d, roundDigits);   // round to this many decimal places
     }
 
+
     private TileTypes getRandomType()
     {
-        // HAS NO TREASURE GENERATION BECAUSE TREASURE IS GENERATED A DIFFERENT WAY
+        // DOES NOT GENERATE TREASURES BECAUSE TREASURE IS GENERATED A DIFFERENT WAY
         int enumCountNoTreasure = Enum.GetNames(typeof(TileTypes)).Length - 1;
         TileTypes type = (TileTypes)rand.Next(0, enumCountNoTreasure);
         return type;
     }
+
 
     private Vector2 GetXYfromColRow(int column, int row)
     {
@@ -546,6 +524,49 @@ public class GridManager : MonoBehaviour
 
         return new Vector2(x, y);
     }
+
+
+
+
+
+
+
+
+
+
+
+    // old stuff no longer used
+
+
+
+    //public void AddTileToGrid(GameObject obj, Vector2Int indices)
+    //{
+    //    SwapBehaviour swapBehaviour = obj.GetComponent<SwapBehaviour>();
+    //    swapBehaviour.SetClickable(true);
+    //    swapBehaviour.GridIndices = indices;
+    //    TileGrid[indices.x, indices.y] = obj;
+    //}
+
+
+
+    // placeholder to test treasure collection
+    //bool[] PossibleBlockPositions(int NumOfTreasures)
+    //{
+    //    //tCalculator.setTotal(NumOfTreasures);
+
+    //    bool[] blockPositions = new bool[GridDimension * GridDimension];
+
+    //    // treasures
+    //    for (int i = 0; i < NumOfTreasures; i++)
+    //    {
+    //        blockPositions[i] = true;
+    //    }
+
+    //    System.Random rand = new System.Random();
+    //    blockPositions = blockPositions.OrderBy(x => rand.Next()).ToArray();
+    //    return blockPositions;
+    //}
+
 
 
 }
