@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Treasure : MonoBehaviour, Tile
+public class Treasure : MonoBehaviour, Tile, Collectible
 {
     private int[] fraction;
     private float internalValue;
@@ -26,9 +26,9 @@ public class Treasure : MonoBehaviour, Tile
 
     // getters
 
-    public new TileTypes GetType()
+    public new CollectibleTypes GetType()
     {
-        return TileTypes.TREASURE;
+        return CollectibleTypes.GEM;
     }
 
     public int[] GetFraction()

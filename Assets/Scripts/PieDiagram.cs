@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PieDiagram : MonoBehaviour, Tile
+public class PieDiagram : MonoBehaviour, Tile, RegularTile
 {
 
     public Image PieSector;

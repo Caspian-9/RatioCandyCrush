@@ -1,10 +1,8 @@
 public interface Tile
 {
-
+    // tile that has a value
 
     // getters
-
-    public TileTypes GetType();
 
     public int[] GetFraction();
 

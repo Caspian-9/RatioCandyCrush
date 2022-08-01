@@ -3,7 +3,6 @@
 public enum TileTypes {
 
     BLOCK,
-    PIE,
-    TREASURE
+    PIE
 }
 

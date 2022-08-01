@@ -201,7 +201,7 @@ public class GridManager : MonoBehaviour
 
 
                 if (tCalculator.isTreasureHere()) {
-                    InitTileInGrid(TileTypes.TREASURE, column, row, Values[row * GridDimension + column]);
+                    InitCollectibleInGrid(CollectibleTypes.GEM, column, row, Values[row * GridDimension + column]);
                     tCalculator.incrementPlaced();
                     //Debug.Log("***************");
                     //Debug.Log(tCalculator.getCollected());
@@ -249,6 +249,30 @@ public class GridManager : MonoBehaviour
 
         //dragDrop.Lock();
 
+    }
+
+    private void InitCollectibleInGrid(CollectibleTypes type, int column, int row, int[] fraction) {
+
+        GameObject newTile = factory.InstantiateCollectible(type);
+        Tile tile = newTile.GetComponent<Tile>();
+        SwapBehaviour swapBehaviour = newTile.GetComponent<SwapBehaviour>();
+
+        newTile.transform.SetParent(GridContainer.transform);
+        newTile.transform.position = GetXYfromColRow(column, row) + positionOffset;
+        newTile.transform.localScale *= 4f / GridDimension;
+
+        TileGrid[column, row] = newTile;
+
+        swapBehaviour.Init();
+        swapBehaviour.setGridManager(this);
+        swapBehaviour.GridIndices = new Vector2Int(column, row);
+        swapBehaviour.SetClickable(true);
+
+        float v = FractionToFloat(fraction, RoundDigits);
+        tile.SetFraction(fraction);
+        tile.SetValue(v);
+
+        tile.SetText();
     }
 
 
@@ -366,16 +390,18 @@ public class GridManager : MonoBehaviour
                 {
                     tile.GetComponent<SwapBehaviour>().Select();
 
-                    if (tile.GetComponent<Tile>().GetType() == TileTypes.TREASURE)
-                    {
-                        // tCalculator.setCollected(tCalculator.getCollected() + 1);    // increment treasures collected
+                    //if (tile.GetComponent<Collectible>() != null  && tile.GetComponent<Collectible>().GetType() == CollectibleTypes.GEM) {
+                    if (tile.GetComponent<Collectible>() != null) {
+
                         tCalculator.incrementCollected();
                         GemText.text = "Gems: " + tCalculator.treasuresCollected.ToString() + "/" + tCalculator.totalTreasures.ToString();
-                        if (tCalculator.isAllCollected())
-                        {
+
+                        if (tCalculator.isAllCollected()) {
                             EndGame();
                         }
+
                     }
+                    
                 }
 
                 Destroy(tile, 1f);
@@ -467,7 +493,7 @@ public class GridManager : MonoBehaviour
                     }
 
                     if (tCalculator.isTreasureHere()) {
-                        InitTileInGrid(TileTypes.TREASURE, column, GridDimension - 1, Values[rand.Next(0, Values.Length)]);
+                        InitCollectibleInGrid(CollectibleTypes.GEM, column, GridDimension - 1, Values[rand.Next(0, Values.Length)]);
                         tCalculator.incrementPlaced();
                     }
                     else {
@@ -503,8 +529,7 @@ public class GridManager : MonoBehaviour
 
     private TileTypes getRandomType()
     {
-        // DOES NOT GENERATE TREASURES BECAUSE TREASURE IS GENERATED A DIFFERENT WAY
-        int enumCountNoTreasure = Enum.GetNames(typeof(TileTypes)).Length - 1;
+        int enumCountNoTreasure = Enum.GetNames(typeof(TileTypes)).Length;
         TileTypes type = (TileTypes)rand.Next(0, enumCountNoTreasure);
         return type;
     }

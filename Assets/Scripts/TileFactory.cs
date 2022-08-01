@@ -18,12 +18,20 @@ public class TileFactory : MonoBehaviour
             case TileTypes.PIE:
                 return Instantiate(PiePrefab);
 
-            case TileTypes.TREASURE:
-                return Instantiate(TreasurePrefab);
-
             default:
                 // block by default
                 return Instantiate(BlockPrefab);
+        }
+    }
+
+    public GameObject InstantiateCollectible(CollectibleTypes type) {
+
+        switch (type) {
+            case CollectibleTypes.GEM:
+                return Instantiate(TreasurePrefab);
+
+            default:
+                return Instantiate(TreasurePrefab);
         }
     }
 }

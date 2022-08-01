@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Block : MonoBehaviour, Tile
+public class Block : MonoBehaviour, Tile, RegularTile
 {
 
     public TextMeshProUGUI TextTop;
