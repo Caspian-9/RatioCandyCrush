@@ -16,6 +16,8 @@ public class GridManager : MonoBehaviour
 
     public GameObject GridContainer;
 
+    public Inventory inventory;
+
     public GameObject EndPrompt;
 
     public GameObject SlotPrefab;
@@ -32,7 +34,7 @@ public class GridManager : MonoBehaviour
 
     private GameObject[,] SlotGrid;
     public GameObject[,] TileGrid;
-    private bool[] isBlockHere;
+    //private bool[] isBlockHere;
 
     private TreasureCalculator tCalculator;
     //public int treasuresCollected;
@@ -99,7 +101,9 @@ public class GridManager : MonoBehaviour
         TileGrid = new GameObject[GridDimension, GridDimension];
 
         canvas = GetComponentInChildren<Canvas>();
-        tCalculator = new TreasureCalculator(3);
+
+        // todo: make it maybe not gem when more types start existing
+        tCalculator = new TreasureCalculator(Items.ItemsToCollect[CollectibleTypes.GEM]);
         stopwatch = stopwatchText.GetComponent<Stopwatch>();
         EndPrompt.SetActive(false);
 
@@ -394,6 +398,7 @@ public class GridManager : MonoBehaviour
                     if (tile.GetComponent<Collectible>() != null) {
 
                         tCalculator.incrementCollected();
+                        inventory.AddItem(tile.GetComponent<Collectible>().GetType());
                         GemText.text = "Gems: " + tCalculator.treasuresCollected.ToString() + "/" + tCalculator.totalTreasures.ToString();
 
                         if (tCalculator.isAllCollected()) {

@@ -2,25 +2,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
-public class Manager : MonoBehaviour
-{
+public class Manager : MonoBehaviour {
+
+    public Inventory inventory;
 
     public GameObject LevelCube;
 
     public GameObject InfoPrompt;
-    //public Camera mainCamera;
+    public GameObject CounterPrefab;
+
+    //public Dictionary<CollectibleTypes, int> itemsToCollect = new Dictionary<CollectibleTypes, int>();
+
+    //private void Awake()
+    //{
+    //    DontDestroyOnLoad(gameObject);
+    //}
 
     // Start is called before the first frame update
     void Start()
     {
-        //mainCamera.transform.position = new Vector3(0, 15, -10);
+        //LoadDictionary();
+
         InfoPrompt.SetActive(true);
+
+        inventory.UpdateInventory();
+        ShowItemsList();
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+
+    //public void LoadDictionary() {
+    //    itemsToCollect.Add(CollectibleTypes.GEM, 10);
+    //}
+
+
+    public void ShowItemsList() {
+
+        foreach (CollectibleTypes type in Items.ItemsToCollect.Keys)
+        {
+            TextMeshProUGUI t = CounterPrefab.GetComponentInChildren<TextMeshProUGUI>();
+            t.text = Items.ItemsToCollect[type].ToString();
+        }
         
     }
 
