@@ -8,6 +8,8 @@ public class Manager : MonoBehaviour {
 
     public Inventory inventory;
 
+    public CutscenePlayer cutscene;
+
     public GameObject LevelCube;
 
     public GameObject CounterPrefab;
@@ -26,6 +28,7 @@ public class Manager : MonoBehaviour {
 
         inventory.UpdateInventory();
         ShowItemsList();
+        CheckCompletion();
     }
 
     // Update is called once per frame
@@ -56,6 +59,14 @@ public class Manager : MonoBehaviour {
         // 0 = 3d platformer scene; 1 = level scene
 
         SceneManager.LoadScene(1);
+    }
+
+    public void CheckCompletion()
+    {
+        if (Items.isComplete())
+        {
+            cutscene.StartTimeline();
+        }
     }
 
 }

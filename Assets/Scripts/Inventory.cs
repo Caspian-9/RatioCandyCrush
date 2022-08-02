@@ -15,8 +15,6 @@ public class Inventory : MonoBehaviour
 
 	public Sprite[] bagSprites;
 
-	private bool isShaking = false;
-
 	// Use this for initialization
 	void Start()
 	{
@@ -26,10 +24,6 @@ public class Inventory : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		//if (isShaking)
-		//{
-		//	bagIcon.transform.Rotate(0, 0, (float)(-2 * Mathf.Sin(2 * Mathf.PI * Time.fixedTime)), Space.World);
-		//}
 
 	}
 
@@ -55,7 +49,6 @@ public class Inventory : MonoBehaviour
 			{
 				x.GetComponentInChildren<TextMeshProUGUI>().text = Items.Inventory[type].ToString();
 			}
-
 		}
 
 		// shake the bag and the gem for VISUAL EFFECTS AND UX MMMMMMMM MYES
@@ -76,7 +69,7 @@ public class Inventory : MonoBehaviour
     {
 		for (float t = 0; t <= 1; t += Time.deltaTime)
 		{
-			obj.transform.Rotate(0, 0, (float)(0.5f * Mathf.Sin(4 * Mathf.PI * t)), Space.World);
+			obj.transform.Rotate(0, 0, (float)(0.4f * Mathf.Sin(4 * Mathf.PI * t)), Space.World);
 			yield return null;
 		}
 
