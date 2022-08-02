@@ -17,5 +17,17 @@ public static class Items
             { CollectibleTypes.GEM, 0 }
 
         };
+
+    public static bool isComplete()
+    {
+        foreach (CollectibleTypes type in ItemsToCollect.Keys)
+        {
+            if (!Inventory.ContainsKey(type) || Inventory[type] != ItemsToCollect[type])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 }
 

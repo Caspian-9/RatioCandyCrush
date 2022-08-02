@@ -62,8 +62,7 @@ public class SwapBehaviour : MonoBehaviour
 
         if (selected != null)
         {
-            if (selected == this)
-                return;
+                
             selected.Unselect();
             if (Vector2.Distance(selected.GridIndices, GridIndices) <= 1)
             {

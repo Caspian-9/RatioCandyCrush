@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using System;
 
 public class Inventory : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class Inventory : MonoBehaviour
 
 	public Sprite[] bagSprites;
 
+	private bool isShaking = false;
+
 	// Use this for initialization
 	void Start()
 	{
@@ -23,7 +26,11 @@ public class Inventory : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-			
+		//if (isShaking)
+		//{
+		//	bagIcon.transform.Rotate(0, 0, (float)(-2 * Mathf.Sin(2 * Mathf.PI * Time.fixedTime)), Space.World);
+		//}
+
 	}
 
 	public void UpdateInventory()
@@ -51,14 +58,29 @@ public class Inventory : MonoBehaviour
 
 		}
 
+		// shake the bag and the gem for VISUAL EFFECTS AND UX MMMMMMMM MYES
+		StartCoroutine(SpinShake(bagIcon));
 	}
 
 
 	public void ToggleBag()
 	{
 		invBG.SetActive(!invBG.activeSelf);
-		int spritesIndex = System.Convert.ToInt32(invBG.activeSelf);
+		int spritesIndex = Convert.ToInt32(invBG.activeSelf);
 		bagIcon.GetComponent<Image>().sprite = bagSprites[spritesIndex];
+	}
+
+
+    // shake obj coroutine
+    IEnumerator SpinShake(GameObject obj)
+    {
+		for (float t = 0; t <= 1; t += Time.deltaTime)
+		{
+			obj.transform.Rotate(0, 0, (float)(0.5f * Mathf.Sin(4 * Mathf.PI * t)), Space.World);
+			yield return null;
+		}
+
+		yield break;
 	}
 }
 

@@ -10,7 +10,6 @@ public class Manager : MonoBehaviour {
 
     public GameObject LevelCube;
 
-    public GameObject InfoPrompt;
     public GameObject CounterPrefab;
 
     //public Dictionary<CollectibleTypes, int> itemsToCollect = new Dictionary<CollectibleTypes, int>();
@@ -24,8 +23,6 @@ public class Manager : MonoBehaviour {
     void Start()
     {
         //LoadDictionary();
-
-        InfoPrompt.SetActive(true);
 
         inventory.UpdateInventory();
         ShowItemsList();
@@ -61,8 +58,4 @@ public class Manager : MonoBehaviour {
         SceneManager.LoadScene(1);
     }
 
-    public void ToggleInfoPrompt() {
-
-        InfoPrompt.SetActive(!InfoPrompt.activeSelf);
-    }
 }

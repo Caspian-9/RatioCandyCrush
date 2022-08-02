@@ -18,6 +18,7 @@ public class GridManager : MonoBehaviour
 
     public Inventory inventory;
 
+    public InfoPrompt infoPrompt;
     public GameObject EndPrompt;
 
     public GameObject SlotPrefab;
@@ -37,8 +38,7 @@ public class GridManager : MonoBehaviour
     //private bool[] isBlockHere;
 
     private TreasureCalculator tCalculator;
-    //public int treasuresCollected;
-    //public int totalTreasures;
+    public CollectibleTypes treasureType = CollectibleTypes.GEM;
 
     //public int score = 0;
     public TextMeshProUGUI GemText;
@@ -96,6 +96,8 @@ public class GridManager : MonoBehaviour
 
     public void NewGame()
     {
+        infoPrompt.iPrompt.SetActive(false);
+
         Values = new int[GridDimension * GridDimension][];
         SlotGrid = new GameObject[GridDimension, GridDimension];
         TileGrid = new GameObject[GridDimension, GridDimension];
@@ -205,7 +207,7 @@ public class GridManager : MonoBehaviour
 
 
                 if (tCalculator.isTreasureHere()) {
-                    InitCollectibleInGrid(CollectibleTypes.GEM, column, row, Values[row * GridDimension + column]);
+                    InitCollectibleInGrid(treasureType, column, row, Values[row * GridDimension + column]);
                     tCalculator.incrementPlaced();
                     //Debug.Log("***************");
                     //Debug.Log(tCalculator.getCollected());
@@ -498,7 +500,7 @@ public class GridManager : MonoBehaviour
                     }
 
                     if (tCalculator.isTreasureHere()) {
-                        InitCollectibleInGrid(CollectibleTypes.GEM, column, GridDimension - 1, Values[rand.Next(0, Values.Length)]);
+                        InitCollectibleInGrid(treasureType, column, GridDimension - 1, Values[rand.Next(0, Values.Length)]);
                         tCalculator.incrementPlaced();
                     }
                     else {
