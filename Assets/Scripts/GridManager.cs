@@ -10,7 +10,7 @@ public class GridManager : MonoBehaviour
 {
     //public List<Sprite> Sprites = new List<Sprite>();
 
-    private Canvas canvas;
+    //private Canvas canvas;
 
     public TileFactory factory;
 
@@ -43,8 +43,8 @@ public class GridManager : MonoBehaviour
     //public int score = 0;
     public TextMeshProUGUI GemText;
 
-    private Stopwatch stopwatch;
-    public TextMeshProUGUI stopwatchText;
+    //private Stopwatch stopwatch;
+    //public TextMeshProUGUI stopwatchText;
 
     private int RoundDigits = 4;
 
@@ -102,11 +102,10 @@ public class GridManager : MonoBehaviour
         SlotGrid = new GameObject[GridDimension, GridDimension];
         TileGrid = new GameObject[GridDimension, GridDimension];
 
-        canvas = GetComponentInChildren<Canvas>();
+        //canvas = GetComponentInChildren<Canvas>();
 
-        // todo: make it maybe not gem when more types start existing
         tCalculator = new TreasureCalculator(Items.ItemsToCollect[CollectibleTypes.GEM]);
-        stopwatch = stopwatchText.GetComponent<Stopwatch>();
+        //stopwatch = stopwatchText.GetComponent<Stopwatch>();
         EndPrompt.SetActive(false);
 
 
@@ -125,8 +124,8 @@ public class GridManager : MonoBehaviour
         InitValues();
         InitGrid();
 
-        stopwatch.setTime(0f);
-        stopwatch.StartStopwatch();
+        //stopwatch.setTime(0f);
+        //stopwatch.StartStopwatch();
     }
 
 
@@ -286,7 +285,7 @@ public class GridManager : MonoBehaviour
 
     private void EndGame()
     {
-        stopwatch.StopStopwatch();
+        //stopwatch.StopStopwatch();
         DisableGrid();
         EndPrompt.SetActive(true);
 
