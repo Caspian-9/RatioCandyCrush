@@ -67,7 +67,14 @@ public class SwapBehaviour : MonoBehaviour
             if (Vector2.Distance(selected.GridIndices, GridIndices) <= 1)
             {
                 SwapBlocks(GridIndices, selected.GridIndices);
-                manager.EndTurn();
+                if (manager.CheckMatches().Count < 3)
+                {
+                    SwapBlocks(selected.GridIndices, GridIndices);
+                }
+                else
+                {
+                    manager.EndTurn();
+                }
                 selected = null;
             }
             else

@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Level
+  - Level0
+  - Level1
+  - Level2
+  - Gem
   layers:
   - Default
   - TransparentFX

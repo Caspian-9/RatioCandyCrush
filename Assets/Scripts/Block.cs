@@ -10,7 +10,7 @@ public class Block : MonoBehaviour, Tile, RegularTile
 
     public TextMeshProUGUI TextTop;
     public TextMeshProUGUI TextBottom;
-    private int[] fraction;   // [0] is numerator, [1] is denominator
+    private Vector2Int fraction;   // x is numerator, y is denominator
     private float internalValue;
 
 
@@ -28,7 +28,7 @@ public class Block : MonoBehaviour, Tile, RegularTile
         return TileTypes.BLOCK;
     }
 
-    public int[] GetFraction()
+    public Vector2Int GetFraction()
     {
         return fraction;
     }
@@ -40,7 +40,7 @@ public class Block : MonoBehaviour, Tile, RegularTile
 
 
     // setters
-    public void SetFraction(int[] f)
+    public void SetFraction(Vector2Int f)
     {
         fraction = f;
     }
@@ -52,8 +52,8 @@ public class Block : MonoBehaviour, Tile, RegularTile
 
     public void SetText()
     {
-        TextTop.text = fraction[0].ToString();
-        TextBottom.text = fraction[1].ToString();
+        TextTop.text = fraction.x.ToString();
+        TextBottom.text = fraction.y.ToString();
     }
 
 }

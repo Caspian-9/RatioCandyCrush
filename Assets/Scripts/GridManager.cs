@@ -8,9 +8,8 @@ using TMPro;
 
 public class GridManager : MonoBehaviour
 {
-    //public List<Sprite> Sprites = new List<Sprite>();
 
-    //private Canvas canvas;
+    private LevelData data;
 
     public TileFactory factory;
 
@@ -23,35 +22,25 @@ public class GridManager : MonoBehaviour
 
     public GameObject SlotPrefab;
 
-    //public int GridDimension;
-    //public float Distance;
-    private int GridDimension = 6;
+    private int GridDimension;
     private Vector2 positionOffset;
 
-    public int[][] Values;
-
-    // todo: PROBABLY DEPRECATED
-    private Dictionary<int[], List<int[]>> Multiples = new Dictionary<int[], List<int[]>>();
+    public List<Vector2Int> Values;
 
     private GameObject[,] SlotGrid;
     public GameObject[,] TileGrid;
-    //private bool[] isBlockHere;
 
     private TreasureCalculator tCalculator;
-    public CollectibleTypes treasureType = CollectibleTypes.GEM;
-
-    //public int score = 0;
+    public CollectibleTypes treasureType;
+    
     public TextMeshProUGUI GemText;
-
-    //private Stopwatch stopwatch;
-    //public TextMeshProUGUI stopwatchText;
 
     private int RoundDigits = 4;
 
     private System.Random rand = new System.Random();
 
 
-    // todo: REMOVE SINGLETON PATTERN
+
     public static GridManager Instance
     {
         get;
@@ -61,8 +50,16 @@ public class GridManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
+        data = AllLevelsData.Data[AllLevelsData.level];
 
-        
+        //Debug.Log(AllLevelsData.level);
+        //Debug.Log(data);
+        //Debug.Log(data.Dimension);
+        //Debug.Log(AllLevelsData.tutorialGrid);
+        //Debug.Log(data.CustomGrid);
+
+        GridDimension = data.Dimension;
+        //Values = data.CustomGrid;
 
         NewGame();
     }
@@ -98,13 +95,13 @@ public class GridManager : MonoBehaviour
     {
         infoPrompt.iPrompt.SetActive(false);
 
-        Values = new int[GridDimension * GridDimension][];
         SlotGrid = new GameObject[GridDimension, GridDimension];
         TileGrid = new GameObject[GridDimension, GridDimension];
 
         //canvas = GetComponentInChildren<Canvas>();
 
-        tCalculator = new TreasureCalculator(Items.ItemsToCollect[CollectibleTypes.GEM]);
+        //tCalculator = new TreasureCalculator(Items.ItemsToCollect[CollectibleTypes.GEM]);
+        tCalculator = new TreasureCalculator(data.NumCollectible);
         //stopwatch = stopwatchText.GetComponent<Stopwatch>();
         EndPrompt.SetActive(false);
 
@@ -121,7 +118,28 @@ public class GridManager : MonoBehaviour
 
         GemText.text = "Gems: 0/" + tCalculator.totalTreasures.ToString();
 
-        InitValues();
+        //Debug.Log(AllLevelsData.level);
+        //Debug.Log(data);
+        //Debug.Log(data.CustomGrid);
+        //if (data.CustomGrid.Count == 0)
+        //{
+        //    InitGridValues();
+        //}
+
+        if (AllLevelsData.level == 1)
+        {
+            InitGridValues(AllLevelsData.lv1Base);
+        }
+        if (AllLevelsData.level == 2)
+        {
+            InitGridValues(AllLevelsData.lv2Base);
+        }
+
+        if (AllLevelsData.level == 0)
+        {
+            Values = AllLevelsData.tutorialGrid;
+        }
+
         InitGrid();
 
         //stopwatch.setTime(0f);
@@ -129,34 +147,18 @@ public class GridManager : MonoBehaviour
     }
 
 
-    void InitValues()
+    void InitGridValues(List<Vector2Int> baseFractions)
     {
-
-        List<int[]> baseVals = new List<int[]>();
-
-        // generate base fractions
-        do {
-            int n = rand.Next(1, 3);
-            int d = rand.Next(1, 7);
-
-            int[] fraction = new int[2] { n, d };
-            if (!baseVals.Contains(fraction) && (FractionToFloat(fraction, RoundDigits) < 1f))
-            {
-                baseVals.Add(fraction);
-                Multiples[fraction] = new List<int[]>();
-            }
-                
-
-        } while (baseVals.Count < GridDimension);
 
         // generate the grid
         for (int i = 0; i < (int)Math.Pow(GridDimension, 2); i++)
         {
 
-            List<int[]> possibleVals = new List<int[]>(baseVals);
+            //List<Vector2Int> possibleVals = new List<Vector2Int>(data.BaseFractions);
+            List<Vector2Int> possibleVals = new List<Vector2Int>(baseFractions);
 
             // remove unwanted values from possibleVals
-            List<int[]> toRemove = new List<int[]>();
+            List<Vector2Int> toRemove = new List<Vector2Int>();
 
             float left = 0f;
             float down = 0f;
@@ -166,7 +168,7 @@ public class GridManager : MonoBehaviour
             if (i - GridDimension >= 0 && Values[i - GridDimension] != null)
                 down = FractionToFloat(Values[i - GridDimension], RoundDigits);
 
-            foreach (int[] val in possibleVals)
+            foreach (Vector2Int val in possibleVals)
             {
                 if (FractionToFloat(val, RoundDigits) == left || FractionToFloat(val, RoundDigits) == down)
                     toRemove.Add(val);
@@ -175,11 +177,11 @@ public class GridManager : MonoBehaviour
 
             // add fraction
             int m = rand.Next(1, 4);    // multiplier
-            int[] selectedFraction = possibleVals[rand.Next(0, possibleVals.Count)];
-            int[] multipliedFraction = new int[2] { selectedFraction[0] * m, selectedFraction[1] * m };
+            Vector2Int selectedFraction = possibleVals[rand.Next(0, possibleVals.Count)];
+            Vector2Int multipliedFraction = new Vector2Int(selectedFraction[0] * m, selectedFraction[1] * m);
             Values[i] = multipliedFraction;
 
-            Multiples[selectedFraction].Add(multipliedFraction);
+            //Multiples[selectedFraction].Add(multipliedFraction);
 
         }
 
@@ -198,14 +200,24 @@ public class GridManager : MonoBehaviour
                 GameObject newSlot = Instantiate(SlotPrefab);
                 newSlot.transform.SetParent(GridContainer.transform);
                 newSlot.transform.localScale *= 4f / GridDimension;
+                newSlot.transform.position = GetXYfromColRow(column, row) + positionOffset;
 
                 Slot slot = newSlot.GetComponent<Slot>();
                 slot.setGridManager(this);
 
                 slot.GridIndices = new Vector2Int(column, row);
+                SlotGrid[column, row] = newSlot;
 
 
-                if (tCalculator.isTreasureHere()) {
+                if (Values[row * GridDimension + column] == Vector2Int.zero)
+                {
+                    TileGrid[column, row] = null;
+                    continue;
+                }
+
+
+                if (tCalculator.isTreasureHere())
+                {
                     InitCollectibleInGrid(treasureType, column, row, Values[row * GridDimension + column]);
                     tCalculator.incrementPlaced();
                     //Debug.Log("***************");
@@ -213,22 +225,16 @@ public class GridManager : MonoBehaviour
                     //Debug.Log(tCalculator.getPlaced());
                     //Debug.Log(tCalculator.getTotal());
                 }
-                else {
+                else
+                {
                     InitTileInGrid(getRandomType(), column, row, Values[row * GridDimension + column]);
                 }
-
-
-                // newSlot.transform.position = new Vector3(column * Distance, row * Distance, 0);
-                newSlot.transform.position = GetXYfromColRow(column, row) + positionOffset;
-
-                SlotGrid[column, row] = newSlot;
             }
         }
-
     }
 
 
-    private void InitTileInGrid(TileTypes type, int column, int row, int[] fraction)
+    private void InitTileInGrid(TileTypes type, int column, int row, Vector2Int fraction)
     {
         GameObject newTile = factory.InstantiateTile(type);
         Tile tile = newTile.GetComponent<Tile>();
@@ -256,7 +262,7 @@ public class GridManager : MonoBehaviour
 
     }
 
-    private void InitCollectibleInGrid(CollectibleTypes type, int column, int row, int[] fraction) {
+    private void InitCollectibleInGrid(CollectibleTypes type, int column, int row, Vector2Int fraction) {
 
         GameObject newTile = factory.InstantiateCollectible(type);
         Tile tile = newTile.GetComponent<Tile>();
@@ -300,6 +306,8 @@ public class GridManager : MonoBehaviour
     {
         foreach (GameObject tile in TileGrid)
         {
+            if (tile == null)
+                continue;
             tile.GetComponent<SwapBehaviour>().SetClickable(false);
         }
     }
@@ -316,11 +324,14 @@ public class GridManager : MonoBehaviour
     public void EndTurn()
     {
         //score += CalculateScore(CheckMatches());
-        int matches = CheckMatches();
-        if (matches >= 3) {
-            tCalculator.calculateChance(matches);
+        List<Vector2Int> matches = CheckMatches();
+        if (matches.Count >= 3)
+        {
+            ClearMatchedTiles(matches);
+            tCalculator.calculateChance(matches.Count);
             //Debug.Log(tCalculator.getChance());
         }
+
         //ScoreText.text = "Score: " + score.ToString();
         //GemText.text = "Gems: " + tCalculator.getCollected().ToString() + "/" + tCalculator.getTotal().ToString();
 
@@ -331,29 +342,10 @@ public class GridManager : MonoBehaviour
     }
 
 
-    public int CalculateScore(int numOfBlocks)
-    {
-        if (numOfBlocks <= 1)
-        {
-            return 0;
-        }
-
-        int baseNum = 1;
-        return (int) Math.Max(0.5f * Math.Pow(numOfBlocks * baseNum, 2), numOfBlocks * baseNum);
-    }
-
-    
-    // todo: do i still need this?
-    private int CalculateTimeBonus(float timeElapsed)
-    {
-        return (int)(20 / Math.Sqrt(timeElapsed));
-    }
-
-
-    public int CheckMatches()
+    public List<Vector2Int> CheckMatches()
     {
         //List<GameObject> matchedTiles = new List<GameObject>();
-        List<int[]> matchedCoordinates = new List<int[]>();
+        List<Vector2Int> matchedCoordinates = new List<Vector2Int>();
 
 
         for (int row = 0; row < GridDimension; row++)
@@ -366,64 +358,67 @@ public class GridManager : MonoBehaviour
                     continue;
                 }
 
-                List<int[]> horizontalMatches = FindColumnMatchForTile(column, row, current);
+                List<Vector2Int> horizontalMatches = FindColumnMatchForTile(column, row, current);
                 if (horizontalMatches.Count >= 2)
                 {
                     matchedCoordinates.AddRange(horizontalMatches);
-                    matchedCoordinates.Add(new int[2] { column, row });
+                    matchedCoordinates.Add(new Vector2Int ( column, row ));
                 }
 
-                List<int[]> verticalMatches = FindRowMatchForTile(column, row, current);
+                List<Vector2Int> verticalMatches = FindRowMatchForTile(column, row, current);
                 if (verticalMatches.Count >= 2)
                 {
                     matchedCoordinates.AddRange(verticalMatches);
-                    matchedCoordinates.Add(new int[2] { column, row });
+                    matchedCoordinates.Add(new Vector2Int ( column, row ));
                 }
             }
         }
+        return matchedCoordinates;
+    }
 
-        if (matchedCoordinates.Count > 2)
+    public void ClearMatchedTiles(List<Vector2Int> tiles)
+    {
+        for (int i = 0; i < tiles.Count; i++)
         {
-            for (int i = 0; i < matchedCoordinates.Count; i++)
+            int col = tiles[i].x;
+            int row = tiles[i].y;
+
+            GameObject tile = TileGrid[col, row];
+
+            if (tile != null)
             {
-                int col = matchedCoordinates[i][0];
-                int row = matchedCoordinates[i][1];
+                tile.GetComponent<SwapBehaviour>().Select();
 
-                GameObject tile = TileGrid[col, row];
-
-                if (tile != null)
+                //if (tile.GetComponent<Collectible>() != null  && tile.GetComponent<Collectible>().GetType() == CollectibleTypes.GEM) {
+                if (tile.GetComponent<Collectible>() != null)
                 {
-                    tile.GetComponent<SwapBehaviour>().Select();
 
-                    //if (tile.GetComponent<Collectible>() != null  && tile.GetComponent<Collectible>().GetType() == CollectibleTypes.GEM) {
-                    if (tile.GetComponent<Collectible>() != null) {
+                    tCalculator.incrementCollected();
+                    inventory.AddItem(tile.GetComponent<Collectible>().GetType());
+                    GemText.text = "Gems: " + tCalculator.treasuresCollected.ToString() + "/" + tCalculator.totalTreasures.ToString();
 
-                        tCalculator.incrementCollected();
-                        inventory.AddItem(tile.GetComponent<Collectible>().GetType());
-                        GemText.text = "Gems: " + tCalculator.treasuresCollected.ToString() + "/" + tCalculator.totalTreasures.ToString();
-
-                        if (tCalculator.isAllCollected()) {
-                            EndGame();
-                        }
-
+                    if (tCalculator.isAllCollected())
+                    {
+                        EndGame();
                     }
-                    
+
                 }
 
-                Destroy(tile, 1f);
             }
 
-            Invoke("FillHoles", 1f);
+            Destroy(tile, 1f);
         }
 
-        return matchedCoordinates.Count;
+        if (AllLevelsData.level != 0)
+            Invoke("FillHoles", 1f);
     }
 
 
-    List<int[]> FindColumnMatchForTile(int col, int row, GameObject obj)
+
+    private List<Vector2Int> FindColumnMatchForTile(int col, int row, GameObject obj)
     {
         //List<GameObject> result = new List<GameObject>();
-        List<int[]> result = new List<int[]>();
+        List<Vector2Int> result = new List<Vector2Int>();
 
         float currentValue = obj.GetComponent<Tile>().GetValue();
 
@@ -438,7 +433,7 @@ public class GridManager : MonoBehaviour
             if (nextColValue != currentValue) {
                 break;
             } else {
-                result.Add(new int[2] {i, row});
+                result.Add(new Vector2Int ( i, row));
             }
             
         }
@@ -446,10 +441,10 @@ public class GridManager : MonoBehaviour
     }
 
 
-    List<int[]> FindRowMatchForTile(int col, int row, GameObject obj)
+    private List<Vector2Int> FindRowMatchForTile(int col, int row, GameObject obj)
     {
         //List<GameObject> result = new List<GameObject>();
-        List<int[]> result = new List<int[]>();
+        List<Vector2Int> result = new List<Vector2Int>();
 
         float currentValue = obj.GetComponent<Tile>().GetValue();
 
@@ -464,14 +459,14 @@ public class GridManager : MonoBehaviour
             if (nextRowValue != currentValue) {
                 break;
             } else {
-                result.Add(new int[2] { col, i });
+                result.Add(new Vector2Int ( col, i ));
             }
         }
         return result;
     }
 
 
-    void FillHoles()
+    private void FillHoles()
     {
         for (int column = 0; column < GridDimension; column++)
         {
@@ -499,11 +494,11 @@ public class GridManager : MonoBehaviour
                     }
 
                     if (tCalculator.isTreasureHere()) {
-                        InitCollectibleInGrid(treasureType, column, GridDimension - 1, Values[rand.Next(0, Values.Length)]);
+                        InitCollectibleInGrid(treasureType, column, GridDimension - 1, Values[rand.Next(0, Values.Count)]);
                         tCalculator.incrementPlaced();
                     }
                     else {
-                        InitTileInGrid(getRandomType(), column, GridDimension - 1, Values[rand.Next(0, Values.Length)]);
+                        InitTileInGrid(getRandomType(), column, GridDimension - 1, Values[rand.Next(0, Values.Count)]);
                     }
                 }
             }
@@ -525,10 +520,10 @@ public class GridManager : MonoBehaviour
     }
 
 
-    public float FractionToFloat(int[] fraction, int roundDigits)
+    public float FractionToFloat(Vector2Int fraction, int roundDigits)
     {
-        int n = fraction[0];
-        int d = fraction[1];
+        int n = fraction.x;
+        int d = fraction.y;
         return (float)Math.Round((double)n / d, roundDigits);   // round to this many decimal places
     }
 
@@ -567,6 +562,98 @@ public class GridManager : MonoBehaviour
 
 
     // old stuff no longer used
+
+
+    //void InitBaseValues()
+    //{
+
+    //    List<Vector2Int> baseVals = data.BaseFractions;
+
+    //    // generate base fractions
+    //    do
+    //    {
+    //        int n = rand.Next(1, 3);
+    //        int d = rand.Next(1, 7);
+
+    //        Vector2Int fraction = new Vector2Int(n, d);
+    //        if (!baseVals.Contains(fraction) && (FractionToFloat(fraction, RoundDigits) < 1f))
+    //        {
+    //            baseVals.Add(fraction);
+    //            //Multiples[fraction] = new List<int[]>();
+    //        }
+
+
+    //    } while (baseVals.Count < GridDimension);
+
+    //}
+
+
+    //public int CalculateScore(int numOfBlocks)
+    //{
+    //    if (numOfBlocks <= 1)
+    //    {
+    //        return 0;
+    //    }
+
+    //    int baseNum = 1;
+    //    return (int) Math.Max(0.5f * Math.Pow(numOfBlocks * baseNum, 2), numOfBlocks * baseNum);
+    //}
+
+    // part of checkmatches
+    //if (matchedCoordinates.Count > 2)
+    //{
+    //    for (int i = 0; i < matchedCoordinates.Count; i++)
+    //    {
+    //        int col = matchedCoordinates[i][0];
+    //        int row = matchedCoordinates[i][1];
+
+    //        GameObject tile = TileGrid[col, row];
+
+    //        if (tile != null)
+    //        {
+    //            tile.GetComponent<SwapBehaviour>().Select();
+
+    //            //if (tile.GetComponent<Collectible>() != null  && tile.GetComponent<Collectible>().GetType() == CollectibleTypes.GEM) {
+    //            if (tile.GetComponent<Collectible>() != null)
+    //            {
+
+    //                tCalculator.incrementCollected();
+    //                inventory.AddItem(tile.GetComponent<Collectible>().GetType());
+    //                GemText.text = "Gems: " + tCalculator.treasuresCollected.ToString() + "/" + tCalculator.totalTreasures.ToString();
+
+    //                if (tCalculator.isAllCollected())
+    //                {
+    //                    EndGame();
+    //                }
+
+    //            }
+
+    //        }
+
+    //        Destroy(tile, 1f);
+    //    }
+
+    //    if (AllLevelsData.level != 0)
+    //        Invoke("FillHoles", 1f);
+    //}
+
+    // todo: do i still need this?
+    //private int CalculateTimeBonus(float timeElapsed)
+    //{
+    //    return (int)(20 / Math.Sqrt(timeElapsed));
+    //}
+
+
+    //public List<Sprite> Sprites = new List<Sprite>();
+    //private Canvas canvas;
+    // todo: PROBABLY DEPRECATED
+    //private Dictionary<int[], List<int[]>> Multiples = new Dictionary<int[], List<int[]>>();
+    //public int GridDimension;
+    //public float Distance;
+    //private bool[] isBlockHere;
+    //public int score = 0;
+    //private Stopwatch stopwatch;
+    //public TextMeshProUGUI stopwatchText;
 
 
 

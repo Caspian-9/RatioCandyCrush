@@ -8,7 +8,7 @@ public class PieDiagram : MonoBehaviour, Tile, RegularTile
 {
 
     public Image PieSector;
-    private int[] fraction;   // [0] is numerator, [1] is denominator
+    private Vector2Int fraction;   // [0] is numerator, [1] is denominator
     private float internalValue;
 
 
@@ -30,7 +30,7 @@ public class PieDiagram : MonoBehaviour, Tile, RegularTile
 
 
     // getters
-    public int[] GetFraction()
+    public Vector2Int GetFraction()
     {
         return fraction;
     }
@@ -42,7 +42,7 @@ public class PieDiagram : MonoBehaviour, Tile, RegularTile
 
 
     // setters
-    public void SetFraction(int[] f)
+    public void SetFraction(Vector2Int f)
     {
         fraction = f;
     }

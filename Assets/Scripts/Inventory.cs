@@ -32,7 +32,8 @@ public class Inventory : MonoBehaviour
 		// syncs the inventory display with inventory contents
 		foreach (GameObject x in itemList)
 		{
-			CollectibleTypes type = x.GetComponent<Counter>().AssignedType;
+
+			CollectibleTypes type = TagToType(x.tag);
 			x.GetComponentInChildren<TextMeshProUGUI>().text = Items.Inventory[type].ToString();
 		}
 	}
@@ -45,7 +46,7 @@ public class Inventory : MonoBehaviour
 
 		foreach (GameObject x in itemList)
 		{
-			if (x.GetComponent<Counter>().AssignedType == type)
+			if (TagToType(x.tag) == type)
 			{
 				x.GetComponentInChildren<TextMeshProUGUI>().text = Items.Inventory[type].ToString();
 			}
@@ -75,5 +76,14 @@ public class Inventory : MonoBehaviour
 
 		yield break;
 	}
+
+	private CollectibleTypes TagToType(string tag)
+	{
+		if (tag == "Gem")
+			return CollectibleTypes.GEM;
+
+		return CollectibleTypes.GEM;
+	}
+
 }
 

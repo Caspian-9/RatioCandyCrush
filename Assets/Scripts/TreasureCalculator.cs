@@ -87,9 +87,6 @@ public class TreasureCalculator
 
 
 
-
-
-
     public bool isAllCollected()
     {
         return treasuresCollected == totalTreasures;
@@ -109,7 +106,7 @@ public class TreasureCalculator
     public void calculateChance(int numOfMatches = 0)
     {
         if (treasuresPlaced == 0) {    // nothing is placed yet
-            chance = 0.3f;
+            chance = 1f / AllLevelsData.Data[AllLevelsData.level].NumCollectible;
         }
 
         else if (treasuresCollected < treasuresPlaced) {    // gems present on the grid aren't collected

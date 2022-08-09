@@ -5,7 +5,7 @@ using TMPro;
 
 public class Treasure : MonoBehaviour, Tile, Collectible
 {
-    private int[] fraction;
+    private Vector2Int fraction;
     private float internalValue;
 
     public TextMeshProUGUI TextTop;
@@ -31,7 +31,7 @@ public class Treasure : MonoBehaviour, Tile, Collectible
         return CollectibleTypes.GEM;
     }
 
-    public int[] GetFraction()
+    public Vector2Int GetFraction()
     {
         return fraction;
     }
@@ -43,7 +43,7 @@ public class Treasure : MonoBehaviour, Tile, Collectible
 
 
     // setters
-    public void SetFraction(int[] f)
+    public void SetFraction(Vector2Int f)
     {
         fraction = f;
     }
@@ -55,7 +55,7 @@ public class Treasure : MonoBehaviour, Tile, Collectible
 
     public void SetText()
     {
-        TextTop.text = fraction[0].ToString();
-        TextBottom.text = fraction[1].ToString();
+        TextTop.text = fraction.x.ToString();
+        TextBottom.text = fraction.y.ToString();
     }
 }
