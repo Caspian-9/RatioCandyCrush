@@ -107,14 +107,28 @@ public class SwapBehaviour : MonoBehaviour
         Vector2 pos2 = tile2.transform.position;
 
         grid[tile1Inds.x, tile1Inds.y] = tile2;
-        tile2.transform.position = pos1;
+        //tile2.transform.position = pos1;
+        StartCoroutine(Move(tile2, pos1, 5f));
         tile2.transform.SetAsLastSibling();
         tile2.GetComponent<SwapBehaviour>().GridIndices = tile1Inds;
 
         grid[tile2Inds.x, tile2Inds.y] = tile1;
-        tile1.transform.position = pos2;
+        //tile1.transform.position = pos2;
+        StartCoroutine(Move(tile1, pos2, 5f));
         tile1.transform.SetAsLastSibling();
         tile1.GetComponent<SwapBehaviour>().GridIndices = tile2Inds;
 
+    }
+
+    private IEnumerator Move(GameObject obj, Vector3 target, float speed)
+    {
+
+        while (obj.transform.position != target)
+        {
+            obj.transform.position = Vector3.MoveTowards(obj.transform.position, target, speed * Time.deltaTime);
+            yield return null;
+        }
+        yield break;
+        //yield return new WaitForSeconds(2);
     }
 }
