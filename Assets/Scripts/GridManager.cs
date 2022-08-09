@@ -50,7 +50,7 @@ public class GridManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        data = AllLevelsData.Data[AllLevelsData.level];
+        
 
         //Debug.Log(AllLevelsData.level);
         //Debug.Log(data);
@@ -58,7 +58,7 @@ public class GridManager : MonoBehaviour
         //Debug.Log(AllLevelsData.tutorialGrid);
         //Debug.Log(data.CustomGrid);
 
-        GridDimension = data.Dimension;
+        
         //Values = data.CustomGrid;
 
         NewGame();
@@ -88,11 +88,21 @@ public class GridManager : MonoBehaviour
         
     }
 
+    public void NextLevel()
+    {
+        AllLevelsData.level += 1;
+        EndPrompt.SetActive(false);
+        NewGame();
+    }
+
 
     // stuff to do at the start of a GAME
 
     public void NewGame()
     {
+        data = AllLevelsData.Data[AllLevelsData.level];
+        GridDimension = data.Dimension;
+
         infoPrompt.iPrompt.SetActive(false);
 
         SlotGrid = new GameObject[GridDimension, GridDimension];

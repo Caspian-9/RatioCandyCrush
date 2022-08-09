@@ -69,6 +69,7 @@ public class SwapBehaviour : MonoBehaviour
                 SwapBlocks(GridIndices, selected.GridIndices);
                 if (manager.CheckMatches().Count < 3)
                 {
+                    StopAllCoroutines();
                     SwapBlocks(selected.GridIndices, GridIndices);
                 }
                 else
@@ -108,13 +109,13 @@ public class SwapBehaviour : MonoBehaviour
 
         grid[tile1Inds.x, tile1Inds.y] = tile2;
         //tile2.transform.position = pos1;
-        StartCoroutine(Move(tile2, pos1, 5f));
+        StartCoroutine(Move(tile2, pos1, 6f));
         tile2.transform.SetAsLastSibling();
         tile2.GetComponent<SwapBehaviour>().GridIndices = tile1Inds;
 
         grid[tile2Inds.x, tile2Inds.y] = tile1;
         //tile1.transform.position = pos2;
-        StartCoroutine(Move(tile1, pos2, 5f));
+        StartCoroutine(Move(tile1, pos2, 6f));
         tile1.transform.SetAsLastSibling();
         tile1.GetComponent<SwapBehaviour>().GridIndices = tile2Inds;
 

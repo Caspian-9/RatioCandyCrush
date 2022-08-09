@@ -397,6 +397,7 @@ MonoBehaviour:
   infoPrompt: {fileID: 1963324433}
   EndPrompt: {fileID: 142576254}
   SlotPrefab: {fileID: 1247011692992048893, guid: 14262e368eb304937bb5917ff8526a99, type: 3}
+  Values: []
   treasureType: 0
   GemText: {fileID: 846143981}
 --- !u!4 &36554473
@@ -1580,7 +1581,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 36554472}
         m_TargetAssemblyTypeName: GridManager, Assembly-CSharp
-        m_MethodName: NewGame
+        m_MethodName: NextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
