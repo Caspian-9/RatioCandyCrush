@@ -2040,6 +2040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1396186501}
   - component: {fileID: 1396186502}
+  - component: {fileID: 1396186503}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2079,6 +2080,18 @@ MonoBehaviour:
   LevelCube: {fileID: 1464100335}
   CounterPrefab: {fileID: 614429506}
   message: {fileID: 349035171}
+--- !u!114 &1396186503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396186499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495b7bfbed5424981a93a4297f5ec686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1442759836
 GameObject:
   m_ObjectHideFlags: 0

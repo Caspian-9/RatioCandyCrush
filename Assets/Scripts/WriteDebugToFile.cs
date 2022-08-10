@@ -24,6 +24,7 @@ public class WriteDebugToFile : MonoBehaviour
     void Start()
 	{
         filename = Application.dataPath + "Log.txt";
+        Debug.Log(filename);
 	}
 
 	// Update is called once per frame
