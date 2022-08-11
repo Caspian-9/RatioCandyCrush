@@ -1,0 +1,3 @@
+[2022-08-11 3:06:48 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-11 3:07:43 PM] Entering tutorial level
+[2022-08-11 3:07:43 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
