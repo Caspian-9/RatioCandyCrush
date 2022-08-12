@@ -9,6 +9,8 @@ using TMPro;
 public class GridManager : MonoBehaviour
 {
 
+    private Canvas canvas;
+
     private LevelData data;
 
     public TileFactory factory;
@@ -103,6 +105,7 @@ public class GridManager : MonoBehaviour
 
     public void NewGame()
     {
+        canvas = GetComponentInChildren<Canvas>();
         data = AllLevelsData.Data[AllLevelsData.level];
         GridDimension = data.Dimension;
 
@@ -122,12 +125,13 @@ public class GridManager : MonoBehaviour
         inventory.UpdateInventory();
 
         RectTransform rt = GridContainer.transform.GetComponent<RectTransform>();
-        float edgelength = 0.8f * (2 * Camera.main.orthographicSize);
-        rt.sizeDelta = new Vector2(edgelength, edgelength);
-        rt.position = new Vector3(0, 0, 0);
+        //float edgelength = 0.8f * (2 * Camera.main.orthographicSize);
+        float edgelength = 0.8f * canvas.GetComponent<RectTransform>().rect.height;
+        //rt.sizeDelta = new Vector2(edgelength, edgelength);
+        //rt.localPosition = new Vector3(0, 0, 0);
         // positionOffset = new Vector2( -(edgelength / 2), -(edgelength / 2)) * canvas.GetComponent<RectTransform>().localScale.x;
         positionOffset = new Vector2(-(edgelength / 2), -(edgelength / 2));
-        
+
 
         //isBlockHere = PossibleBlockPositions(3);
 
@@ -229,7 +233,8 @@ public class GridManager : MonoBehaviour
                 GameObject newSlot = Instantiate(SlotPrefab);
                 newSlot.transform.SetParent(GridContainer.transform);
                 newSlot.transform.localScale *= 4f / GridDimension;
-                newSlot.transform.position = GetXYfromColRow(column, row) + positionOffset;
+                newSlot.transform.localPosition = GetXYfromColRow(column, row) + positionOffset;
+                //newSlot.transform.position = GetXYfromColRow(column, row);
 
                 Slot slot = newSlot.GetComponent<Slot>();
                 slot.setGridManager(this);
@@ -271,7 +276,8 @@ public class GridManager : MonoBehaviour
         SwapBehaviour swapBehaviour = newTile.GetComponent<SwapBehaviour>();
 
         newTile.transform.SetParent(GridContainer.transform);
-        newTile.transform.position = GetXYfromColRow(column, row) + positionOffset;
+        newTile.transform.localPosition = GetXYfromColRow(column, row) + positionOffset;
+        //newTile.transform.position = GetXYfromColRow(column, row);
         newTile.transform.localScale *= 4f / GridDimension;
 
         TileGrid[column, row] = newTile;
@@ -298,7 +304,8 @@ public class GridManager : MonoBehaviour
         SwapBehaviour swapBehaviour = newTile.GetComponent<SwapBehaviour>();
 
         newTile.transform.SetParent(GridContainer.transform);
-        newTile.transform.position = GetXYfromColRow(column, row) + positionOffset;
+        newTile.transform.localPosition = GetXYfromColRow(column, row) + positionOffset;
+        //newTile.transform.position = GetXYfromColRow(column, row);
         newTile.transform.localScale *= 4f / GridDimension;
 
         TileGrid[column, row] = newTile;
@@ -522,7 +529,8 @@ public class GridManager : MonoBehaviour
 
                         //Debug.Log(column.ToString() + "," + filler.ToString() + ": " + next);
 
-                        next.transform.position = GetXYfromColRow(column, filler) + positionOffset;
+                        next.transform.localPosition = GetXYfromColRow(column, filler) + positionOffset;
+                        //next.transform.localPosition = GetXYfromColRow(column, filler);
                         next.GetComponent<SwapBehaviour>().GridIndices = new Vector2Int(column, filler);
                         
                     }
@@ -574,9 +582,10 @@ public class GridManager : MonoBehaviour
 
     private Vector2 GetXYfromColRow(int column, int row)
     {
-        RectTransform rt = GridContainer.transform.GetComponent<RectTransform>();
+        //RectTransform rt = GridContainer.transform.GetComponent<RectTransform>();
         //float gridsize = rt.sizeDelta.y * canvas.GetComponent<RectTransform>().localScale.x;
-        float gridsize = rt.sizeDelta.y;
+        //float gridsize = rt.sizeDelta.y;
+        float gridsize = 0.8f * canvas.GetComponent<RectTransform>().rect.height;
         float tilesize = gridsize / GridDimension;
 
         //Debug.Log("gridsize: " + gridsize + "; tilesize: " + tilesize);
