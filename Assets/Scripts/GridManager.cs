@@ -116,6 +116,7 @@ public class GridManager : MonoBehaviour
         //stopwatch = stopwatchText.GetComponent<Stopwatch>();
         EndPrompt.SetActive(false);
 
+        inventory.UpdateInventory();
 
         RectTransform rt = GridContainer.transform.GetComponent<RectTransform>();
         float edgelength = 0.8f * (2 * Camera.main.orthographicSize);
@@ -137,8 +138,16 @@ public class GridManager : MonoBehaviour
         //    InitGridValues();
         //}
 
+        Values = new List<Vector2Int>();
+        TempValueGrid = new Vector2Int[GridDimension * GridDimension];
+
         if (AllLevelsData.level == 1)
         {
+            //Debug.Log("======================");
+            //foreach (Vector2Int v in AllLevelsData.lv1Base)
+            //{
+            //    Debug.Log(v);
+            //}
             InitGridValues(AllLevelsData.lv1Base);
         }
         if (AllLevelsData.level == 2)
@@ -163,7 +172,7 @@ public class GridManager : MonoBehaviour
     {
 
         // generate the grid
-        for (int row = 0; row < (int)Math.Pow(GridDimension, 2); row++)
+        for (int row = 0; row < GridDimension; row++)
         {
             for (int col = 0; col < GridDimension; col++)
             {
@@ -194,7 +203,7 @@ public class GridManager : MonoBehaviour
                 int m = rand.Next(1, 4);    // multiplier
                 Vector2Int selectedFraction = possibleVals[rand.Next(0, possibleVals.Count)];
                 Vector2Int multipliedFraction = new Vector2Int(selectedFraction[0] * m, selectedFraction[1] * m);
-                Values[i] = multipliedFraction;
+                Values.Add(multipliedFraction);
                 TempValueGrid[i] = multipliedFraction;
 
                 //Multiples[selectedFraction].Add(multipliedFraction);
@@ -432,7 +441,7 @@ public class GridManager : MonoBehaviour
         }
 
         if (AllLevelsData.level != 0)
-            Invoke("FillHoles", 1f);
+            Invoke("FillHoles", 1.8f);
     }
 
 
@@ -514,14 +523,16 @@ public class GridManager : MonoBehaviour
                         next.GetComponent<SwapBehaviour>().GridIndices = new Vector2Int(column, filler);
                         
                     }
-
+                    Vector2Int val = Values[rand.Next(0, Values.Count)];
                     if (tCalculator.isTreasureHere()) {
-                        InitCollectibleInGrid(treasureType, column, GridDimension - 1, Values[rand.Next(0, Values.Count)]);
+                        InitCollectibleInGrid(treasureType, column, GridDimension - 1, val);
                         tCalculator.incrementPlaced();
                     }
                     else {
-                        InitTileInGrid(getRandomType(), column, GridDimension - 1, Values[rand.Next(0, Values.Count)]);
+                        InitTileInGrid(getRandomType(), column, GridDimension - 1, val);
                     }
+
+                    UpdateTempValues();
                 }
             }
         }
@@ -571,6 +582,24 @@ public class GridManager : MonoBehaviour
         float y = row * tilesize + (tilesize / 2);
 
         return new Vector2(x, y);
+    }
+
+
+    private void UpdateTempValues()
+    {
+        for (int row = 0; row < GridDimension; row++)
+        {
+            for (int column = 0; column < GridDimension; column++)
+            {
+                GameObject current = TileGrid[column, row];
+                if (current == null || !current.activeSelf)
+                {
+                    continue;
+                }
+
+                TempValueGrid[row * GridDimension + column] = current.GetComponent<Tile>().GetFraction();
+            }
+        }
     }
 
 

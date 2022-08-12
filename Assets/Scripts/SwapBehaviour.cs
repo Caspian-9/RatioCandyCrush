@@ -75,10 +75,10 @@ public class SwapBehaviour : MonoBehaviour
                     SwapBlocks(selected.GridIndices, GridIndices);
                     manager.EndTurn();
                 }
-                else
-                {
-                    //Debug.Log("ILLEGAL MOVE");
-                }
+                //else
+                //{
+                //    //Debug.Log("ILLEGAL MOVE");
+                //}
 
                 //SwapBlocks(GridIndices, selected.GridIndices);
                 //if (manager.CheckMatches().Count < 3)
@@ -124,13 +124,13 @@ public class SwapBehaviour : MonoBehaviour
 
         grid[tile1Inds.x, tile1Inds.y] = tile2;
         //tile2.transform.position = pos1;
-        StartCoroutine(Move(tile2, pos1, 6f));
+        StartCoroutine(Move(tile2, pos1, 7f));
         tile2.transform.SetAsLastSibling();
         tile2.GetComponent<SwapBehaviour>().GridIndices = tile1Inds;
 
         grid[tile2Inds.x, tile2Inds.y] = tile1;
         //tile1.transform.position = pos2;
-        StartCoroutine(Move(tile1, pos2, 6f));
+        StartCoroutine(Move(tile1, pos2, 7f));
         tile1.transform.SetAsLastSibling();
         tile1.GetComponent<SwapBehaviour>().GridIndices = tile2Inds;
 
@@ -161,7 +161,7 @@ public class SwapBehaviour : MonoBehaviour
         }
         else
         {
-            SwapVals(v1Inds, v2Inds);    // swap back
+            SwapVals(v2Inds, v1Inds);    // swap back
             return false;
         }
 

@@ -114,7 +114,7 @@ public class TreasureCalculator
         }
 
         else if (treasuresCollected == treasuresPlaced) {   // all current gems on grid collected
-            chance += 0.05f + (0.002f * numOfMatches);
+            chance += 0.08f + (0.01f * numOfMatches);
         }
 
     }
