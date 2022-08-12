@@ -303,7 +303,12 @@ public class GridManager : MonoBehaviour
     {
         //stopwatch.StopStopwatch();
         DisableGrid();
+        
         EndPrompt.SetActive(true);
+        if (AllLevelsData.level + 1 >= AllLevelsData.Data.Count)
+        {
+            EndPrompt.transform.Find("NextButton").gameObject.SetActive(false);
+        }
 
         //score += CalculateTimeBonus(stopwatch.getTime());
         //ScoreText.text = "Score: " + score.ToString();

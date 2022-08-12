@@ -1,3 +1,9 @@
 [2022-08-11 3:06:48 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
 [2022-08-11 3:07:43 PM] Entering tutorial level
 [2022-08-11 3:07:43 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-11 9:44:42 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-11 9:47:03 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-11 9:48:32 PM] Entering level 2
+[2022-08-11 9:48:33 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-11 10:28:07 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-11 10:42:25 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
