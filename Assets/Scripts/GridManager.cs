@@ -22,13 +22,14 @@ public class GridManager : MonoBehaviour
 
     public GameObject SlotPrefab;
 
-    private int GridDimension;
+    public int GridDimension;
     private Vector2 positionOffset;
 
     public List<Vector2Int> Values;
 
     private GameObject[,] SlotGrid;
     public GameObject[,] TileGrid;
+    public Vector2Int[] TempValueGrid;
 
     private TreasureCalculator tCalculator;
     public CollectibleTypes treasureType;
@@ -148,6 +149,7 @@ public class GridManager : MonoBehaviour
         if (AllLevelsData.level == 0)
         {
             Values = AllLevelsData.tutorialGrid;
+            TempValueGrid = AllLevelsData.tutorialGrid.ToArray();
         }
 
         InitGrid();
@@ -161,37 +163,42 @@ public class GridManager : MonoBehaviour
     {
 
         // generate the grid
-        for (int i = 0; i < (int)Math.Pow(GridDimension, 2); i++)
+        for (int row = 0; row < (int)Math.Pow(GridDimension, 2); row++)
         {
-
-            //List<Vector2Int> possibleVals = new List<Vector2Int>(data.BaseFractions);
-            List<Vector2Int> possibleVals = new List<Vector2Int>(baseFractions);
-
-            // remove unwanted values from possibleVals
-            List<Vector2Int> toRemove = new List<Vector2Int>();
-
-            float left = 0f;
-            float down = 0f;
-
-            if (i - 1 >= 0 && Values[i - 1] != null)
-                left = FractionToFloat(Values[i - 1], RoundDigits);
-            if (i - GridDimension >= 0 && Values[i - GridDimension] != null)
-                down = FractionToFloat(Values[i - GridDimension], RoundDigits);
-
-            foreach (Vector2Int val in possibleVals)
+            for (int col = 0; col < GridDimension; col++)
             {
-                if (FractionToFloat(val, RoundDigits) == left || FractionToFloat(val, RoundDigits) == down)
-                    toRemove.Add(val);
+                //List<Vector2Int> possibleVals = new List<Vector2Int>(data.BaseFractions);
+                List<Vector2Int> possibleVals = new List<Vector2Int>(baseFractions);
+
+                // remove unwanted values from possibleVals
+                List<Vector2Int> toRemove = new List<Vector2Int>();
+
+                float left = 0f;
+                float down = 0f;
+
+                int i = row * GridDimension + col;
+
+                if (i - 1 >= 0 && Values[i - 1] != null)
+                    left = FractionToFloat(Values[i - 1], RoundDigits);
+                if (i - GridDimension >= 0 && Values[i - GridDimension] != null)
+                    down = FractionToFloat(Values[i - GridDimension], RoundDigits);
+
+                foreach (Vector2Int val in possibleVals)
+                {
+                    if (FractionToFloat(val, RoundDigits) == left || FractionToFloat(val, RoundDigits) == down)
+                        toRemove.Add(val);
+                }
+                possibleVals = possibleVals.Except(toRemove).ToList();
+
+                // add fraction
+                int m = rand.Next(1, 4);    // multiplier
+                Vector2Int selectedFraction = possibleVals[rand.Next(0, possibleVals.Count)];
+                Vector2Int multipliedFraction = new Vector2Int(selectedFraction[0] * m, selectedFraction[1] * m);
+                Values[i] = multipliedFraction;
+                TempValueGrid[i] = multipliedFraction;
+
+                //Multiples[selectedFraction].Add(multipliedFraction);
             }
-            possibleVals = possibleVals.Except(toRemove).ToList();
-
-            // add fraction
-            int m = rand.Next(1, 4);    // multiplier
-            Vector2Int selectedFraction = possibleVals[rand.Next(0, possibleVals.Count)];
-            Vector2Int multipliedFraction = new Vector2Int(selectedFraction[0] * m, selectedFraction[1] * m);
-            Values[i] = multipliedFraction;
-
-            //Multiples[selectedFraction].Add(multipliedFraction);
 
         }
 
