@@ -7,6 +7,7 @@ public class SwapBehaviour : MonoBehaviour
 {
     private GridManager manager = null;
     private int dimension;
+    private StatusMessage statusMessage;
 
     private static SwapBehaviour selected;
     private SpriteRenderer Renderer;
@@ -42,6 +43,7 @@ public class SwapBehaviour : MonoBehaviour
     {
         this.manager = m;
         this.dimension = manager.GridDimension;
+        this.statusMessage = manager.statusMessage;
     }
 
     public void Select()
@@ -75,10 +77,12 @@ public class SwapBehaviour : MonoBehaviour
                     SwapBlocks(selected.GridIndices, GridIndices);
                     manager.EndTurn();
                 }
-                //else
-                //{
-                //    //Debug.Log("ILLEGAL MOVE");
-                //}
+                else
+                {
+                    statusMessage.gameObject.SetActive(true);
+                    statusMessage.SetText("Move doesn't result in match. Try again");
+                    statusMessage.Show();
+                }
 
                 //SwapBlocks(GridIndices, selected.GridIndices);
                 //if (manager.CheckMatches().Count < 3)

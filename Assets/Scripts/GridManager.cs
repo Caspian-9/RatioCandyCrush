@@ -17,6 +17,8 @@ public class GridManager : MonoBehaviour
 
     public Inventory inventory;
 
+    public StatusMessage statusMessage;
+
     public InfoPrompt infoPrompt;
     public GameObject EndPrompt;
 
@@ -105,6 +107,7 @@ public class GridManager : MonoBehaviour
         GridDimension = data.Dimension;
 
         infoPrompt.iPrompt.SetActive(false);
+        statusMessage.gameObject.SetActive(false);
 
         SlotGrid = new GameObject[GridDimension, GridDimension];
         TileGrid = new GameObject[GridDimension, GridDimension];

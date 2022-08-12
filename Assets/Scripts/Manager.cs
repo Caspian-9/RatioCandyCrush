@@ -14,7 +14,7 @@ public class Manager : MonoBehaviour {
 
     public GameObject CounterPrefab;
 
-    public GameObject message;
+    public StatusMessage statusMessage;
 
     //public Dictionary<CollectibleTypes, int> itemsToCollect = new Dictionary<CollectibleTypes, int>();
 
@@ -27,7 +27,7 @@ public class Manager : MonoBehaviour {
     void Start()
     {
         //LoadDictionary();
-        message.SetActive(true);
+        statusMessage.gameObject.SetActive(true);
 
         inventory.UpdateInventory();
         ShowItemsList();
@@ -37,11 +37,11 @@ public class Manager : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (message.activeSelf)
+        if (statusMessage.gameObject.activeSelf)
         {
             if (CheckIfMoved())
             {
-                StartCoroutine(FadeOut(message));
+                statusMessage.FadeOut(statusMessage.gameObject);
             }
         }
     }
@@ -81,33 +81,7 @@ public class Manager : MonoBehaviour {
     
 
 
-    IEnumerator FadeIn(GameObject obj)
-    {
-        Renderer r = obj.GetComponent<SpriteRenderer>();
-        Color c = r.material.color;
-
-        for (float alpha = 0f; alpha <= 1f; alpha += 0.1f)
-        {
-            c.a = alpha;
-            yield return null;
-        }
-
-        yield break;
-    }
-
-    IEnumerator FadeOut(GameObject obj)
-    {
-        Renderer r = obj.GetComponent<SpriteRenderer>();
-        Color c = r.material.color;
-
-        for (float alpha = 1f; alpha >= 0f; alpha -= 0.05f)
-        {
-            c.a = alpha;
-            yield return null;
-        }
-        obj.SetActive(false);
-        yield break;
-    }
+    
 
     private bool CheckIfMoved()
     {
