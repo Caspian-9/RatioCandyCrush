@@ -7,3 +7,276 @@
 [2022-08-11 9:48:33 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
 [2022-08-11 10:28:07 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
 [2022-08-11 10:42:25 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-11 11:40:26 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-11 11:40:42 PM] NullReferenceException: Object reference not set to an instance of an object
+[2022-08-11 11:44:39 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-11 11:45:56 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-11 11:46:43 PM] NullReferenceException: Object reference not set to an instance of an object
+[2022-08-11 11:55:16 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-11 11:58:19 PM] ILLEGAL MOVE
+[2022-08-11 11:58:22 PM] ILLEGAL MOVE
+[2022-08-11 11:58:24 PM] ILLEGAL MOVE
+[2022-08-11 11:58:26 PM] ILLEGAL MOVE
+[2022-08-12 12:02:12 AM] ILLEGAL MOVE
+[2022-08-12 12:02:14 AM] ILLEGAL MOVE
+[2022-08-12 12:02:16 AM] ILLEGAL MOVE
+[2022-08-12 12:16:05 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 12:17:16 AM] ILLEGAL MOVE
+[2022-08-12 12:17:18 AM] ILLEGAL MOVE
+[2022-08-12 12:17:20 AM] ILLEGAL MOVE
+[2022-08-12 12:17:22 AM] ILLEGAL MOVE
+[2022-08-12 12:17:23 AM] ILLEGAL MOVE
+[2022-08-12 12:17:25 AM] ILLEGAL MOVE
+[2022-08-12 12:21:43 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 12:21:56 AM] System.Collections.Generic.List`1[UnityEngine.Vector2Int]
+[2022-08-12 12:21:56 AM] ILLEGAL MOVE
+[2022-08-12 12:26:05 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 12:26:17 AM] 0
+[2022-08-12 12:26:17 AM] ILLEGAL MOVE
+[2022-08-12 12:26:19 AM] 3
+[2022-08-12 12:26:23 AM] ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+[2022-08-12 12:33:54 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 12:34:09 AM] 0
+[2022-08-12 12:34:09 AM] ILLEGAL MOVE
+[2022-08-12 12:34:12 AM] 3
+[2022-08-12 1:14:17 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 1:24:45 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 1:28:26 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 1:28:26 AM] Non-convex MeshCollider with non-kinematic Rigidbody is no longer supported since Unity 5.
+If you want to use a non-convex mesh either make the Rigidbody kinematic or remove the Rigidbody component. Scene hierarchy path "Ground", Mesh asset path "Library/unity default resources" Mesh name "Plane"
+[2022-08-12 1:33:06 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 1:33:06 AM] Non-convex MeshCollider with non-kinematic Rigidbody is no longer supported since Unity 5.
+If you want to use a non-convex mesh either make the Rigidbody kinematic or remove the Rigidbody component. Scene hierarchy path "Ground", Mesh asset path "Library/unity default resources" Mesh name "Plane"
+[2022-08-12 1:36:15 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 1:36:15 AM] Non-convex MeshCollider with non-kinematic Rigidbody is no longer supported since Unity 5.
+If you want to use a non-convex mesh either make the Rigidbody kinematic or remove the Rigidbody component. Scene hierarchy path "Ground", Mesh asset path "Library/unity default resources" Mesh name "Plane"
+[2022-08-12 1:39:26 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 1:39:26 AM] Non-convex MeshCollider with non-kinematic Rigidbody is no longer supported since Unity 5.
+If you want to use a non-convex mesh either make the Rigidbody kinematic or remove the Rigidbody component. Scene hierarchy path "Ground", Mesh asset path "Library/unity default resources" Mesh name "Plane"
+[2022-08-12 1:41:00 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 1:41:00 AM] Non-convex MeshCollider with non-kinematic Rigidbody is no longer supported since Unity 5.
+If you want to use a non-convex mesh either make the Rigidbody kinematic or remove the Rigidbody component. Scene hierarchy path "Ground", Mesh asset path "Library/unity default resources" Mesh name "Plane"
+[2022-08-12 1:45:18 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 1:45:18 AM] Non-convex MeshCollider with non-kinematic Rigidbody is no longer supported since Unity 5.
+If you want to use a non-convex mesh either make the Rigidbody kinematic or remove the Rigidbody component. Scene hierarchy path "Ground", Mesh asset path "Library/unity default resources" Mesh name "Plane"
+[2022-08-12 1:50:34 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 1:50:34 AM] Non-convex MeshCollider with non-kinematic Rigidbody is no longer supported since Unity 5.
+If you want to use a non-convex mesh either make the Rigidbody kinematic or remove the Rigidbody component. Scene hierarchy path "Ground", Mesh asset path "Library/unity default resources" Mesh name "Plane"
+[2022-08-12 1:54:21 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 1:56:29 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:02:47 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:06:22 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:09:58 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:13:04 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:16:06 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:16:29 AM] Entering level 1
+[2022-08-12 2:16:30 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:16:47 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:16:52 AM] Entering level 1
+[2022-08-12 2:16:52 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:19:26 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:20:17 AM] Entering level 1
+[2022-08-12 2:20:17 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:23:30 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:24:49 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:27:35 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:28:37 AM] Entering level 1
+[2022-08-12 2:28:37 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:32:29 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:33:19 AM] Entering level 1
+[2022-08-12 2:33:19 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:36:26 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:36:33 AM] Entering level 1
+[2022-08-12 2:36:33 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:37:39 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:37:47 AM] Entering level 1
+[2022-08-12 2:37:47 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:39:56 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:40:04 AM] Entering level 1
+[2022-08-12 2:40:04 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:41:48 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:41:57 AM] Entering level 1
+[2022-08-12 2:41:57 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:42:01 AM] 0
+[2022-08-12 2:42:08 AM] 0
+[2022-08-12 2:42:11 AM] 3
+[2022-08-12 2:42:19 AM] 3
+[2022-08-12 2:42:24 AM] 3
+[2022-08-12 2:42:27 AM] 0
+[2022-08-12 2:42:28 AM] 0
+[2022-08-12 2:42:33 AM] 3
+[2022-08-12 2:42:36 AM] 3
+[2022-08-12 2:42:39 AM] 3
+[2022-08-12 2:46:33 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:46:43 AM] Entering level 1
+[2022-08-12 2:46:43 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:46:45 AM] 0
+[2022-08-12 2:47:21 AM] 3
+[2022-08-12 2:50:32 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:50:38 AM] Entering level 1
+[2022-08-12 2:50:39 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:50:41 AM] 0
+[2022-08-12 2:50:49 AM] 0
+[2022-08-12 2:51:17 AM] 3
+[2022-08-12 2:52:05 AM] 0
+[2022-08-12 2:52:07 AM] 0
+[2022-08-12 2:59:33 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:59:41 AM] Entering level 1
+[2022-08-12 2:59:41 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 2:59:43 AM] 0
+[2022-08-12 3:00:05 AM] 3
+[2022-08-12 3:01:14 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 3:01:21 AM] Entering level 1
+[2022-08-12 3:01:21 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 3:01:23 AM] 0
+[2022-08-12 3:02:03 AM] 3
+[2022-08-12 3:03:18 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 3:03:25 AM] Entering level 1
+[2022-08-12 3:03:25 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 3:03:28 AM] 0
+[2022-08-12 3:03:49 AM] 3
+[2022-08-12 3:03:58 AM] 7
+[2022-08-12 3:04:09 AM] 7
+[2022-08-12 3:04:32 AM] 0
+[2022-08-12 3:04:48 AM] 0
+[2022-08-12 3:04:53 AM] 3
+[2022-08-12 3:04:58 AM] 10
+[2022-08-12 3:05:13 AM] 3
+[2022-08-12 3:05:19 AM] 3
+[2022-08-12 3:05:30 AM] 10
+[2022-08-12 3:05:36 AM] 3
+[2022-08-12 3:05:58 AM] 0
+[2022-08-12 3:06:08 AM] 0
+[2022-08-12 3:06:10 AM] 0
+[2022-08-12 3:06:13 AM] 0
+[2022-08-12 3:06:15 AM] 0
+[2022-08-12 3:06:16 AM] 0
+[2022-08-12 3:06:18 AM] 0
+[2022-08-12 3:06:19 AM] 0
+[2022-08-12 3:06:20 AM] 0
+[2022-08-12 3:06:22 AM] 0
+[2022-08-12 3:06:24 AM] 0
+[2022-08-12 3:06:25 AM] 0
+[2022-08-12 3:06:26 AM] 0
+[2022-08-12 3:06:27 AM] 0
+[2022-08-12 3:06:28 AM] 0
+[2022-08-12 3:06:29 AM] 0
+[2022-08-12 3:06:30 AM] 0
+[2022-08-12 3:06:31 AM] 0
+[2022-08-12 3:06:48 AM] 0
+[2022-08-12 3:06:56 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 3:07:03 AM] Entering level 2
+[2022-08-12 3:07:04 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 3:07:56 AM] 3
+[2022-08-12 3:08:00 AM] 3
+[2022-08-12 3:08:17 AM] 3
+[2022-08-12 3:08:23 AM] 7
+[2022-08-12 3:08:27 AM] 10
+[2022-08-12 3:08:32 AM] 3
+[2022-08-12 3:08:36 AM] 6
+[2022-08-12 3:08:42 AM] 9
+[2022-08-12 3:08:46 AM] 3
+[2022-08-12 3:08:52 AM] 6
+[2022-08-12 3:08:58 AM] 3
+[2022-08-12 3:09:07 AM] 3
+[2022-08-12 3:09:19 AM] 13
+[2022-08-12 3:09:23 AM] 31
+[2022-08-12 3:09:33 AM] 13
+[2022-08-12 3:09:41 AM] 10
+[2022-08-12 3:09:47 AM] 10
+[2022-08-12 3:09:54 AM] 3
+[2022-08-12 3:10:02 AM] 12
+[2022-08-12 3:10:05 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 3:10:10 AM] Entering tutorial level
+[2022-08-12 3:10:10 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 3:10:12 AM] 0
+[2022-08-12 3:10:14 AM] 0
+[2022-08-12 3:10:15 AM] 0
+[2022-08-12 3:10:17 AM] 3
+[2022-08-12 3:10:33 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 3:23:30 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 3:24:53 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 3:25:42 AM] Entering tutorial level
+[2022-08-12 3:25:43 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 3:25:49 AM] 3
+[2022-08-12 3:25:52 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 3:26:07 AM] Entering level 1
+[2022-08-12 3:26:07 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 3:26:10 AM] 0
+[2022-08-12 3:42:14 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 3:42:22 AM] Entering level 1
+[2022-08-12 3:42:22 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 3:42:25 AM] 0
+[2022-08-12 3:42:30 AM] 0
+[2022-08-12 3:42:33 AM] 0
+[2022-08-12 3:42:34 AM] 3
+[2022-08-12 3:42:45 AM] 10
+[2022-08-12 4:29:01 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 4:32:35 AM] Entering tutorial level
+[2022-08-12 4:32:35 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 4:32:38 AM] 0
+[2022-08-12 4:32:41 AM] 0
+[2022-08-12 4:32:43 AM] 0
+[2022-08-12 4:33:43 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 4:33:51 AM] Entering tutorial level
+[2022-08-12 4:33:51 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 4:33:53 AM] 0
+[2022-08-12 4:34:17 AM] 0
+[2022-08-12 4:34:19 AM] 0
+[2022-08-12 4:35:41 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 4:35:48 AM] Entering tutorial level
+[2022-08-12 4:35:48 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 4:35:50 AM] 0
+[2022-08-12 4:39:13 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 4:39:36 AM] Entering tutorial level
+[2022-08-12 4:39:36 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 4:39:39 AM] 0
+[2022-08-12 4:42:17 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 4:42:23 AM] Entering tutorial level
+[2022-08-12 4:42:23 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 4:42:25 AM] 0
+[2022-08-12 4:43:04 AM] 3
+[2022-08-12 4:46:19 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 4:46:26 AM] Entering tutorial level
+[2022-08-12 4:46:26 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 4:46:28 AM] 0
+[2022-08-12 4:48:36 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 4:48:41 AM] Entering tutorial level
+[2022-08-12 4:48:41 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 4:48:43 AM] 0
+[2022-08-12 4:48:55 AM] 0
+[2022-08-12 4:48:57 AM] 3
+[2022-08-12 4:49:00 AM] Should not be capturing when there is a hotcontrol
+[2022-08-12 4:50:01 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 4:50:14 AM] Entering tutorial level
+[2022-08-12 4:50:14 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 4:50:15 AM] 0
+[2022-08-12 4:50:19 AM] 3
+[2022-08-12 4:50:20 AM] Trying to Invoke method: GridManager.EndPrompt.SetActive(true) couldn't be called.
+[2022-08-12 4:50:20 AM] Trying to Invoke method: GridManager.EndPrompt.SetActive(true) couldn't be called.
+[2022-08-12 4:50:28 AM] Should not be capturing when there is a hotcontrol
+[2022-08-12 8:33:22 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 8:34:54 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 8:54:15 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 9:04:52 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 9:10:32 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 9:11:35 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 9:14:13 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 9:16:23 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 9:17:56 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 9:19:42 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 9:20:43 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 9:21:58 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 9:23:23 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 9:24:27 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 9:24:32 AM] Entering tutorial level
+[2022-08-12 9:24:33 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 9:25:58 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 9:26:04 AM] Entering tutorial level
+[2022-08-12 9:26:04 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 9:28:39 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 9:30:10 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 9:33:02 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 9:48:15 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-12 9:52:46 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
