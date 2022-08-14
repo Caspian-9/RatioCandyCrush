@@ -12,9 +12,12 @@ public class SwapBehaviour : MonoBehaviour, IPointerDownHandler
     private StatusMessage statusMessage;
 
     private static SwapBehaviour selected;
-    private SpriteRenderer Renderer;
+    //private SpriteRenderer Renderer;
     private Color color;
     public Vector2Int GridIndices;
+
+    public GameObject border;
+    
 
     private bool clickable = false;
 
@@ -35,10 +38,11 @@ public class SwapBehaviour : MonoBehaviour, IPointerDownHandler
 
     public void Init()
     {
-        Renderer = gameObject.GetComponent<SpriteRenderer>();
-        color = Renderer.color;
-        color.a = 0f;
-        gameObject.GetComponent<SpriteRenderer>().material.color = color;
+        //Renderer = gameObject.GetComponent<SpriteRenderer>();
+        //color = Renderer.color;
+        //color.a = 0f;
+        //gameObject.GetComponent<SpriteRenderer>().material.color = color;
+        border.SetActive(false);
     }
 
     public void setGridManager(GridManager m)
@@ -50,14 +54,16 @@ public class SwapBehaviour : MonoBehaviour, IPointerDownHandler
 
     public void Select(GameObject obj)
     {
-        color.a = 1f;
-        obj.GetComponent<SpriteRenderer>().material.color = color;
+        //color.a = 1f;
+        //obj.GetComponent<SpriteRenderer>().material.color = color;
+        obj.GetComponent<SwapBehaviour>().border.SetActive(true);
     }
 
     public void Unselect(GameObject obj)
     {
-        color.a = 0f;
-        obj.GetComponent<SpriteRenderer>().material.color = color;
+        //color.a = 0f;
+        //obj.GetComponent<SpriteRenderer>().material.color = color;
+        obj.GetComponent<SwapBehaviour>().border.SetActive(false);
     }
 
 

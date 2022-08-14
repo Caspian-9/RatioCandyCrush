@@ -399,14 +399,14 @@ public class GridManager : MonoBehaviour
                 if (horizontalMatches.Count >= 2)
                 {
                     matchedCoordinates.AddRange(horizontalMatches);
-                    matchedCoordinates.Add(new Vector2Int ( column, row ));
+                    matchedCoordinates.Add(new Vector2Int (column, row));
                 }
 
                 List<Vector2Int> verticalMatches = FindRowMatchForTile(column, row, current);
                 if (verticalMatches.Count >= 2)
                 {
                     matchedCoordinates.AddRange(verticalMatches);
-                    matchedCoordinates.Add(new Vector2Int ( column, row ));
+                    matchedCoordinates.Add(new Vector2Int (column, row));
                 }
             }
         }
