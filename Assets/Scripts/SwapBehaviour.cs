@@ -35,10 +35,10 @@ public class SwapBehaviour : MonoBehaviour, IPointerDownHandler
 
     public void Init()
     {
-        Renderer = GetComponent<SpriteRenderer>();
+        Renderer = gameObject.GetComponent<SpriteRenderer>();
         color = Renderer.color;
         color.a = 0f;
-        GetComponent<SpriteRenderer>().color = color;
+        gameObject.GetComponent<SpriteRenderer>().material.color = color;
     }
 
     public void setGridManager(GridManager m)
@@ -48,68 +48,65 @@ public class SwapBehaviour : MonoBehaviour, IPointerDownHandler
         this.statusMessage = manager.statusMessage;
     }
 
-    public void Select()
+    public void Select(GameObject obj)
     {
         color.a = 1f;
-        GetComponent<SpriteRenderer>().color = color;
+        obj.GetComponent<SpriteRenderer>().material.color = color;
     }
 
-    public void Unselect()
+    public void Unselect(GameObject obj)
     {
         color.a = 0f;
-        GetComponent<SpriteRenderer>().color = color;
+        obj.GetComponent<SpriteRenderer>().material.color = color;
     }
 
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (!clickable)
+        SwapBehaviour clicked = eventData.pointerEnter.GetComponent<SwapBehaviour>();
+        Debug.Log(eventData);
+
+        if (!clickable || clicked == null)
         {
             return;
         }
 
-        if (selected != null)
+        if (selected == null)
         {
-            Debug.Log("clicked");
-            selected.Unselect();
-            if (Vector2.Distance(selected.GridIndices, GridIndices) <= 1)
-            {
-                if (isLegalMove(selected.GridIndices, GridIndices))
-                {
-                    SwapBlocks(selected.GridIndices, GridIndices);
-                    manager.EndTurn();
-                }
-                else
-                {
-                    statusMessage.gameObject.SetActive(true);
-                    statusMessage.SetText("Move doesn't result in match. Try again");
-                    statusMessage.Show();
-                }
+            selected = clicked;
+            selected.Select(selected.gameObject);
+            return;
+        }
 
-                //SwapBlocks(GridIndices, selected.GridIndices);
-                //if (manager.CheckMatches().Count < 3)
-                //{
-                //    StopAllCoroutines();
-                //    SwapBlocks(selected.GridIndices, GridIndices);
-                //}
-                //else
-                //{
-                //    manager.EndTurn();
-                //}
-                selected = null;
-            }
-            else
-            {
-                selected = this;
-                Select();
-            }
-        }
-        else
+        if (selected == clicked)  // clicked on self
         {
-            selected = this;
-            Select();
+            selected.Unselect(selected.gameObject);
+            selected = null;
+            return;
         }
+        //else  // clicked one that isnt self
+        //{
+        //    selected = clicked;
+        //    selected.Select();
+        //    Debug.Log(selected.GridIndices);
+        //}
+
+        if (isLegalMove(selected.GridIndices, clicked.GridIndices))
+        {
+            SwapBlocks(selected.GridIndices, clicked.GridIndices);
+            manager.EndTurn();
+        }
+        else   // move is not legal
+        {
+            statusMessage.gameObject.SetActive(true);
+            statusMessage.SetText("Move doesn't result in match. Try again");
+            statusMessage.Show();
+        }
+
+        selected.Unselect(selected.gameObject);
+        selected = null;
     }
+
 
     public void SetClickable(bool c)
     {
@@ -130,13 +127,13 @@ public class SwapBehaviour : MonoBehaviour, IPointerDownHandler
 
         grid[tile1Inds.x, tile1Inds.y] = tile2;
         //tile2.transform.position = pos1;
-        StartCoroutine(Move(tile2, pos1, 7f));
+        StartCoroutine(Move(tile2, pos1, 230f));
         tile2.transform.SetAsLastSibling();
         tile2.GetComponent<SwapBehaviour>().GridIndices = tile1Inds;
 
         grid[tile2Inds.x, tile2Inds.y] = tile1;
         //tile1.transform.position = pos2;
-        StartCoroutine(Move(tile1, pos2, 7f));
+        StartCoroutine(Move(tile1, pos2, 230f));
         tile1.transform.SetAsLastSibling();
         tile1.GetComponent<SwapBehaviour>().GridIndices = tile2Inds;
 
@@ -288,6 +285,57 @@ public class SwapBehaviour : MonoBehaviour, IPointerDownHandler
     }
 
 
+
+
+    //public void OnMouseDown()
+    //{
+    //    if (!clickable)
+    //    {
+    //        return;
+    //    }
+
+    //    if (selected != null)
+    //    {
+    //        Debug.Log("clicked");
+    //        selected.Unselect();
+    //        if (Vector2.Distance(selected.GridIndices, GridIndices) <= 1)
+    //        {
+    //            if (isLegalMove(selected.GridIndices, GridIndices))
+    //            {
+    //                SwapBlocks(selected.GridIndices, GridIndices);
+    //                manager.EndTurn();
+    //            }
+    //            else
+    //            {
+    //                statusMessage.gameObject.SetActive(true);
+    //                statusMessage.SetText("Move doesn't result in match. Try again");
+    //                statusMessage.Show();
+    //            }
+
+    //            //SwapBlocks(GridIndices, selected.GridIndices);
+    //            //if (manager.CheckMatches().Count < 3)
+    //            //{
+    //            //    StopAllCoroutines();
+    //            //    SwapBlocks(selected.GridIndices, GridIndices);
+    //            //}
+    //            //else
+    //            //{
+    //            //    manager.EndTurn();
+    //            //}
+    //            selected = null;
+    //        }
+    //        else
+    //        {
+    //            selected = this;
+    //            Select();
+    //        }
+    //    }
+    //    else
+    //    {
+    //        selected = this;
+    //        Select();
+    //    }
+    //}
 
 
     //private List<Vector2Int> FindRowMatchForVec(int col, int row, Vector2Int vec)

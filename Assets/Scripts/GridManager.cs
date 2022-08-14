@@ -125,9 +125,9 @@ public class GridManager : MonoBehaviour
 
         RectTransform rt = GridContainer.transform.GetComponent<RectTransform>();
         //float edgelength = 0.8f * (2 * Camera.main.orthographicSize);
-        float edgelength = 0.8f * (canvas.GetComponent<RectTransform>().rect.height);
-        //rt.sizeDelta = new Vector2(edgelength, edgelength);
-        rt.localPosition = new Vector3(0, 0, 0);
+        float edgelength = 0.72f * (canvas.GetComponent<RectTransform>().rect.height);
+        rt.sizeDelta = new Vector2(edgelength, edgelength);
+        rt.localPosition = new Vector3(0, (0.08f * canvas.GetComponent<RectTransform>().rect.height), 0);
         // positionOffset = new Vector2( -(edgelength / 2), -(edgelength / 2)) * canvas.GetComponent<RectTransform>().localScale.x;
         positionOffset = new Vector2(-(edgelength / 2), -(edgelength / 2));
         
@@ -424,7 +424,7 @@ public class GridManager : MonoBehaviour
 
             if (tile != null)
             {
-                tile.GetComponent<SwapBehaviour>().Select();
+                tile.GetComponent<SwapBehaviour>().Select(tile);
 
                 //if (tile.GetComponent<Collectible>() != null  && tile.GetComponent<Collectible>().GetType() == CollectibleTypes.GEM) {
                 if (tile.GetComponent<Collectible>() != null)
@@ -525,7 +525,7 @@ public class GridManager : MonoBehaviour
 
                         //Debug.Log(column.ToString() + "," + filler.ToString() + ": " + next);
 
-                        next.transform.position = GetXYfromColRow(column, filler) + positionOffset;
+                        next.transform.localPosition = GetXYfromColRow(column, filler) + positionOffset;
                         next.GetComponent<SwapBehaviour>().GridIndices = new Vector2Int(column, filler);
                         
                     }

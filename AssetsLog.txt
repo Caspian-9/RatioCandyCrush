@@ -318,3 +318,3997 @@ Your script should either check if it is null or you should not destroy the obje
 Your script should either check if it is null or you should not destroy the object.
 [2022-08-13 4:54:59 PM] clicked
 [2022-08-13 4:54:59 PM] 0
+[2022-08-13 7:57:20 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 7:57:27 PM] clicked
+[2022-08-13 7:57:27 PM] 0
+[2022-08-13 7:57:36 PM] clicked
+[2022-08-13 7:57:36 PM] 3
+[2022-08-13 7:57:37 PM] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+[2022-08-13 8:03:45 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 8:03:51 PM] clicked
+[2022-08-13 8:03:51 PM] 0
+[2022-08-13 8:03:53 PM] clicked
+[2022-08-13 8:03:53 PM] 0
+[2022-08-13 8:03:57 PM] clicked
+[2022-08-13 8:03:57 PM] 3
+[2022-08-13 8:03:58 PM] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+[2022-08-13 8:13:25 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 8:13:27 PM] clicked
+[2022-08-13 8:13:27 PM] NullReferenceException: Object reference not set to an instance of an object
+[2022-08-13 8:13:31 PM] clicked
+[2022-08-13 8:13:31 PM] NullReferenceException: Object reference not set to an instance of an object
+[2022-08-13 8:13:33 PM] clicked
+[2022-08-13 8:13:33 PM] NullReferenceException: Object reference not set to an instance of an object
+[2022-08-13 9:17:57 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 9:19:02 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 9:19:06 PM] Null
+[2022-08-13 9:19:07 PM] Null
+[2022-08-13 9:19:09 PM] Null
+[2022-08-13 9:19:09 PM] Null
+[2022-08-13 9:19:10 PM] Null
+[2022-08-13 9:19:11 PM] Null
+[2022-08-13 9:19:12 PM] Null
+[2022-08-13 9:19:12 PM] Null
+[2022-08-13 9:20:30 PM] Null
+[2022-08-13 9:26:08 PM] Null
+[2022-08-13 9:26:10 PM] Null
+[2022-08-13 9:26:14 PM] Null
+[2022-08-13 9:26:15 PM] Null
+[2022-08-13 9:26:19 PM] Null
+[2022-08-14 12:04:09 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 12:20:06 PM] Null
+[2022-08-14 12:40:22 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 12:40:31 PM] Null
+[2022-08-14 12:40:32 PM] Null
+[2022-08-14 12:40:32 PM] Null
+[2022-08-14 12:40:33 PM] Null
+[2022-08-14 12:40:34 PM] Null
+[2022-08-14 12:40:34 PM] Null
+[2022-08-14 12:40:54 PM] Null
+[2022-08-14 12:40:54 PM] Null
+[2022-08-14 12:40:55 PM] Null
+[2022-08-14 12:46:50 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 12:47:27 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 12:48:02 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 1:00:56 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 1:02:33 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 1:04:27 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 1:05:10 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 1:05:16 PM] Entering level 2
+[2022-08-14 1:05:16 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 1:06:19 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 1:06:21 PM] Null
+[2022-08-14 1:06:22 PM] Null
+[2022-08-14 1:06:23 PM] Null
+[2022-08-14 1:06:23 PM] Null
+[2022-08-14 1:06:24 PM] Null
+[2022-08-14 1:06:25 PM] Null
+[2022-08-14 1:06:25 PM] Null
+[2022-08-14 1:07:38 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 1:07:42 PM] Entering level 2
+[2022-08-14 1:07:43 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 1:07:45 PM] Null
+[2022-08-14 1:07:45 PM] Null
+[2022-08-14 1:07:48 PM] Null
+[2022-08-14 1:07:48 PM] Null
+[2022-08-14 1:07:53 PM] Null
+[2022-08-14 1:08:43 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 1:10:22 PM] <b>Position</b>: (356.00, 150.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: TextBottom (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: 
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: TextBottom (UnityEngine.GameObject)
+module: Name: Canvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 13
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (356.00, 150.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: TextBottom (UnityEngine.GameObject)
+module: Name: Canvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 13
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (356.00, 150.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 1:10:26 PM] <b>Position</b>: (454.00, 162.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Guidelines (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Guidelines (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 20
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (454.00, 162.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Guidelines (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 20
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (454.00, 162.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 1:10:27 PM] <b>Position</b>: (547.00, 175.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: TextTop (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: TextTop (UnityEngine.GameObject)
+module: Name: Canvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 23
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (547.00, 175.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: TextTop (UnityEngine.GameObject)
+module: Name: Canvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 23
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (547.00, 175.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 1:10:28 PM] <b>Position</b>: (561.00, 257.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Guidelines (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Guidelines (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 34
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (561.00, 257.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Guidelines (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 34
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (561.00, 257.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 1:16:55 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 1:17:04 PM] <b>Position</b>: (358.00, 114.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: 
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (358.00, 114.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (358.00, 114.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 1:17:57 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 1:18:19 PM] <b>Position</b>: (349.00, 144.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: 
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (349.00, 144.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (349.00, 144.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 1:18:19 PM] clicked
+[2022-08-14 1:18:19 PM] NullReferenceException: Object reference not set to an instance of an object
+[2022-08-14 1:25:52 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 1:27:36 PM] <b>Position</b>: (364.00, 166.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: 
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (364.00, 166.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (364.00, 166.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 1:27:36 PM] clicked
+[2022-08-14 1:27:36 PM] (1, 0)
+[2022-08-14 1:27:36 PM] 0
+[2022-08-14 1:27:42 PM] <b>Position</b>: (435.00, 150.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 16
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (435.00, 150.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 16
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (435.00, 150.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 1:27:42 PM] clicked
+[2022-08-14 1:27:42 PM] (2, 0)
+[2022-08-14 1:27:42 PM] 0
+[2022-08-14 1:27:42 PM] <b>Position</b>: (385.00, 149.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (385.00, 149.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (385.00, 149.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 1:27:42 PM] clicked
+[2022-08-14 1:27:42 PM] (1, 0)
+[2022-08-14 1:27:42 PM] 0
+[2022-08-14 1:27:44 PM] <b>Position</b>: (441.00, 161.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 16
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (441.00, 161.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 16
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (441.00, 161.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 1:27:44 PM] clicked
+[2022-08-14 1:27:44 PM] (2, 0)
+[2022-08-14 1:27:44 PM] 0
+[2022-08-14 1:46:13 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 1:46:17 PM] <b>Position</b>: (354.00, 145.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: 
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (354.00, 145.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (354.00, 145.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 1:46:17 PM] clicked
+[2022-08-14 1:46:17 PM] (1, 0)
+[2022-08-14 1:46:17 PM] 0
+[2022-08-14 1:46:24 PM] <b>Position</b>: (374.00, 150.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (374.00, 150.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (374.00, 150.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 1:46:24 PM] clicked
+[2022-08-14 1:46:24 PM] (1, 0)
+[2022-08-14 1:46:24 PM] 0
+[2022-08-14 1:46:28 PM] <b>Position</b>: (536.00, 238.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 31
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (536.00, 238.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 31
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (536.00, 238.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 1:46:28 PM] clicked
+[2022-08-14 1:46:28 PM] (3, 1)
+[2022-08-14 1:46:28 PM] 0
+[2022-08-14 1:46:29 PM] <b>Position</b>: (536.00, 145.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 22
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (536.00, 145.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 22
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (536.00, 145.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 1:46:29 PM] clicked
+[2022-08-14 1:46:29 PM] (3, 0)
+[2022-08-14 1:46:29 PM] 0
+[2022-08-14 2:19:15 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 2:19:19 PM] <b>Position</b>: (349.00, 144.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: 
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (349.00, 144.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (349.00, 144.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:19:21 PM] <b>Position</b>: (447.00, 147.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 16
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (447.00, 147.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 16
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (447.00, 147.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:19:21 PM] 0
+[2022-08-14 2:19:23 PM] <b>Position</b>: (538.00, 139.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 21
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (538.00, 139.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 21
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (538.00, 139.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:19:24 PM] <b>Position</b>: (522.00, 216.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 29
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (522.00, 216.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 29
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (522.00, 216.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:19:24 PM] 3
+[2022-08-14 2:22:00 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 2:22:10 PM] <b>Position</b>: (356.00, 131.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: 
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (356.00, 131.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (356.00, 131.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:22:10 PM] Treasure(Clone) (UnityEngine.SpriteRenderer)
+[2022-08-14 2:23:47 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 2:24:30 PM] <b>Position</b>: (362.00, 137.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: 
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (362.00, 137.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (362.00, 137.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:24:31 PM] <b>Position</b>: (439.00, 137.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 16
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (439.00, 137.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 16
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (439.00, 137.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:24:31 PM] 0
+[2022-08-14 2:24:33 PM] <b>Position</b>: (540.00, 216.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 30
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (540.00, 216.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 30
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (540.00, 216.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:24:34 PM] <b>Position</b>: (543.00, 136.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 21
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (543.00, 136.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 21
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (543.00, 136.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:24:34 PM] 3
+[2022-08-14 2:24:35 PM] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+[2022-08-14 2:25:29 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 2:25:31 PM] <b>Position</b>: (516.00, 214.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: 
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 30
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (516.00, 214.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 30
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (516.00, 214.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:25:32 PM] <b>Position</b>: (524.00, 140.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 22
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (524.00, 140.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 22
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (524.00, 140.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:25:32 PM] 3
+[2022-08-14 2:25:33 PM] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+[2022-08-14 2:26:07 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 2:26:10 PM] <b>Position</b>: (522.00, 237.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: 
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 30
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (522.00, 237.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 30
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (522.00, 237.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:26:11 PM] <b>Position</b>: (543.00, 133.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 21
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (543.00, 133.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 21
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (543.00, 133.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:26:11 PM] 3
+[2022-08-14 2:40:14 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 2:40:17 PM] <b>Position</b>: (544.00, 241.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: 
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 30
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (544.00, 241.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 30
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (544.00, 241.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:40:18 PM] <b>Position</b>: (534.00, 145.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 22
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (534.00, 145.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 22
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (534.00, 145.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:40:18 PM] 3
+[2022-08-14 2:40:29 PM] <b>Position</b>: (348.00, 402.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: NextButton (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 101
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (348.00, 402.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 101
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (348.00, 402.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:40:34 PM] <b>Position</b>: (347.00, 406.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 101
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (347.00, 406.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 101
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (347.00, 406.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:40:34 PM] <b>Position</b>: (282.00, 410.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 96
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (282.00, 410.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 96
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (282.00, 410.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:40:43 PM] <b>Position</b>: (357.00, 240.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 57
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (357.00, 240.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 57
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (357.00, 240.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:40:43 PM] 0
+[2022-08-14 2:40:43 PM] <b>Position</b>: (455.00, 244.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 63
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (455.00, 244.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 63
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (455.00, 244.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:40:45 PM] <b>Position</b>: (370.00, 241.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 57
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (370.00, 241.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 57
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (370.00, 241.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:40:45 PM] 6
+[2022-08-14 2:42:07 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 2:42:11 PM] <b>Position</b>: (526.00, 225.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: 
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 30
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (526.00, 225.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 30
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (526.00, 225.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:42:12 PM] <b>Position</b>: (544.00, 153.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 22
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (544.00, 153.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 22
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (544.00, 153.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:42:12 PM] 3
+[2022-08-14 2:42:15 PM] <b>Position</b>: (525.00, 127.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: NextButton (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 46
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (525.00, 127.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 46
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (525.00, 127.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:42:24 PM] <b>Position</b>: (539.00, 254.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 68
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (539.00, 254.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 68
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (539.00, 254.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:42:24 PM] 0
+[2022-08-14 2:42:27 PM] <b>Position</b>: (457.00, 235.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 62
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (457.00, 235.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 62
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (457.00, 235.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:42:28 PM] <b>Position</b>: (545.00, 238.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 68
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (545.00, 238.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 68
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (545.00, 238.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:42:28 PM] 3
+[2022-08-14 2:46:09 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 2:46:52 PM] <b>Position</b>: (343.00, 155.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: 
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (343.00, 155.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (343.00, 155.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:46:52 PM] <b>Position</b>: (446.00, 156.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 16
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (446.00, 156.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 16
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (446.00, 156.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:46:52 PM] 0
+[2022-08-14 2:47:00 PM] <b>Position</b>: (445.00, 149.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 16
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (445.00, 149.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 16
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (445.00, 149.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:47:38 PM] <b>Position</b>: (542.00, 168.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 22
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (542.00, 168.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 22
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (542.00, 168.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:47:38 PM] 0
+[2022-08-14 2:47:40 PM] <b>Position</b>: (542.00, 168.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 22
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (542.00, 168.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 22
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (542.00, 168.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:47:40 PM] <b>Position</b>: (541.00, 219.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 30
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (541.00, 219.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 30
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (541.00, 219.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 2:47:40 PM] 3
+[2022-08-14 3:07:58 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 3:08:04 PM] <b>Position</b>: (443.00, 162.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: 
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 16
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (443.00, 162.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 16
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (443.00, 162.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:08:33 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 3:08:37 PM] <b>Position</b>: (534.00, 238.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: 
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 30
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (534.00, 238.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 30
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (534.00, 238.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:08:38 PM] <b>Position</b>: (532.00, 243.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 30
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (532.00, 243.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 30
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (532.00, 243.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:08:39 PM] <b>Position</b>: (534.00, 155.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 22
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (534.00, 155.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 22
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (534.00, 155.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:08:41 PM] <b>Position</b>: (526.00, 221.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 30
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (526.00, 221.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 30
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (526.00, 221.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:08:41 PM] 3
+[2022-08-14 3:09:07 PM] <b>Position</b>: (456.00, 148.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: NextButton (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 41
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (456.00, 148.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 41
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (456.00, 148.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:09:08 PM] <b>Position</b>: (447.00, 224.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 64
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (447.00, 224.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 64
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (447.00, 224.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:09:08 PM] 3
+[2022-08-14 3:09:11 PM] <b>Position</b>: (351.00, 334.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 84
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (351.00, 334.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 84
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (351.00, 334.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:09:12 PM] <b>Position</b>: (425.00, 327.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 89
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (425.00, 327.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 89
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (425.00, 327.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:09:12 PM] 0
+[2022-08-14 3:09:14 PM] <b>Position</b>: (360.00, 332.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 84
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (360.00, 332.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 84
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (360.00, 332.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:09:14 PM] <b>Position</b>: (356.00, 403.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 103
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (356.00, 403.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 103
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (356.00, 403.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:09:14 PM] 0
+[2022-08-14 3:09:15 PM] <b>Position</b>: (356.00, 335.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 84
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (356.00, 335.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 84
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (356.00, 335.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:09:16 PM] <b>Position</b>: (282.00, 335.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 56
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (282.00, 335.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 56
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (282.00, 335.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:09:16 PM] 0
+[2022-08-14 3:09:17 PM] <b>Position</b>: (364.00, 322.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 84
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (364.00, 322.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 84
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (364.00, 322.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:09:18 PM] <b>Position</b>: (364.00, 233.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 61
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (364.00, 233.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 61
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (364.00, 233.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:09:18 PM] 0
+[2022-08-14 3:09:19 PM] <b>Position</b>: (368.00, 153.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 35
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (368.00, 153.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 35
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (368.00, 153.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:09:19 PM] <b>Position</b>: (432.00, 149.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 99
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (432.00, 149.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 99
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (432.00, 149.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:09:19 PM] 0
+[2022-08-14 3:09:20 PM] <b>Position</b>: (444.00, 241.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 66
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (444.00, 241.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 66
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (444.00, 241.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:09:21 PM] <b>Position</b>: (456.00, 146.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 99
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (456.00, 146.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 99
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (456.00, 146.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:09:21 PM] 7
+[2022-08-14 3:09:27 PM] <b>Position</b>: (373.00, 237.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: null
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 66
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (373.00, 237.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 66
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (373.00, 237.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:09:28 PM] <b>Position</b>: (272.00, 241.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 52
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (272.00, 241.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 52
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (272.00, 241.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:09:28 PM] 3
+[2022-08-14 3:09:31 PM] <b>Position</b>: (362.00, 252.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: null
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 103
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (362.00, 252.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 103
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (362.00, 252.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:09:31 PM] <b>Position</b>: (276.00, 250.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 99
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (276.00, 250.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 99
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (276.00, 250.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:09:31 PM] 10
+[2022-08-14 3:18:31 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 3:18:36 PM] <b>Position</b>: (442.00, 169.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: 
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 16
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (442.00, 169.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 16
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (442.00, 169.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:18:37 PM] <b>Position</b>: (367.00, 161.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (367.00, 161.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (367.00, 161.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:18:37 PM] 0
+[2022-08-14 3:18:39 PM] <b>Position</b>: (534.00, 229.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 29
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (534.00, 229.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 29
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (534.00, 229.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:18:40 PM] <b>Position</b>: (543.00, 162.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 21
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (543.00, 162.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 21
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (543.00, 162.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:18:40 PM] 3
+[2022-08-14 3:18:43 PM] <b>Position</b>: (530.00, 313.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: NextButton (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 91
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (530.00, 313.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Pie(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 91
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (530.00, 313.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:18:45 PM] <b>Position</b>: (542.00, 255.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Pie(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 69
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (542.00, 255.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 69
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (542.00, 255.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:18:45 PM] 0
+[2022-08-14 3:21:02 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-14 3:21:06 PM] <b>Position</b>: (434.00, 158.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: 
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 16
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (434.00, 158.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 16
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (434.00, 158.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:21:07 PM] <b>Position</b>: (373.00, 165.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (373.00, 165.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Treasure(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 11
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (373.00, 165.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:21:07 PM] 0
+[2022-08-14 3:21:09 PM] <b>Position</b>: (532.00, 229.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Treasure(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 29
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (532.00, 229.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 29
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (532.00, 229.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:21:10 PM] <b>Position</b>: (538.00, 159.00)
+<b>delta</b>: (0.00, 0.00)
+<b>eligibleForClick</b>: True
+<b>pointerEnter</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerPress</b>: 
+<b>lastPointerPress</b>: Block(Clone) (UnityEngine.GameObject)
+<b>pointerDrag</b>: 
+<b>Use Drag Threshold</b>: True
+<b>Current Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 21
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (538.00, 159.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>Press Raycast:</b>
+Name: Block(Clone) (UnityEngine.GameObject)
+module: Name: UICanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 1
+renderOrderPriority: 0
+distance: 0
+index: 0
+depth: 21
+worldNormal: (0.00, 0.00, -1.00)
+worldPosition: (0.00, 0.00, 0.00)
+screenPosition: (538.00, 159.00)
+module.sortOrderPriority: 1
+module.renderOrderPriority: 0
+sortingLayer: 0
+sortingOrder: 1
+<b>pressure</b>: 0
+<b>tangentialPressure</b>: 0
+<b>altitudeAngle</b>: 0
+<b>azimuthAngle</b>: 0
+<b>twist</b>: 0
+<b>radius</b>: (0.00, 0.00)
+<b>radiusVariance</b>: (0.00, 0.00)
+
+[2022-08-14 3:21:10 PM] 3
