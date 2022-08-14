@@ -1,9 +1,11 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class SwapBehaviour : MonoBehaviour
+public class SwapBehaviour : MonoBehaviour, IPointerDownHandler
 {
     private GridManager manager = null;
     private int dimension;
@@ -59,7 +61,7 @@ public class SwapBehaviour : MonoBehaviour
     }
 
 
-    private void OnMouseDown()
+    public void OnPointerDown(PointerEventData eventData)
     {
         if (!clickable)
         {

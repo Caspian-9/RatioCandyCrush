@@ -280,3 +280,41 @@ If you want to use a non-convex mesh either make the Rigidbody kinematic or remo
 [2022-08-12 9:33:02 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
 [2022-08-12 9:48:15 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
 [2022-08-12 9:52:46 AM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 1:47:07 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 3:29:41 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 3:38:08 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 3:39:38 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 3:46:17 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 3:56:48 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 4:00:08 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 4:00:29 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 4:00:34 PM] Entering tutorial level
+[2022-08-13 4:00:34 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 4:06:19 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 4:06:23 PM] clicked
+[2022-08-13 4:06:23 PM] 0
+[2022-08-13 4:06:25 PM] clicked
+[2022-08-13 4:06:25 PM] 0
+[2022-08-13 4:06:26 PM] clicked
+[2022-08-13 4:06:26 PM] 0
+[2022-08-13 4:06:27 PM] clicked
+[2022-08-13 4:06:27 PM] 3
+[2022-08-13 4:06:28 PM] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+[2022-08-13 4:23:29 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 4:24:46 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 4:25:22 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 4:25:28 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 4:25:43 PM] Entering tutorial level
+[2022-08-13 4:25:43 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 4:54:34 PM] /Users/Carol/Development/Unity/RatioCandyCrush/AssetsLog.txt
+[2022-08-13 4:54:38 PM] clicked
+[2022-08-13 4:54:38 PM] 0
+[2022-08-13 4:54:41 PM] clicked
+[2022-08-13 4:54:41 PM] 0
+[2022-08-13 4:54:42 PM] clicked
+[2022-08-13 4:54:42 PM] 3
+[2022-08-13 4:54:43 PM] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+[2022-08-13 4:54:59 PM] clicked
+[2022-08-13 4:54:59 PM] 0

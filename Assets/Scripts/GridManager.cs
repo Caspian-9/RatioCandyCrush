@@ -9,7 +9,7 @@ using TMPro;
 public class GridManager : MonoBehaviour
 {
 
-    private Canvas canvas;
+    public Canvas canvas;
 
     private LevelData data;
 
@@ -105,7 +105,6 @@ public class GridManager : MonoBehaviour
 
     public void NewGame()
     {
-        canvas = GetComponentInChildren<Canvas>();
         data = AllLevelsData.Data[AllLevelsData.level];
         GridDimension = data.Dimension;
 
@@ -125,7 +124,8 @@ public class GridManager : MonoBehaviour
         inventory.UpdateInventory();
 
         RectTransform rt = GridContainer.transform.GetComponent<RectTransform>();
-        float edgelength = 0.8f * (2 * Camera.main.orthographicSize);
+        //float edgelength = 0.8f * (2 * Camera.main.orthographicSize);
+        float edgelength = 0.8f * (canvas.GetComponent<RectTransform>().rect.height);
         //rt.sizeDelta = new Vector2(edgelength, edgelength);
         rt.localPosition = new Vector3(0, 0, 0);
         // positionOffset = new Vector2( -(edgelength / 2), -(edgelength / 2)) * canvas.GetComponent<RectTransform>().localScale.x;
@@ -232,7 +232,7 @@ public class GridManager : MonoBehaviour
                 GameObject newSlot = Instantiate(SlotPrefab);
                 newSlot.transform.SetParent(GridContainer.transform);
                 newSlot.transform.localScale *= 4f / GridDimension;
-                newSlot.transform.position = GetXYfromColRow(column, row) + positionOffset;
+                newSlot.transform.localPosition = GetXYfromColRow(column, row) + positionOffset;
 
                 Slot slot = newSlot.GetComponent<Slot>();
                 slot.setGridManager(this);
@@ -274,7 +274,7 @@ public class GridManager : MonoBehaviour
         SwapBehaviour swapBehaviour = newTile.GetComponent<SwapBehaviour>();
 
         newTile.transform.SetParent(GridContainer.transform);
-        newTile.transform.position = GetXYfromColRow(column, row) + positionOffset;
+        newTile.transform.localPosition = GetXYfromColRow(column, row) + positionOffset;
         newTile.transform.localScale *= 4f / GridDimension;
 
         TileGrid[column, row] = newTile;
@@ -301,7 +301,7 @@ public class GridManager : MonoBehaviour
         SwapBehaviour swapBehaviour = newTile.GetComponent<SwapBehaviour>();
 
         newTile.transform.SetParent(GridContainer.transform);
-        newTile.transform.position = GetXYfromColRow(column, row) + positionOffset;
+        newTile.transform.localPosition = GetXYfromColRow(column, row) + positionOffset;
         newTile.transform.localScale *= 4f / GridDimension;
 
         TileGrid[column, row] = newTile;

@@ -9,7 +9,7 @@ public class InfoPrompt : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		iPrompt.SetActive(true);
+		//iPrompt.SetActive(true);
 	}
 
 	// Update is called once per frame
