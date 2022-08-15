@@ -13,9 +13,17 @@ public class Block : MonoBehaviour, Tile, RegularTile
     private Vector2Int fraction;   // x is numerator, y is denominator
     private float internalValue;
 
+    private Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
+    {
+        animator = GetComponent<Animator>();
+        
+    }
+
+    void Update()
     {
 
     }
@@ -56,4 +64,10 @@ public class Block : MonoBehaviour, Tile, RegularTile
         TextBottom.text = fraction.y.ToString();
     }
 
+    public void Destroy()
+    {
+        Debug.Log("play anim");
+        animator.Play("BlockDestroyAnim");
+        Destroy(gameObject, 2f);
+    }
 }

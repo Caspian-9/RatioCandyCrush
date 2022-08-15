@@ -99,14 +99,16 @@ public class SwapBehaviour : MonoBehaviour, IPointerDownHandler
 
         if (isLegalMove(selected.GridIndices, clicked.GridIndices))
         {
+            statusMessage.SetText("");
             SwapBlocks(selected.GridIndices, clicked.GridIndices);
-            manager.EndTurn();
+            
         }
         else   // move is not legal
         {
-            statusMessage.gameObject.SetActive(true);
+            //statusMessage.gameObject.SetActive(true);
+            //statusMessage.gameObject.GetComponent<SpriteRenderer>().material.color.a = 0f;
             statusMessage.SetText("Move doesn't result in match. Try again");
-            statusMessage.Show();
+            //statusMessage.Show();
         }
 
         selected.Unselect(selected.gameObject);
@@ -142,6 +144,8 @@ public class SwapBehaviour : MonoBehaviour, IPointerDownHandler
         StartCoroutine(Move(tile1, pos2, 230f));
         tile1.transform.SetAsLastSibling();
         tile1.GetComponent<SwapBehaviour>().GridIndices = tile2Inds;
+
+        manager.EndTurn();
 
     }
 

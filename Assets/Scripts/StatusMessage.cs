@@ -47,29 +47,29 @@ public class StatusMessage : MonoBehaviour
 
     private IEnumerator ShowCoroutine(GameObject obj)
     {
-        //StartCoroutine(FadeInCoroutine(obj));
 
-        Renderer r = obj.GetComponent<SpriteRenderer>();
-        Color c = r.material.color;
+        //Renderer r = obj.GetComponent<SpriteRenderer>();
+        //Color c = r.material.color;
 
-        for (float alpha = 0f; alpha <= 1f; alpha += 0.05f)
-        {
-            c.a = alpha;
-            yield return null;
-        }
+        //for (float alpha = 0f; alpha <= 1f; alpha += 0.05f)
+        //{
+        //    c.a = alpha;
+        //    obj.GetComponent<SpriteRenderer>().material.color = c;
+        //    yield return null;
+        //}
+        Debug.Log("show coroutine running");
 
 
         yield return new WaitForSeconds(4f);
 
 
-        for (float alpha = 1f; alpha >= 0f; alpha -= 0.05f)
-        {
-            c.a = alpha;
-            yield return null;
-        }
+        //for (float alpha = 1f; alpha >= 0f; alpha -= 0.05f)
+        //{
+        //    c.a = alpha;
+        //    obj.GetComponent<SpriteRenderer>().material.color = c;
+        //    yield return null;
+        //}
 
-
-        //StartCoroutine(FadeOutCoroutine(obj));
         obj.SetActive(false);
     }
 
@@ -81,6 +81,7 @@ public class StatusMessage : MonoBehaviour
         for (float alpha = 0f; alpha <= 1f; alpha += 0.05f)
         {
             c.a = alpha;
+            //obj.GetComponent<SpriteRenderer>().material.color = c;
             yield return null;
         }
 
@@ -95,6 +96,7 @@ public class StatusMessage : MonoBehaviour
         for (float alpha = 1f; alpha >= 0f; alpha -= 0.05f)
         {
             c.a = alpha;
+            //obj.GetComponent<SpriteRenderer>().material.color = c;
             yield return null;
         }
         obj.SetActive(false);

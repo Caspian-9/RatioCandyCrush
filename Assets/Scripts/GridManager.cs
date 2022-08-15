@@ -109,7 +109,9 @@ public class GridManager : MonoBehaviour
         GridDimension = data.Dimension;
 
         infoPrompt.iPrompt.SetActive(false);
-        statusMessage.gameObject.SetActive(false);
+
+        statusMessage.gameObject.SetActive(true);
+        statusMessage.SetText("");
 
         SlotGrid = new GameObject[GridDimension, GridDimension];
         TileGrid = new GameObject[GridDimension, GridDimension];
@@ -443,7 +445,7 @@ public class GridManager : MonoBehaviour
 
             }
 
-            Destroy(tile, 1f);
+            tile.GetComponent<Tile>().Destroy();
         }
 
         if (AllLevelsData.level != 0)

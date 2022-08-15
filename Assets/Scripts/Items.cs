@@ -22,7 +22,7 @@ public static class Items
     {
         foreach (CollectibleTypes type in ItemsToCollect.Keys)
         {
-            if (!Inventory.ContainsKey(type) || Inventory[type] != ItemsToCollect[type])
+            if (!Inventory.ContainsKey(type) || Inventory[type] < ItemsToCollect[type])
             {
                 return false;
             }

@@ -58,4 +58,10 @@ public class Treasure : MonoBehaviour, Tile, Collectible
         TextTop.text = fraction.x.ToString();
         TextBottom.text = fraction.y.ToString();
     }
+
+    public void Destroy()
+    {
+        Debug.Log("destroy animation not implemented");
+        Destroy(gameObject, 2f);
+    }
 }

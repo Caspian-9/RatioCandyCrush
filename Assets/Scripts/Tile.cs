@@ -19,5 +19,7 @@ public interface Tile
 
     public void SetText();
 
+    public void Destroy();
+
 }
 

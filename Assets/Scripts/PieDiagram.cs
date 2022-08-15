@@ -59,4 +59,9 @@ public class PieDiagram : MonoBehaviour, Tile, RegularTile
         return;
     }
 
+    public void Destroy()
+    {
+        Debug.Log("destroy animation not implemented");
+        Destroy(gameObject, 2f);
+    }
 }
