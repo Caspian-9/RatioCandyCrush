@@ -123,6 +123,7 @@ public class GridManager : MonoBehaviour
         //stopwatch = stopwatchText.GetComponent<Stopwatch>();
         EndPrompt.SetActive(false);
 
+        treasureType = data.AssignedType;
         inventory.UpdateInventory();
 
         RectTransform rt = GridContainer.transform.GetComponent<RectTransform>();
@@ -149,26 +150,24 @@ public class GridManager : MonoBehaviour
         Values = new List<Vector2Int>();
         TempValueGrid = new Vector2Int[GridDimension * GridDimension];
 
-        if (AllLevelsData.level == 1)
-        {
-            //Debug.Log("======================");
-            //foreach (Vector2Int v in AllLevelsData.lv1Base)
-            //{
-            //    Debug.Log(v);
-            //}
-            InitGridValues(AllLevelsData.lv1Base);
-        }
-        if (AllLevelsData.level == 2)
-        {
-            InitGridValues(AllLevelsData.lv2Base);
-        }
-
         if (AllLevelsData.level == 0)
         {
             Values = AllLevelsData.tutorialGrid;
             TempValueGrid = AllLevelsData.tutorialGrid.ToArray();
 
             statusMessage.SetText(AllLevelsData.tutorialMessages[0]);
+        }
+        else if (AllLevelsData.level == 1)
+        {
+            InitGridValues(AllLevelsData.lv1Base);
+        }
+        else if (AllLevelsData.level == 2)
+        {
+            InitGridValues(AllLevelsData.lv2Base);
+        }
+        else if (AllLevelsData.level == 3)
+        {
+            InitGridValues(AllLevelsData.lv3Base);
         }
 
         InitGrid();

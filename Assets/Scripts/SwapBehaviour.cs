@@ -12,12 +12,16 @@ public class SwapBehaviour : MonoBehaviour //, IPointerDownHandler
     private StatusMessage statusMessage;
 
     private static SwapBehaviour selected;
+    
     //private SpriteRenderer Renderer;
     private Color color;
     public Vector2Int GridIndices;
 
     public GameObject border;
-    
+
+    // used for tutorial only
+    public static bool firstClicked = true;
+
 
     private bool clickable = false;
 
@@ -81,6 +85,17 @@ public class SwapBehaviour : MonoBehaviour //, IPointerDownHandler
 
         if (selected == null)
         {
+            if (AllLevelsData.level == 0 && firstClicked == true)
+            {
+                firstClicked = false;
+                statusMessage.SetText(AllLevelsData.tutorialMessages[1]);
+            } else if (AllLevelsData.level == 0)
+            {
+                statusMessage.SetText(AllLevelsData.tutorialMessages[3]);
+            }
+
+
+
             selected = clicked;
             selected.Select(selected.gameObject);
             return;
@@ -92,11 +107,10 @@ public class SwapBehaviour : MonoBehaviour //, IPointerDownHandler
             selected = null;
             return;
         }
-        //else  // clicked one that isnt self
+
+        //if (AllLevelsData.level == 0)
         //{
-        //    selected = clicked;
-        //    selected.Select();
-        //    Debug.Log(selected.GridIndices);
+        //    statusMessage.SetText(AllLevelsData.tutorialMessages[2]);
         //}
 
         if (isLegalMove(selected.GridIndices, clicked.GridIndices))
@@ -109,7 +123,15 @@ public class SwapBehaviour : MonoBehaviour //, IPointerDownHandler
         {
             //statusMessage.gameObject.SetActive(true);
             //statusMessage.gameObject.GetComponent<SpriteRenderer>().material.color.a = 0f;
-            statusMessage.SetText("Move doesn't result in match. Try again");
+            if (AllLevelsData.level == 0)
+            {
+                statusMessage.SetText(AllLevelsData.tutorialMessages[2]);
+            }
+            else
+            {
+                statusMessage.SetText("Move doesn't result in match. Try again");
+            }
+            
             //statusMessage.Show();
         }
 

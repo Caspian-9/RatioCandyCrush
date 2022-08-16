@@ -7,6 +7,8 @@ public class TileFactory : MonoBehaviour
     public GameObject BlockPrefab;
     public GameObject PiePrefab;
     public GameObject TreasurePrefab;
+    public GameObject GoldPrefab;
+    public GameObject CompassPrefab;
 
     public GameObject InstantiateTile(TileTypes type)
     {
@@ -29,6 +31,12 @@ public class TileFactory : MonoBehaviour
         switch (type) {
             case CollectibleTypes.GEM:
                 return Instantiate(TreasurePrefab);
+
+            case CollectibleTypes.GOLD:
+                return Instantiate(GoldPrefab);
+
+            case CollectibleTypes.COMPASS:
+                return Instantiate(CompassPrefab);
 
             default:
                 return Instantiate(TreasurePrefab);

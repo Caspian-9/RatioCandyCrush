@@ -10,13 +10,15 @@ public static class AllLevelsData
     public static LevelData lv0;
     public static LevelData lv1;
     public static LevelData lv2;
+    public static LevelData lv3;
 
     public static Dictionary<int, LevelData> Data =
         new Dictionary<int, LevelData>
         {
             { 0, getLv0() },
             { 1, getLv1() },
-            { 2, getLv2() }
+            { 2, getLv2() },
+            { 3, getLv3() }
         };
 
     static AllLevelsData()
@@ -31,10 +33,15 @@ public static class AllLevelsData
 
         lv1Base = new List<Vector2Int>
         {
-            new Vector2Int(1,2), new Vector2Int(1,3), new Vector2Int(2,3)
+            new Vector2Int(1,2), new Vector2Int(1,3)
         };
 
         lv2Base = new List<Vector2Int>
+        {
+            new Vector2Int(1,3), new Vector2Int(2,3), new Vector2Int(1,4)
+        };
+
+        lv3Base = new List<Vector2Int>
         {
             new Vector2Int(1,3), new Vector2Int(2,3), new Vector2Int(4,5), new Vector2Int(1,6)
         };
@@ -68,6 +75,15 @@ public static class AllLevelsData
         return lv2;
     }
 
+    private static LevelData getLv3()
+    {
+        if (lv3 == null)
+        {
+            lv3 = new LevelData(2, CollectibleTypes.COMPASS, 6, lv2Base, new List<Vector2Int>());
+        }
+        return lv3;
+    }
+
 
     //public static LevelData lv0 = new LevelData(1, CollectibleTypes.GEM, 4, new List<Vector2Int>(), tutorialGrid);
     //public static LevelData lv1 = new LevelData(3, CollectibleTypes.GEM, 4, lv1Base, new List<Vector2Int>());
@@ -86,10 +102,16 @@ public static class AllLevelsData
     public static List<Vector2Int> lv1Base =
         new List<Vector2Int>
         {
-            new Vector2Int(1,2), new Vector2Int(1,3), new Vector2Int(2,3)
+            new Vector2Int(1,2), new Vector2Int(1,3)
         };
 
     public static List<Vector2Int> lv2Base =
+        new List<Vector2Int>
+        {
+            new Vector2Int(1,3), new Vector2Int(2,3), new Vector2Int(1,4)
+        };
+
+    public static List<Vector2Int> lv3Base =
         new List<Vector2Int>
         {
             new Vector2Int(1,3), new Vector2Int(2,3), new Vector2Int(4,5), new Vector2Int(1,6)
@@ -100,10 +122,9 @@ public static class AllLevelsData
         new List<string>
         {
             "Click on a tile to select it",
-            "Click another adjacent tile to attempt a swap",
+            "Click an adjacent tile to swap",
             "Swap only works if it results in a match 3",
-            "Match 3 tiles to clear them",
-            "Goal: collect the treasure"
+            "Goal: collect the treasure by matching it"
         };
 }
 

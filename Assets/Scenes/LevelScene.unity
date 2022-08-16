@@ -1292,6 +1292,8 @@ MonoBehaviour:
   BlockPrefab: {fileID: 6240212962720627833, guid: 3207d6cefe6d64d4c9986bb5143433a2, type: 3}
   PiePrefab: {fileID: 224287130842451218, guid: 2813fd98c416846c1a2a009c9b6d24d9, type: 3}
   TreasurePrefab: {fileID: 8739383191606301311, guid: 3f5f23d592ea9472780db54c6ba75e4e, type: 3}
+  GoldPrefab: {fileID: 8097235941707163699, guid: 86ed05fb3083543e2a2009d0ef0a5027, type: 3}
+  CompassPrefab: {fileID: 7436243928542263074, guid: b816a6bbf3ca9453cb9550dc45a07b43, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
