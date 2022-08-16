@@ -70,6 +70,13 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Entering level 2");
             AllLevelsData.level = 2;
         }
+
+        if (other.gameObject.tag == "Level3")
+        {
+            Debug.Log("Entering level 3");
+            AllLevelsData.level = 3;
+        }
+
         manager.LoadLevel();
     }
 }

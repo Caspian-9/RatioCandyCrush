@@ -137,7 +137,7 @@ public class GridManager : MonoBehaviour
 
         //isBlockHere = PossibleBlockPositions(3);
 
-        GemText.text = "Gems: 0/" + tCalculator.totalTreasures.ToString();
+        GemText.text = "Treasures: 0/" + tCalculator.totalTreasures.ToString();
 
         //Debug.Log(AllLevelsData.level);
         //Debug.Log(data);
@@ -377,7 +377,7 @@ public class GridManager : MonoBehaviour
         }
 
         //ScoreText.text = "Score: " + score.ToString();
-        //GemText.text = "Gems: " + tCalculator.getCollected().ToString() + "/" + tCalculator.getTotal().ToString();
+        GemText.text = "Treasures: " + tCalculator.getCollected().ToString() + "/" + tCalculator.getTotal().ToString();
 
         if (tCalculator.isAllCollected())
         {
