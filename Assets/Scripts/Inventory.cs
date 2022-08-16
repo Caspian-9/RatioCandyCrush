@@ -81,6 +81,10 @@ public class Inventory : MonoBehaviour
 	{
 		if (tag == "Gem")
 			return CollectibleTypes.GEM;
+		if (tag == "Gold")
+			return CollectibleTypes.GOLD;
+		if (tag == "Compass")
+			return CollectibleTypes.COMPASS;
 
 		return CollectibleTypes.GEM;
 	}

@@ -12,7 +12,10 @@ public class Manager : MonoBehaviour {
 
     public GameObject LevelCube;
 
-    public GameObject CounterPrefab;
+    //public List<GameObject> itemList;
+    public GameObject gemCounter;
+    public GameObject goldCounter;
+    public GameObject compassCounter;
 
     public StatusMessage statusMessage;
 
@@ -54,12 +57,21 @@ public class Manager : MonoBehaviour {
 
     public void ShowItemsList() {
 
-        foreach (CollectibleTypes type in Items.ItemsToCollect.Keys)
-        {
-            TextMeshProUGUI t = CounterPrefab.GetComponentInChildren<TextMeshProUGUI>();
-            t.text = Items.ItemsToCollect[type].ToString();
-        }
-        
+        //foreach (CollectibleTypes type in Items.ItemsToCollect.Keys)
+        //{
+        //    TextMeshProUGUI t = CounterPrefab.GetComponentInChildren<TextMeshProUGUI>();
+        //    t.text = Items.ItemsToCollect[type].ToString();
+        //}
+
+        TextMeshProUGUI mt = gemCounter.GetComponentInChildren<TextMeshProUGUI>();
+        mt.text = Items.ItemsToCollect[CollectibleTypes.GEM].ToString();
+
+        TextMeshProUGUI gt = goldCounter.GetComponentInChildren<TextMeshProUGUI>();
+        gt.text = Items.ItemsToCollect[CollectibleTypes.GOLD].ToString();
+
+        TextMeshProUGUI ct = compassCounter.GetComponentInChildren<TextMeshProUGUI>();
+        ct.text = Items.ItemsToCollect[CollectibleTypes.COMPASS].ToString();
+
     }
 
 
@@ -121,5 +133,17 @@ public class Manager : MonoBehaviour {
         }
 
         return false;
+    }
+
+    private CollectibleTypes TagToType(string tag)
+    {
+        if (tag == "Gem")
+            return CollectibleTypes.GEM;
+        if (tag == "Gold")
+            return CollectibleTypes.GOLD;
+        if (tag == "Compass")
+            return CollectibleTypes.COMPASS;
+
+        return CollectibleTypes.GEM;
     }
 }
