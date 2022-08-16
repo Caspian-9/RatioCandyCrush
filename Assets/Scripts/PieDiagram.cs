@@ -73,16 +73,16 @@ public class PieDiagram : MonoBehaviour, Tile, RegularTile
     public void Destroy()
     {
         var em = ps.emission;
-        var dur = ps.duration;
+        var dur = ps.main.duration;
 
         em.enabled = true;
         ps.Play();
 
-        Destroy(PieEdge);
-        Destroy(PieBlank);
-        Destroy(PieSector);
+        //Destroy(PieEdge);
+        //Destroy(PieBlank);
+        //Destroy(PieSector);
 
-        Invoke(nameof(DestroyObj), dur);
+        Invoke(nameof(DestroyObj), dur / 2);
 
     }
 

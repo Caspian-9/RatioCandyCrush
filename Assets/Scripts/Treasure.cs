@@ -73,16 +73,16 @@ public class Treasure : MonoBehaviour, Tile, Collectible
     public void Destroy()
     {
         var em = ps.emission;
-        var dur = ps.duration;
+        var dur = ps.main.duration;
 
         em.enabled = true;
         ps.Play();
 
-        Destroy(img);
-        Destroy(TextTop);
-        Destroy(TextBottom);
+        //Destroy(img);
+        //Destroy(TextTop);
+        //Destroy(TextBottom);
 
-        Invoke(nameof(DestroyObj), dur);
+        Invoke(nameof(DestroyObj), dur / 2);
 
     }
 

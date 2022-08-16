@@ -455,6 +455,8 @@ public class GridManager : MonoBehaviour
         }
 
         if (AllLevelsData.level != 0)
+            //Debug.Log("filling holes");
+            //FillHoles();
             Invoke("FillHoles", 1.8f);
     }
 
