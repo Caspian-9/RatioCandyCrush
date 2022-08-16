@@ -1,6 +1,8 @@
 ﻿using System;
 public enum CollectibleTypes
 {
-    GEM
+    GEM,
+    GOLD,
+    COMPASS
 }
 

@@ -167,6 +167,8 @@ public class GridManager : MonoBehaviour
         {
             Values = AllLevelsData.tutorialGrid;
             TempValueGrid = AllLevelsData.tutorialGrid.ToArray();
+
+            statusMessage.SetText(AllLevelsData.tutorialMessages[0]);
         }
 
         InitGrid();
@@ -233,7 +235,8 @@ public class GridManager : MonoBehaviour
                 
                 GameObject newSlot = Instantiate(SlotPrefab);
                 newSlot.transform.SetParent(GridContainer.transform);
-                newSlot.transform.localScale *= 4f / GridDimension;
+                newSlot.transform.localScale = canvas.GetComponent<RectTransform>().localScale;
+                newSlot.transform.localScale *= (4f / GridDimension);
                 newSlot.transform.localPosition = GetXYfromColRow(column, row) + positionOffset;
 
                 Slot slot = newSlot.GetComponent<Slot>();
@@ -277,7 +280,8 @@ public class GridManager : MonoBehaviour
 
         newTile.transform.SetParent(GridContainer.transform);
         newTile.transform.localPosition = GetXYfromColRow(column, row) + positionOffset;
-        newTile.transform.localScale *= 4f / GridDimension;
+        newTile.transform.localScale = canvas.GetComponent<RectTransform>().localScale;
+        newTile.transform.localScale *= (4f / GridDimension);
 
         TileGrid[column, row] = newTile;
 
@@ -304,6 +308,7 @@ public class GridManager : MonoBehaviour
 
         newTile.transform.SetParent(GridContainer.transform);
         newTile.transform.localPosition = GetXYfromColRow(column, row) + positionOffset;
+        newTile.transform.localScale = canvas.GetComponent<RectTransform>().localScale;
         newTile.transform.localScale *= 4f / GridDimension;
 
         TileGrid[column, row] = newTile;
@@ -319,6 +324,7 @@ public class GridManager : MonoBehaviour
 
         tile.SetText();
     }
+
 
 
     // stuff to do at the end of a GAME

@@ -66,8 +66,8 @@ public class Block : MonoBehaviour, Tile, RegularTile
 
     public void Destroy()
     {
-        Debug.Log("play anim");
-        animator.Play("BlockDestroyAnim");
+        //Debug.Log("play anim");
+        //animator.Play("BlockDestroyAnim");
         Destroy(gameObject, 2f);
     }
 }

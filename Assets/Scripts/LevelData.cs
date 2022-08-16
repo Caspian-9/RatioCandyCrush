@@ -54,7 +54,7 @@ public static class AllLevelsData
     {
         if (lv1 == null)
         {
-            lv1 = new LevelData(3, CollectibleTypes.GEM, 4, lv1Base, new List<Vector2Int>());
+            lv1 = new LevelData(4, CollectibleTypes.GEM, 4, lv1Base, new List<Vector2Int>());
         }
         return lv1;
     }
@@ -63,10 +63,11 @@ public static class AllLevelsData
     {
         if (lv2 == null)
         {
-            lv2 = new LevelData(6, CollectibleTypes.GEM, 6, lv2Base, new List<Vector2Int>());
+            lv2 = new LevelData(4, CollectibleTypes.GOLD, 6, lv2Base, new List<Vector2Int>());
         }
         return lv2;
     }
+
 
     //public static LevelData lv0 = new LevelData(1, CollectibleTypes.GEM, 4, new List<Vector2Int>(), tutorialGrid);
     //public static LevelData lv1 = new LevelData(3, CollectibleTypes.GEM, 4, lv1Base, new List<Vector2Int>());
@@ -92,6 +93,17 @@ public static class AllLevelsData
         new List<Vector2Int>
         {
             new Vector2Int(1,3), new Vector2Int(2,3), new Vector2Int(4,5), new Vector2Int(1,6)
+        };
+
+
+    public static List<string> tutorialMessages =
+        new List<string>
+        {
+            "Click on a tile to select it",
+            "Click another adjacent tile to attempt a swap",
+            "Swap only works if it results in a match 3",
+            "Match 3 tiles to clear them",
+            "Goal: collect the treasure"
         };
 }
 
