@@ -45,6 +45,9 @@ public class GridManager : MonoBehaviour
     private System.Random rand = new System.Random();
 
 
+    //private Vector2Int resolution;
+
+
 
     public static GridManager Instance
     {
@@ -55,7 +58,10 @@ public class GridManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        
+
+        //resolution = new Vector2Int(Screen.width, Screen.height);
+        //resolution = new Vector2Int(Screen.width, Screen.height);
+        //Debug.Log("resolution: " + resolution);
 
         //Debug.Log(AllLevelsData.level);
         //Debug.Log(data);
@@ -63,7 +69,7 @@ public class GridManager : MonoBehaviour
         //Debug.Log(AllLevelsData.tutorialGrid);
         //Debug.Log(data.CustomGrid);
 
-        
+
         //Values = data.CustomGrid;
 
         NewGame();
@@ -90,6 +96,21 @@ public class GridManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if (resolution.x != Screen.width || resolution.y != Screen.height)
+        //{
+        //    string screenheight = "Screen height: " + Screen.height;
+        //    string screenwidth = "Screen width: " + Screen.width;
+        //    string canvasheight = "canvas height: " + canvas.GetComponent<RectTransform>().rect.height;
+        //    string canvaswidth = "canvas width: " + canvas.GetComponent<RectTransform>().rect.width;
+        //    string containersize = "container size: " + GridContainer.transform.GetComponent<RectTransform>().rect.height;
+        //    string slotsize = "unscaled slot size: " + SlotGrid[0, 0].GetComponent<RectTransform>().sizeDelta.x;
+        //    string scale = "scale: " + SlotGrid[0, 0].GetComponent<RectTransform>().localScale.x;
+        //    string scaledsize = "scaled slot size: " + SlotGrid[0, 0].GetComponent<RectTransform>().sizeDelta.x * SlotGrid[0, 0].GetComponent<RectTransform>().localScale.x;
+        //    Debug.Log(screenheight + ", " + screenwidth + " --- " + canvasheight + " --- " + containersize + " --- " + slotsize + " --- " + scale + " --- " + scaledsize);
+
+        //    resolution.x = Screen.width;
+        //    resolution.y = Screen.height;
+        //}
         
     }
 
@@ -127,16 +148,18 @@ public class GridManager : MonoBehaviour
         inventory.UpdateInventory();
 
         RectTransform rt = GridContainer.transform.GetComponent<RectTransform>();
-        
-        float edgelength = 1f * (canvas.GetComponent<RectTransform>().rect.height);
 
-        Debug.Log(canvas.GetComponent<RectTransform>().rect.height + "  ----  " + edgelength);
-        Debug.Log(canvas.GetComponent<RectTransform>().sizeDelta.y);
+        //float edgelength = canvas.GetComponent<RectTransform>().rect.height;
+        //float edgelength = Screen.height;
+        float edgelength = 400f;
+
+        //Debug.Log(canvas.GetComponent<RectTransform>().rect.height + "  ----  " + edgelength);
+        //Debug.Log(canvas.GetComponent<RectTransform>().sizeDelta.y);
         //Debug.Log(2 * Camera.main.orthographicSize);
 
         rt.sizeDelta = new Vector2(edgelength, edgelength);
         //rt.localPosition = new Vector3(0, (0.08f * canvas.GetComponent<RectTransform>().rect.height), 0);
-        rt.localPosition = new Vector3(0, 0, 0);
+        rt.localPosition = new Vector3(0, 50, 0);
 
         positionOffset = new Vector2(-(edgelength / 2), -(edgelength / 2));
 
@@ -244,6 +267,8 @@ public class GridManager : MonoBehaviour
                 
                 GameObject newSlot = Instantiate(SlotPrefab);
                 newSlot.transform.SetParent(GridContainer.transform);
+
+                //Debug.Log("slot size before scale: " + newSlot.GetComponent<RectTransform>().sizeDelta.x * canvas.GetComponent<RectTransform>().localScale.x);
 
                 RectTransform rt = GridContainer.transform.GetComponent<RectTransform>();
                 float scale = canvas.GetComponent<RectTransform>().localScale.x * rt.sizeDelta.y / (GridDimension * 92);
