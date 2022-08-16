@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class SwapBehaviour : MonoBehaviour, IPointerDownHandler
+public class SwapBehaviour : MonoBehaviour //, IPointerDownHandler
 {
     private GridManager manager = null;
     private int dimension;
@@ -67,10 +67,12 @@ public class SwapBehaviour : MonoBehaviour, IPointerDownHandler
     }
 
 
-    public void OnPointerDown(PointerEventData eventData)
+    public void OnMouseDown()
     {
-        SwapBehaviour clicked = eventData.pointerEnter.GetComponent<SwapBehaviour>();
-        Debug.Log(eventData);
+        //SwapBehaviour clicked = eventData.pointerEnter.GetComponent<SwapBehaviour>();
+        //Debug.Log(eventData);
+        SwapBehaviour clicked = gameObject.GetComponent<SwapBehaviour>();
+        Debug.Log(clicked);
 
         if (!clickable || clicked == null)
         {
@@ -101,7 +103,7 @@ public class SwapBehaviour : MonoBehaviour, IPointerDownHandler
         {
             statusMessage.SetText("");
             SwapBlocks(selected.GridIndices, clicked.GridIndices);
-            
+
         }
         else   // move is not legal
         {
@@ -114,6 +116,54 @@ public class SwapBehaviour : MonoBehaviour, IPointerDownHandler
         selected.Unselect(selected.gameObject);
         selected = null;
     }
+
+    //public void OnPointerDown(PointerEventData eventData)
+    //{
+    //    SwapBehaviour clicked = eventData.pointerEnter.GetComponent<SwapBehaviour>();
+    //    Debug.Log(eventData);
+
+    //    if (!clickable || clicked == null)
+    //    {
+    //        return;
+    //    }
+
+    //    if (selected == null)
+    //    {
+    //        selected = clicked;
+    //        selected.Select(selected.gameObject);
+    //        return;
+    //    }
+
+    //    if (selected == clicked)  // clicked on self
+    //    {
+    //        selected.Unselect(selected.gameObject);
+    //        selected = null;
+    //        return;
+    //    }
+    //    //else  // clicked one that isnt self
+    //    //{
+    //    //    selected = clicked;
+    //    //    selected.Select();
+    //    //    Debug.Log(selected.GridIndices);
+    //    //}
+
+    //    if (isLegalMove(selected.GridIndices, clicked.GridIndices))
+    //    {
+    //        statusMessage.SetText("");
+    //        SwapBlocks(selected.GridIndices, clicked.GridIndices);
+
+    //    }
+    //    else   // move is not legal
+    //    {
+    //        //statusMessage.gameObject.SetActive(true);
+    //        //statusMessage.gameObject.GetComponent<SpriteRenderer>().material.color.a = 0f;
+    //        statusMessage.SetText("Move doesn't result in match. Try again");
+    //        //statusMessage.Show();
+    //    }
+
+    //    selected.Unselect(selected.gameObject);
+    //    selected = null;
+    //}
 
 
     public void SetClickable(bool c)
