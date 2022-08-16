@@ -7,19 +7,22 @@ using TMPro;
 
 public class Block : MonoBehaviour, Tile, RegularTile
 {
+    public ParticleSystem ps;
+
+    public Image img;
 
     public TextMeshProUGUI TextTop;
     public TextMeshProUGUI TextBottom;
     private Vector2Int fraction;   // x is numerator, y is denominator
     private float internalValue;
 
-    private Animator animator;
+    //private Animator animator;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
         
     }
 
@@ -66,8 +69,22 @@ public class Block : MonoBehaviour, Tile, RegularTile
 
     public void Destroy()
     {
-        //Debug.Log("play anim");
-        //animator.Play("BlockDestroyAnim");
-        Destroy(gameObject, 2f);
+        var em = ps.emission;
+        var dur = ps.duration;
+
+        em.enabled = true;
+        ps.Play();
+
+        Destroy(img);
+        Destroy(TextTop);
+        Destroy(TextBottom);
+
+        Invoke(nameof(DestroyObj), dur);
+        
+    }
+
+    private void DestroyObj()
+    {
+        Destroy(gameObject);
     }
 }

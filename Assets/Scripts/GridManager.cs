@@ -450,8 +450,8 @@ public class GridManager : MonoBehaviour
                 }
 
             }
-            Destroy(tile, 1.3f);
-            //tile.GetComponent<Tile>().Destroy();
+            //Destroy(tile, 1.3f);
+            tile.GetComponent<Tile>().Destroy();
         }
 
         if (AllLevelsData.level != 0)

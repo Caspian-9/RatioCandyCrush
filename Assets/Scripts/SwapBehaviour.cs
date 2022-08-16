@@ -141,11 +141,9 @@ public class SwapBehaviour : MonoBehaviour, IPointerDownHandler
 
         grid[tile2Inds.x, tile2Inds.y] = tile1;
         //tile1.transform.position = pos2;
-        StartCoroutine(Move(tile1, pos2, 230f));
+        StartCoroutine(Move2(tile1, pos2, 230f));
         tile1.transform.SetAsLastSibling();
         tile1.GetComponent<SwapBehaviour>().GridIndices = tile2Inds;
-
-        manager.EndTurn();
 
     }
 
@@ -157,6 +155,20 @@ public class SwapBehaviour : MonoBehaviour, IPointerDownHandler
             obj.transform.position = Vector3.MoveTowards(obj.transform.position, target, speed * Time.deltaTime);
             yield return null;
         }
+        yield break;
+        //yield return new WaitForSeconds(2);
+    }
+
+    private IEnumerator Move2(GameObject obj, Vector3 target, float speed)
+    {
+        // same thing but this needs to be called last so it calls endturn
+        while (obj.transform.position != target)
+        {
+            obj.transform.position = Vector3.MoveTowards(obj.transform.position, target, speed * Time.deltaTime);
+            yield return null;
+        }
+
+        manager.EndTurn();
         yield break;
         //yield return new WaitForSeconds(2);
     }

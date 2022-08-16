@@ -7,7 +7,12 @@ using UnityEngine.UI;
 public class PieDiagram : MonoBehaviour, Tile, RegularTile
 {
 
+    public ParticleSystem ps;
+
+    public Image PieEdge;
+    public Image PieBlank;
     public Image PieSector;
+
     private Vector2Int fraction;   // [0] is numerator, [1] is denominator
     private float internalValue;
 
@@ -59,9 +64,30 @@ public class PieDiagram : MonoBehaviour, Tile, RegularTile
         return;
     }
 
+    //public void Destroy()
+    //{
+    //    Debug.Log("destroy animation not implemented");
+    //    Destroy(gameObject, 2f);
+    //}
+
     public void Destroy()
     {
-        Debug.Log("destroy animation not implemented");
-        Destroy(gameObject, 2f);
+        var em = ps.emission;
+        var dur = ps.duration;
+
+        em.enabled = true;
+        ps.Play();
+
+        Destroy(PieEdge);
+        Destroy(PieBlank);
+        Destroy(PieSector);
+
+        Invoke(nameof(DestroyObj), dur);
+
+    }
+
+    private void DestroyObj()
+    {
+        Destroy(gameObject);
     }
 }

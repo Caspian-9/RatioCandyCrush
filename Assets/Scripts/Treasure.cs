@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class Treasure : MonoBehaviour, Tile, Collectible
 {
+    public ParticleSystem ps;
+
+    public Image img;
+
     private Vector2Int fraction;
     private float internalValue;
 
@@ -59,9 +64,30 @@ public class Treasure : MonoBehaviour, Tile, Collectible
         TextBottom.text = fraction.y.ToString();
     }
 
+    //public void Destroy()
+    //{
+    //    Debug.Log("destroy animation not implemented");
+    //    Destroy(gameObject, 2f);
+    //}
+
     public void Destroy()
     {
-        Debug.Log("destroy animation not implemented");
-        Destroy(gameObject, 2f);
+        var em = ps.emission;
+        var dur = ps.duration;
+
+        em.enabled = true;
+        ps.Play();
+
+        Destroy(img);
+        Destroy(TextTop);
+        Destroy(TextBottom);
+
+        Invoke(nameof(DestroyObj), dur);
+
+    }
+
+    private void DestroyObj()
+    {
+        Destroy(gameObject);
     }
 }
