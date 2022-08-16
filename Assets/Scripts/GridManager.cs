@@ -235,8 +235,8 @@ public class GridManager : MonoBehaviour
                 
                 GameObject newSlot = Instantiate(SlotPrefab);
                 newSlot.transform.SetParent(GridContainer.transform);
-                newSlot.transform.localScale = canvas.GetComponent<RectTransform>().localScale;
-                newSlot.transform.localScale *= (4f / GridDimension);
+                //newSlot.transform.localScale = canvas.GetComponent<RectTransform>().localScale;
+                newSlot.transform.localScale *= (4f / GridDimension) * canvas.GetComponent<RectTransform>().localScale.x;
                 newSlot.transform.localPosition = GetXYfromColRow(column, row) + positionOffset;
 
                 Slot slot = newSlot.GetComponent<Slot>();
@@ -280,8 +280,8 @@ public class GridManager : MonoBehaviour
 
         newTile.transform.SetParent(GridContainer.transform);
         newTile.transform.localPosition = GetXYfromColRow(column, row) + positionOffset;
-        newTile.transform.localScale = canvas.GetComponent<RectTransform>().localScale;
-        newTile.transform.localScale *= (4f / GridDimension);
+        newTile.transform.localScale *= (4f / GridDimension) * canvas.GetComponent<RectTransform>().localScale.x;
+        //newTile.transform.localScale *= (4f / GridDimension);
 
         TileGrid[column, row] = newTile;
 
@@ -308,8 +308,8 @@ public class GridManager : MonoBehaviour
 
         newTile.transform.SetParent(GridContainer.transform);
         newTile.transform.localPosition = GetXYfromColRow(column, row) + positionOffset;
-        newTile.transform.localScale = canvas.GetComponent<RectTransform>().localScale;
-        newTile.transform.localScale *= 4f / GridDimension;
+        newTile.transform.localScale *= (4f / GridDimension) * canvas.GetComponent<RectTransform>().localScale.x;
+        //newTile.transform.localScale *= 4f / GridDimension;
 
         TileGrid[column, row] = newTile;
 
@@ -450,8 +450,8 @@ public class GridManager : MonoBehaviour
                 }
 
             }
-
-            tile.GetComponent<Tile>().Destroy();
+            Destroy(tile, 1.3f);
+            //tile.GetComponent<Tile>().Destroy();
         }
 
         if (AllLevelsData.level != 0)

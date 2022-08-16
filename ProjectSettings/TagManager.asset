@@ -11,6 +11,7 @@ TagManager:
   - Gem
   - Gold
   - Compass
+  - Level3
   layers:
   - Default
   - TransparentFX
