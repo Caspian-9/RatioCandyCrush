@@ -127,13 +127,23 @@ public class GridManager : MonoBehaviour
         inventory.UpdateInventory();
 
         RectTransform rt = GridContainer.transform.GetComponent<RectTransform>();
-        //float edgelength = 0.8f * (2 * Camera.main.orthographicSize);
-        float edgelength = 0.72f * (canvas.GetComponent<RectTransform>().rect.height);
-        rt.sizeDelta = new Vector2(edgelength, edgelength);
-        rt.localPosition = new Vector3(0, (0.08f * canvas.GetComponent<RectTransform>().rect.height), 0);
-        // positionOffset = new Vector2( -(edgelength / 2), -(edgelength / 2)) * canvas.GetComponent<RectTransform>().localScale.x;
-        positionOffset = new Vector2(-(edgelength / 2), -(edgelength / 2));
         
+        float edgelength = 1f * (canvas.GetComponent<RectTransform>().rect.height);
+
+        Debug.Log(canvas.GetComponent<RectTransform>().rect.height + "  ----  " + edgelength);
+        Debug.Log(canvas.GetComponent<RectTransform>().sizeDelta.y);
+        //Debug.Log(2 * Camera.main.orthographicSize);
+
+        rt.sizeDelta = new Vector2(edgelength, edgelength);
+        //rt.localPosition = new Vector3(0, (0.08f * canvas.GetComponent<RectTransform>().rect.height), 0);
+        rt.localPosition = new Vector3(0, 0, 0);
+
+        positionOffset = new Vector2(-(edgelength / 2), -(edgelength / 2));
+
+        //float edgelength = 0.72f * (2 * Camera.main.orthographicSize);
+        //rt.localPosition = new Vector3(0, 0.16f * Camera.main.orthographicSize, 0);
+        // positionOffset = new Vector2( -(edgelength / 2), -(edgelength / 2)) * canvas.GetComponent<RectTransform>().localScale.x;
+
 
         //isBlockHere = PossibleBlockPositions(3);
 
@@ -234,8 +244,13 @@ public class GridManager : MonoBehaviour
                 
                 GameObject newSlot = Instantiate(SlotPrefab);
                 newSlot.transform.SetParent(GridContainer.transform);
+
+                RectTransform rt = GridContainer.transform.GetComponent<RectTransform>();
+                float scale = canvas.GetComponent<RectTransform>().localScale.x * rt.sizeDelta.y / (GridDimension * 92);
+                newSlot.transform.localScale *= scale;
+
                 //newSlot.transform.localScale = canvas.GetComponent<RectTransform>().localScale;
-                newSlot.transform.localScale *= (4f / GridDimension) * canvas.GetComponent<RectTransform>().localScale.x;
+                //newSlot.transform.localScale *= 4f * canvas.GetComponent<RectTransform>().localScale.x / GridDimension;
                 newSlot.transform.localPosition = GetXYfromColRow(column, row) + positionOffset;
 
                 Slot slot = newSlot.GetComponent<Slot>();
@@ -279,7 +294,12 @@ public class GridManager : MonoBehaviour
 
         newTile.transform.SetParent(GridContainer.transform);
         newTile.transform.localPosition = GetXYfromColRow(column, row) + positionOffset;
-        newTile.transform.localScale *= (4f / GridDimension) * canvas.GetComponent<RectTransform>().localScale.x;
+
+        RectTransform rt = GridContainer.transform.GetComponent<RectTransform>();
+        float scale = canvas.GetComponent<RectTransform>().localScale.x * rt.sizeDelta.y / (GridDimension * 92);
+        newTile.transform.localScale *= scale;
+
+        //newTile.transform.localScale *= 4f * canvas.GetComponent<RectTransform>().localScale.x / GridDimension;
         //newTile.transform.localScale *= (4f / GridDimension);
 
         TileGrid[column, row] = newTile;
@@ -307,7 +327,12 @@ public class GridManager : MonoBehaviour
 
         newTile.transform.SetParent(GridContainer.transform);
         newTile.transform.localPosition = GetXYfromColRow(column, row) + positionOffset;
-        newTile.transform.localScale *= (4f / GridDimension) * canvas.GetComponent<RectTransform>().localScale.x;
+
+        RectTransform rt = GridContainer.transform.GetComponent<RectTransform>();
+        float scale = canvas.GetComponent<RectTransform>().localScale.x * rt.sizeDelta.y / (GridDimension * 92);
+        newTile.transform.localScale *= scale;
+
+        //newTile.transform.localScale *= 4f * canvas.GetComponent<RectTransform>().localScale.x / GridDimension;
         //newTile.transform.localScale *= 4f / GridDimension;
 
         TileGrid[column, row] = newTile;
@@ -417,11 +442,16 @@ public class GridManager : MonoBehaviour
                 }
             }
         }
+
         return matchedCoordinates;
     }
 
     public void ClearMatchedTiles(List<Vector2Int> tiles)
     {
+
+        Debug.Log("================");
+        Debug.Log("Matched " + tiles.Count + " tiles: ");
+
         for (int i = 0; i < tiles.Count; i++)
         {
             int col = tiles[i].x;
@@ -431,12 +461,18 @@ public class GridManager : MonoBehaviour
 
             if (tile != null)
             {
+
+                Vector2Int f = tile.GetComponent<Tile>().GetFraction();
+                Vector2Int pos = tile.GetComponent<SwapBehaviour>().GridIndices;
+
+                Debug.Log("Tile with value " + f.x + "/" + f.y + " at position " + pos);
+
                 tile.GetComponent<SwapBehaviour>().Select(tile);
 
                 //if (tile.GetComponent<Collectible>() != null  && tile.GetComponent<Collectible>().GetType() == CollectibleTypes.GEM) {
                 if (tile.GetComponent<Collectible>() != null)
                 {
-
+                    Debug.Log("Collected a treasure");
                     tCalculator.incrementCollected();
                     inventory.AddItem(tile.GetComponent<Collectible>().GetType());
                     GemText.text = "Gems: " + tCalculator.treasuresCollected.ToString() + "/" + tCalculator.totalTreasures.ToString();
@@ -452,6 +488,7 @@ public class GridManager : MonoBehaviour
             //Destroy(tile, 1.3f);
             tile.GetComponent<Tile>().Destroy();
         }
+        Debug.Log("================");
 
         if (AllLevelsData.level != 0)
             //Debug.Log("filling holes");

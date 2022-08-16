@@ -53,28 +53,32 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
 
         // other is the collider of the gameobject the bean is hitting
-        if (other.gameObject.tag == "Level0") {
-
-            Debug.Log("Entering tutorial level");
+        if (other.gameObject.tag == "Level0")
+        {
             AllLevelsData.level = 0;
+            AllLevelsData.LevelCounter[0] += 1;
+            Debug.Log("Entering tutorial level for the " + AllLevelsData.LevelCounter[0] + "th time");
         }
 
         if (other.gameObject.tag == "Level1")
         {
-            Debug.Log("Entering level 1");
             AllLevelsData.level = 1;
+            AllLevelsData.LevelCounter[1] += 1;
+            Debug.Log("Entering level 1 for the " + AllLevelsData.LevelCounter[1] + "th time");
         }
 
         if (other.gameObject.tag == "Level2")
         {
-            Debug.Log("Entering level 2");
             AllLevelsData.level = 2;
+            AllLevelsData.LevelCounter[2] += 1;
+            Debug.Log("Entering level 2 for the " + AllLevelsData.LevelCounter[2] + "th time");
         }
 
         if (other.gameObject.tag == "Level3")
         {
-            Debug.Log("Entering level 3");
             AllLevelsData.level = 3;
+            AllLevelsData.LevelCounter[3] += 1;
+            Debug.Log("Entering level 3 for the" + AllLevelsData.LevelCounter[3] + "th time");
         }
 
         manager.LoadLevel();

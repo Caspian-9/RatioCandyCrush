@@ -21,6 +21,15 @@ public static class AllLevelsData
             { 3, getLv3() }
         };
 
+    public static Dictionary<int, int> LevelCounter =
+        new Dictionary<int, int>
+        {
+            { 0, 0 },
+            { 1, 0 },
+            { 2, 0 },
+            { 3, 0 }
+        };
+
     static AllLevelsData()
     {
         tutorialGrid = new List<Vector2Int>
@@ -33,12 +42,12 @@ public static class AllLevelsData
 
         lv1Base = new List<Vector2Int>
         {
-            new Vector2Int(1,2), new Vector2Int(1,3)
+            new Vector2Int(1,2), new Vector2Int(1,3), new Vector2Int(2,3)
         };
 
         lv2Base = new List<Vector2Int>
         {
-            new Vector2Int(1,3), new Vector2Int(2,3), new Vector2Int(1,4)
+            new Vector2Int(1,3), new Vector2Int(1,4), new Vector2Int(1,5)
         };
 
         lv3Base = new List<Vector2Int>
@@ -102,13 +111,13 @@ public static class AllLevelsData
     public static List<Vector2Int> lv1Base =
         new List<Vector2Int>
         {
-            new Vector2Int(1,2), new Vector2Int(1,3)
+            new Vector2Int(1,2), new Vector2Int(1,3), new Vector2Int(2,3)
         };
 
     public static List<Vector2Int> lv2Base =
         new List<Vector2Int>
         {
-            new Vector2Int(1,3), new Vector2Int(2,3), new Vector2Int(1,4)
+            new Vector2Int(1,3), new Vector2Int(1,4), new Vector2Int(1,5)
         };
 
     public static List<Vector2Int> lv3Base =

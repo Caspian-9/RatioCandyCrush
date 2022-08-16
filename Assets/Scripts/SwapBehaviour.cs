@@ -76,7 +76,8 @@ public class SwapBehaviour : MonoBehaviour //, IPointerDownHandler
         //SwapBehaviour clicked = eventData.pointerEnter.GetComponent<SwapBehaviour>();
         //Debug.Log(eventData);
         SwapBehaviour clicked = gameObject.GetComponent<SwapBehaviour>();
-        Debug.Log(clicked);
+        Vector2Int clickedFraction = clicked.gameObject.GetComponent<Tile>().GetFraction();
+        Debug.Log("Clicked on " + clicked + " type tile with value " + clickedFraction.x + "/" + clickedFraction.y);
 
         if (!clickable || clicked == null)
         {
@@ -113,8 +114,15 @@ public class SwapBehaviour : MonoBehaviour //, IPointerDownHandler
         //    statusMessage.SetText(AllLevelsData.tutorialMessages[2]);
         //}
 
+        Vector2Int sf = selected.gameObject.GetComponent<Tile>().GetFraction();
+        Vector2Int cf = clicked.gameObject.GetComponent<Tile>().GetFraction();
+
+        string s = sf.x + "/" + sf.y;
+        string c = cf.x + "/" + cf.y;
+
         if (isLegalMove(selected.GridIndices, clicked.GridIndices))
         {
+            Debug.Log("Swapped tiles at " + selected.GridIndices + " with value " + s + " and " + clicked.GridIndices + " with value " + c);
             statusMessage.SetText("");
             SwapBlocks(selected.GridIndices, clicked.GridIndices);
 
@@ -131,7 +139,8 @@ public class SwapBehaviour : MonoBehaviour //, IPointerDownHandler
             {
                 statusMessage.SetText("Move doesn't result in match. Try again");
             }
-            
+            Debug.Log("Unsuccessfully tried to swap tiles at " + selected.GridIndices + " with value " + s + " and " + clicked.GridIndices + " with value " + c);
+
             //statusMessage.Show();
         }
 
@@ -265,7 +274,7 @@ public class SwapBehaviour : MonoBehaviour //, IPointerDownHandler
                 }
             }
         }
-        Debug.Log(matchedCoordinates.Count);
+        //Debug.Log(matchedCoordinates.Count);
         return matchedCoordinates.Count >= 3;
     }
 
